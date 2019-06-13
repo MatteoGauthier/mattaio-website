@@ -20,7 +20,8 @@
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/pwa": "^2.6.0",
     "bulma": "^0.7.5",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "tippy.js": "^4.3.4"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",

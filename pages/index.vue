@@ -3,9 +3,10 @@
     <section class="hero has-bg-img">
       <div class="hero-body">
         <div class="container">
-          <h1 id="title" class="title has-text-white">Mattèo Gauthier</h1>
+          <h1 id="title" class="title has-text-white">{{heroGuy}}</h1>
           <h2 class="subtitle has-text-light">
-            Bonjour et bienvenue sur une page qui vous permetteras d'en savoir plus sur Mattèo Gauthier 😃
+            {{heroDesc}}
+            
           </h2>
         </div>
       </div>
@@ -17,6 +18,12 @@
 <script>
 import PostsPreview from "@/components/PostsPreview.vue";
 export default {
+  data() {
+    return {
+      heroGuy: 'Mattèo Gauthier',
+      heroDesc: `Bonjour et bienvenue sur une page qui vous permetteras d'en savoir plus sur Mattèo Gauthier 😃`
+    }
+  },
   components: {
     PostsPreview
 

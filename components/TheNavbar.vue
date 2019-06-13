@@ -16,7 +16,7 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">Mes posts</a>
+          <a class="navbar-item soonPop">Mes posts</a>
 
           <a class="navbar-item">About</a>
           <a class="navbar-item">Contact</a>
@@ -24,8 +24,8 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-light">Feedback</a>
-              <a class="button is-light">
+              <a class="button is-light soonPop">Feedback</a>
+              <a href="https://semoule.fr" class="button is-light">
                 <strong>Semoule.fr</strong>
               </a>
             </div>
