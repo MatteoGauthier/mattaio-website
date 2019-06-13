@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-fundamentals",
+  "version": "1.0.0",
+  "description": "My tremendous Nuxt.js project",
+  "author": "Mattèo Gauthier",
+  "private": true,
+  "config": {
+    "nuxt": {
+      "host": "192.168.1.9",
+      "port": "3000"
+    }
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/font-awesome": "^1.0.4",
+    "@nuxtjs/pwa": "^2.6.0",
+    "bulma": "^0.7.5",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.9",
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.7",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "sass-loader": "^7.1.0"
+  }
+}

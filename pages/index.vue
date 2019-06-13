@@ -1,0 +1,37 @@
+<template>
+  <div>
+    <section class="hero has-bg-img">
+      <div class="hero-body">
+        <div class="container">
+          <h1 id="title" class="title has-text-white">Mattèo Gauthier</h1>
+          <h2 class="subtitle has-text-light">
+            Bonjour et bienvenue sur une page qui vous permetteras d'en savoir plus sur Mattèo Gauthier 😃
+          </h2>
+        </div>
+      </div>
+    </section>
+    <PostsPreview/>
+  </div>
+</template>
+
+<script>
+import PostsPreview from "@/components/PostsPreview.vue";
+export default {
+  components: {
+    PostsPreview
+
+  }
+}
+
+</script>
+
+<style>
+.has-bg-img {
+  background: url("../assets/res/cropped-bg.jpg") center center;
+  background-size: cover;
+}
+
+#title {
+  font-weight: 700;
+}
+</style>
