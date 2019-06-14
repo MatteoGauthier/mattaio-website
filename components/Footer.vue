@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer is-size-7-mobile">
     <div class="is-pulled-left">
       <p>
         <a class="linkn" href="https://semoule.fr"><strong>Semoule.fr</strong></a> 2017 → 2019 by
@@ -42,6 +42,7 @@
 
   footer {
     padding: 3rem 1.5rem 3rem !important; // TODO I don't know how to override the bulma default value
+    
   }
 
 </style>

@@ -10,6 +10,8 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [ ] Clean the projects
 - [ ] Fix the errors on build (size limit)
 - [ ] I don't know how to override the bulma default value
+- [ ] Make the tags indexable (on click > page with all blog-posts with this tag)
+- [ ] better footer
 
 ## Development - Build
 

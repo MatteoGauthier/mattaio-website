@@ -2,9 +2,13 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        
+
+        <nuxt-link class="navbar-item" :to="{name: 'index'}">
           <h1 class="title logo-text">Mattèo Gauthier</h1>
-        </a>
+
+
+        </nuxt-link>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
           data-target="navbarBasicExample">
@@ -16,8 +20,7 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item soonPop">Mes posts</a>
-
+          <nuxt-link class="navbar-item" :to="{name: 'posts'}">Mes posts</nuxt-link>
           <a class="navbar-item">About</a>
           <a class="navbar-item">Contact</a>
         </div>
@@ -74,6 +77,9 @@
 
   .logo-text {
     font-weight: 800;
+  }
+  .navbar {
+    box-shadow: 0px 1px 4px #0000004a;
   }
 
 </style>
