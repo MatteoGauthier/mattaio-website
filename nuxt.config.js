@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: "Mattèo's Personnal Website",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -53,5 +53,15 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
+  // generate: {
+  //   routes: function () {
+  //     return axios.get('')
+  //     .then((res) => {
+  //       return res.data.map((user) => {
+  //         return '/posts/' + user.id
+  //       })
+  //     })
+  //   }
+  // }
 }

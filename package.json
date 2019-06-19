@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-fundamentals",
+  "name": "mattaio-website",
   "version": "1.0.0",
-  "description": "My tremendous Nuxt.js project",
+  "description": "Mattèo Gauthier personnal website, find out some blog-posts, tutorials, etc ..",
   "author": "Mattèo Gauthier",
   "private": true,
   "config": {
