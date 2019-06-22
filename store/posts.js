@@ -1,4 +1,6 @@
+
 export const state = () => ({
+  logicBack: [],
   all: [{
       id: 'balut',
       title: 'What is balut',

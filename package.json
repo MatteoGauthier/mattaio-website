@@ -1,15 +1,9 @@
 {
-  "name": "mattaio-website",
+  "name": "Mattaio-Website",
   "version": "1.0.0",
-  "description": "Mattèo Gauthier personnal website, find out some blog-posts, tutorials, etc ..",
+  "description": "Mattèo Gauthier personnal website, find out some blog-posts, tutorials, et",
   "author": "Mattèo Gauthier",
   "private": true,
-  "config": {
-    "nuxt": {
-      "host": "192.168.1.9",
-      "port": "3000"
-    }
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -17,10 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/pwa": "^2.6.0",
-    "bulma": "^0.7.5",
-    "font-awesome": "^4.7.0",
+    "nuxt": "^2.0.0",
     "tippy.js": "^4.3.4"
   },
   "devDependencies": {

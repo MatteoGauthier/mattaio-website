@@ -11,7 +11,9 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [ ] Fix the errors on build (size limit)
 - [ ] I don't know how to override the bulma default value
 - [ ] Make the tags indexable (on click > page with all blog-posts with this tag)
-- [ ] better footer
+- [x] better footer
+- [ ] Fetch data markdown, work with middleware
+
 
 ## Development - Build
 
