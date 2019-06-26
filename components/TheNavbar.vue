@@ -20,7 +20,7 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <nuxt-link class="navbar-item" :to="{name: 'posts'}">Mes posts</nuxt-link>
+          <nuxt-link class="navbar-item" :to="{name: 'blog'}">Mes posts</nuxt-link>
           <a class="navbar-item">About</a>
           <a class="navbar-item">Contact</a>
         </div>

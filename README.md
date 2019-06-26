@@ -1,19 +1,22 @@
 # Mattèo's website
-Hello everyone, here is the repository of my personnal website, it is powered by vue.js through the nuxt.js framework, remark, this project is in beta so it probably contains bugs and some mistakes.
+Hello everyone, here is the repository of my personnal website, it is powered by vue.js through the nuxt.js framework, markdownit, front-matter, obviously VueJ and the powerfull Bulma Framework. This project is in beta so it probably contains bugs and some mistakes.
 
 If you wan't to contribute to the development of the project it is possible and encouraged 😄 (I'm a novice developer that's why my apps may have an ugly code style). Feel free to publish issue it's so helpful 😇
 
-## TODO
+## TODO's
 If you know the answer you can open a pull request, a new issue or send me an [email](mailto:matteo.gauthier@gmail.com).
 
 - [ ] Align the tags to the bottom
+- [ ] Move the footer at the bottom 
 - [ ] Clean the projects
 - [ ] Fix the errors on build (size limit)
 - [ ] I don't know how to override the bulma default value
 - [ ] Make the tags indexable (on click > page with all blog-posts with this tag)
 - [x] better footer
 - [ ] Fetch data markdown, work with middleware
-
+- [x] Add ga.js
+- [ ] Create the homepage hero
+- [ ] Find a way to host properly my website
 
 ## Development - Build
 
@@ -42,5 +45,7 @@ npm run dev
 
 ## Credits
 
-* `vue.js` [frameworks](https://github.com/vuejs/vue) by Discord.js team
-* `nuxt.js` [frameworks](https://github.com/nuxt/nuxt.js) by Nuxt.js team 
+* `vue.js` [framework](https://github.com/vuejs/vue) by Discord.js team
+* `nuxt.js` [framework](https://github.com/nuxt/nuxt.js) by Nuxt.js team
+* `bulma` [framework](bulma.io) by Jeremy Thomas
+* [Nicolò Rebughini](https://github.com/nirebu) and is his blog that helped me to build mine

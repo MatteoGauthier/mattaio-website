@@ -1,4 +1,4 @@
-// @import "~/assets/overBuefy.scss";
+
 @import '~bulma/sass/utilities/initial-variables'; @import '~bulma/sass/utilities/functions';
 @import url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.9.0/css/all.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
@@ -18,15 +18,24 @@ html {
   
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 5px;
+}
+
 footer {
 
+  
   width: 100%;
   padding: 3rem 1.5rem 3rem;
-  right: 0;
   bottom: 0;
   left: 0;
-    position: relative;
-    display: flow-root;
+  right: 0;
+  display: flow-root;
+  position: relative;
   +mobile {
     border: solid 20px green;
   }
@@ -47,4 +56,56 @@ footer {
     position: relative;
 }
 
-@import '~bulma';
+.has-background-gradient {
+    animation : bg-hue 30s infinite;
+    background: #020021;
+    background: linear-gradient(166deg, #020021 0%, #00758c 140%);
+    // border-bottom: solid black 2px;
+    
+}
+.slideee {
+  height: 4px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transform: translateY(-4px)
+}
+.slideee:before{
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 4px;
+  background: rgb(2,0,33);
+background: linear-gradient(90deg, rgba(2,0,33,0) 0%, rgba(255,255,255,1) 100%);
+  animation: loading 5s linear infinite;
+  border-radius: 5px;
+}
+
+@keyframes loading {
+    from {left: -400px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+
+
+@keyframes bg-hue {
+  from {
+    
+  }
+}
+
+.page-enter-active, .page-leave-active {
+  transition: all .30s ease-out;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+@import '~bulma'; // Check if it's work (@import "~bulma/bulma.sass";)

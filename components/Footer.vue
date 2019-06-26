@@ -40,8 +40,5 @@
     }
   }
 
-  footer {
-    padding: 3rem 1.5rem 3rem !important; // TODO I don't know how to override the bulma default value
-  }
-
+  
 </style>

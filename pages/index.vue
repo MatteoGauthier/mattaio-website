@@ -11,7 +11,7 @@
         </div>
       </div>
     </section>
-    <PostsPreview/>
+    <!-- <PostsPreview/> -->
   </div>
 </template>
 
