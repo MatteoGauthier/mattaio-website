@@ -17,7 +17,7 @@ function getSlugs(post, _) {
 const routerBase = process.env.DEPLOY_ENV === "GH_PAGES"
   ? {
     router: {
-      base: "/my-project/",
+      base: "/mattaio-website/",
     },
   }
   : {
@@ -86,6 +86,7 @@ export default {
       }
     ]
   ],
+  ...routerBase,
   generate: {
     routes: function() {
       return files.map(getSlugs);
@@ -137,6 +138,3 @@ export default {
     }
   }
 };
-module.exports = {
-  routerBase
-}
