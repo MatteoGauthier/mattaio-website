@@ -8,8 +8,10 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "deploy": "nuxt generate && surge dist/ mattaio-website.surge.sh && push-dir --dir=dist --branch=gh-pages --cleanup && now"
+    "deploy": "nuxt generate && surge dist/ mattaio-website.surge.sh && push-dir --dir=dist --branch=gh-pages --cleanup --verbose && now",
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
+
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -44,5 +46,4 @@
       "host": "192.168.1.9",
       "port": "8080"
     }
-  }
-}
+  }}
