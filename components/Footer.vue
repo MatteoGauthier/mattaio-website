@@ -25,7 +25,9 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+
+  };
 
 </script>
 
@@ -40,5 +42,23 @@
     }
   }
 
-  
+footer {
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (max-width: 528px) {
+  .buttons {
+        justify-content: center;
+  }
+
+  .footer {
+    text-align: center;
+
+    padding: 1.5rem 1.5rem 1.5rem !important;
+    * {
+    float: none !important;}
+  }
+}
+
+
 </style>

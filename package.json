@@ -14,13 +14,15 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/font-awesome": "^1.0.4",
-    "@nuxtjs/pwa": "^2.6.0",
-    "nuxt": "^2.0.0",
-    "tippy.js": "^4.3.4",
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/moment": "^1.2.0",
+    "@nuxtjs/pwa": "^2.6.0",
+    "bulma-modal-fx": "^1.1.1",
     "cross-env": "^5.2.0",
-    "glob": "^7.1.4"
+    "glob": "^7.1.4",
+    "node-snackbar": "^0.1.15",
+    "nuxt": "^2.0.0",
+    "tippy.js": "^4.3.4"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
@@ -35,5 +37,11 @@
     "frontmatter-markdown-loader": "^1.7.0",
     "responsive-loader": "^1.2.0",
     "sharp": "^0.22.1"
+  },
+  "config": {
+    "nuxt": {
+      "host": "192.168.1.9",
+      "port": "8080"
+    }
   }
 }

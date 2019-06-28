@@ -30,7 +30,9 @@ export default {
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    link: [{ rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"}]
+    link: [{ rel: "stylesheet", href:"https://indestructibletype.com/fonts/Jost.css", type:"text/css", charset:"utf-8" }],
+    // link: [{ rel: "stylesheet", href:"https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css", type:"text/css", charset:"utf-8" }],
+    script: [{ type:"text/javascript", src:"https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"}]
   },
   loading: {
     color: "#4FC08D",
@@ -45,7 +47,7 @@ export default {
    */
   plugins: [],
   
-  transition: {
+  pageTransition: {
     name: "page",
     mode: "out-in"
   },

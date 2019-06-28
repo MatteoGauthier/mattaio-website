@@ -17,6 +17,7 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [x] Add ga.js
 - [ ] Create the homepage hero
 - [ ] Find a way to host properly my website
+- [ ] Modal Close when the value is changed (contact section)
 
 ## Development - Build
 
@@ -49,3 +50,5 @@ npm run dev
 * `nuxt.js` [framework](https://github.com/nuxt/nuxt.js) by Nuxt.js team
 * `bulma` [framework](bulma.io) by Jeremy Thomas
 * [Nicolò Rebughini](https://github.com/nirebu) and is his blog that helped me to build mine
+* `node-snackbar` [utility](https://github.com/polonel/SnackBar) by Chris Brame
+* `Jost*` [font](https://indestructibletype.com/Jost.html) by indestructible type*

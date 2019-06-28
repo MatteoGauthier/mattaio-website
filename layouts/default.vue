@@ -24,6 +24,7 @@ export default {
       placement: "bottom",
       theme: "light-border"
     });
+    
     }
 };
 </script>

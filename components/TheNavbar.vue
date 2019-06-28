@@ -22,7 +22,7 @@
         <div class="navbar-start">
           <nuxt-link class="navbar-item" :to="{name: 'blog'}">Mes posts</nuxt-link>
           <a class="navbar-item">About</a>
-          <a class="navbar-item">Contact</a>
+          <nuxt-link class="navbar-item" :to="{name: 'contact'}">Contact</nuxt-link>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">

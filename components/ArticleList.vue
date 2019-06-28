@@ -5,14 +5,14 @@
         <div class="container ">
           <div class="boxs">
 
-          <div class="title has-text-white" id="blog-text">Blog <i class="fas fa-feather-alt"></i></div>
-          <div class="subtitle">Retrouve ici mes derniers articles</div>
+            <div class="title has-text-white" id="blog-text">Blog <i class="fas fa-feather-alt"></i></div>
+            <div class="subtitle">Retrouve ici mes dernières publications</div>
           </div>
-          
-          </div>
+
+        </div>
       </div>
     </div>
-        <div class="slideee"></div>
+    <div class="slideee"></div>
     <section class="section">
       <div class="container">
         <div class="columns is-centered">
@@ -50,49 +50,60 @@
 </template>
 
 <script>
-export default {
-  computed: {
-    bloglist() {
-      if (!this.isPaginated) {
-        return this.$store.state.bloglist.slice(0, this.postsPerPage);
-      } else {
-        return this.$store.state.bloglist;
+  export default {
+    computed: {
+      bloglist() {
+        if (!this.isPaginated) {
+          return this.$store.state.bloglist.slice(0, this.postsPerPage);
+        } else {
+          return this.$store.state.bloglist;
+        }
+      },
+      totalPages() {
+        return this.isPaginated ?
+          Math.ceil(this.$store.state.bloglist.length / this.postsPerPage) :
+          1;
       }
     },
-    totalPages() {
-      return this.isPaginated
-        ? Math.ceil(this.$store.state.bloglist.length / this.postsPerPage)
-        : 1;
+    props: {
+      isPaginated: Boolean,
+      postsPerPage: Number
     }
-  },
-  props: {
-    isPaginated: Boolean,
-    postsPerPage: Number
-  }
-};
+  };
+
 </script>
 
 <style scoped lang="scss">
-.preview-image {
-  width: 12vw;
-}
-.hero-body {
-  padding: 1.5rem;
-}
 
-.boxs {
-  border: solid rgb(221, 221, 221) 2px ;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 1.2rem;
-  #blog-text {
-  font-family: 'Source Code Pro', monospace;
-  text-align: left;
-}
-.subtitle {
-  color: white;
-}
-}
+  .preview-image {
+    width: 12vw;
+  }
 
+  .hero-body {
+    padding: 1.5rem;
+  }
+
+  .boxs {
+    border: solid rgb(221, 221, 221) 2px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 1.2rem;
+
+    #blog-text {
+      font-family: 'Source Code Pro', monospace;
+      text-align: left;
+    }
+
+    .subtitle {
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .boxs #blog-text {
+      text-align: center;
+    }
+  }
 
 </style>
