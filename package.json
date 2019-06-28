@@ -2,16 +2,19 @@
   "name": "Mattaio-Website",
   "version": "1.0.0",
   "description": "Mattèo Gauthier personnal website, find out some blog-posts, tutorials, et",
+  "keywords": ["Mattèo Gauthier", "Mattèo", "semoule.fr", "semoule", "mattaio-website", "personnal website"],
   "author": "Mattèo Gauthier",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "top": "node test.js",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate && surge dist/ mattaio-website.surge.sh && push-dir --dir=dist --branch=gh-pages --cleanup --verbose && now",
+    "deploy": "nuxt generate && surge dist/ mattaio.surge.sh && DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --cleanup --verbose && now",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "gh-page": "cross-env DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
 
   },
   "dependencies": {

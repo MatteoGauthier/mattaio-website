@@ -5,6 +5,8 @@ let files = glob.sync("**/*.md", {
   cwd: "articles"
 });
 
+
+
 // We define a function to trim the '.md' from the filename
 // and return the correct path.
 // This function will be used later
@@ -30,6 +32,7 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: 'keywords', content: "Mattèo Gauthier, Mattèo, semoule.fr, semoule, mattaio-website, personnal website"},
       {
         hid: "description",
         name: "description",

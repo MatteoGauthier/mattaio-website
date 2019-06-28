@@ -43,8 +43,8 @@
   }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  // position: absolute;
+  // bottom: 0;
 }
 @media screen and (max-width: 528px) {
   .buttons {
