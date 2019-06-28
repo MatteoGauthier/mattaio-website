@@ -52,7 +52,6 @@
 </script>
 
 <style scoped lang="scss">
-  @import url('https://cdn.jsdelivr.net/gh/MattixNow/OnEstCombien/res/snackbar.css');
   //@import url('https://indestructibletype.com/fonts/Jost.css');
 
   #title {
