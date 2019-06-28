@@ -2,22 +2,28 @@
   "name": "Mattaio-Website",
   "version": "1.0.0",
   "description": "Mattèo Gauthier personnal website, find out some blog-posts, tutorials, et",
-  "keywords": ["Mattèo Gauthier", "Mattèo", "semoule.fr", "semoule", "mattaio-website", "personnal website"],
+  "keywords": [
+    "Mattèo Gauthier",
+    "Mattèo",
+    "semoule.fr",
+    "semoule",
+    "mattaio-website",
+    "personnal website"
+  ],
   "author": "Mattèo Gauthier",
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt start",
-    "top": "node test.js",
+    "build": "nuxt build",
     "generate": "nuxt generate",
-    "direct-deploy": "npm run typical-deploy && npm run ghpages-deploy",
-    "typical-deploy":"nuxt generate && surge dist/ mattaio.surge.sh && now",
-    "ghpages-deploy":"generate:gh-pages && cross-env DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --verbose",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "top": "node test.js",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "gh-page": "cross-env DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --verbose"
-
+    "direct-deploy": "npm run typical-deploy && npm run ghpages-deploy",
+    "typical-deploy": "nuxt generate && surge dist/ mattaio.surge.sh && now",
+    "ghpages-deploy": "npm run generate:gh-pages && npm run gh-pages",
+    "gh-pages": "cross-env DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --verbose"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -27,12 +33,12 @@
     "@nuxtjs/moment": "^1.2.0",
     "@nuxtjs/pwa": "^2.6.0",
     "bulma-modal-fx": "^1.1.1",
-    "cross-env": "^5.2.0",
     "glob": "^7.1.4",
     "node-snackbar": "^0.1.15",
     "tippy.js": "^4.3.4"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "@nuxtjs/markdownit": "^1.2.5",
     "@nuxtjs/style-resources": "^0.1.2",
     "bulma": "^0.7.5",
@@ -52,4 +58,5 @@
       "host": "192.168.1.9",
       "port": "8080"
     }
-  }}
+  }
+}

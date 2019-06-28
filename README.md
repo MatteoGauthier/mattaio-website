@@ -7,15 +7,15 @@ If you wan't to contribute to the development of the project it is possible and 
 If you know the answer you can open a pull request, a new issue or send me an [email](mailto:matteo.gauthier@gmail.com).
 
 - [ ] Align the tags to the bottom
-- [ ] Move the footer at the bottom 
-- [ ] Clean the projects
+- [x] Move the footer at the bottom 
+- [x] Clean the projects
 - [ ] Fix the errors on build (size limit)
 - [ ] I don't know how to override the bulma default value
 - [ ] Make the tags indexable (on click > page with all blog-posts with this tag)
 - [x] better footer
-- [ ] Fetch data markdown, work with middleware
+- [x] Fetch data markdown
 - [x] Add ga.js
-- [ ] Create the homepage hero
+- [x] Create the homepage hero
 - [ ] Find a way to host properly my website
 - [ ] Modal Close when the value is changed (contact section)
 
@@ -44,6 +44,7 @@ npm run dev
 ```
 ✨ Open your browser at localhost:3000 ✨
 
+> For deployment see the package.json file
 ## Credits
 
 * `vue.js` [framework](https://github.com/vuejs/vue) by Discord.js team
