@@ -14,15 +14,22 @@ function getSlugs(post, _) {
   let slug = post.substr(0, post.lastIndexOf("."));
   return `/blog/${slug}`;
 }
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/mattaio-website/'
-  },
-  mode: "spa",
-} : {}
+const routerBase = process.env.DEPLOY_ENV === "GH_PAGES"
+  ? {
+    router: {
+      base: "/my-project/",
+    },
+  }
+  : {
+    router: {
+      base: "/",
+    },
+  }
+
 
 
 export default {
+  routerBase,
   mode: "universal",
   /*
    ** Headers of the page
