@@ -18,6 +18,7 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [x] Create the homepage hero
 - [ ] Find a way to host properly my website
 - [ ] Modal Close when the value is changed (contact section)
+- [ ] Add video support markdown-it
 
 ## Development - Build
 
