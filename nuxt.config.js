@@ -1,4 +1,7 @@
 const glob = require("glob");
+const webhook = require("webhook-discord")
+ 
+const Hook = new webhook.Webhook("https://discordapp.com/api/webhooks/594532612224319496/i8vv4upuSlQoc9U3PW2WJUlrnncMZF97daCur-GdDiJM1pN6MIP4qu3hXC95TQXfMsJI")
 // we acquire an array containing the filenames
 // in the articles directory
 let files = glob.sync("**/*.md", {
@@ -21,7 +24,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 } : {}
   
 
-
+if (process.env.DEPLOY_ENV == 'GH_PAGES') {
+  Hook.info("Node.js Debugger",`🎉 ${process.env.npm_package_name} have just been deployed in production mode 📦`)
+}
 
 export default {
   mode: "universal",

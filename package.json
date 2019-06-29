@@ -35,7 +35,8 @@
     "bulma-modal-fx": "^1.1.1",
     "glob": "^7.1.4",
     "node-snackbar": "^0.1.15",
-    "tippy.js": "^4.3.4"
+    "tippy.js": "^4.3.4",
+    "webhook-discord": "^3.2.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
