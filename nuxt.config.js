@@ -46,7 +46,7 @@ export default {
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    link: [{ rel: "stylesheet", href:"https://indestructibletype.com/fonts/Jost.css", type:"text/css", charset:"utf-8" }],
+    link: [{ rel: "stylesheet", href:"https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/fonts/Jost/Jost.css", type:"text/css", charset:"utf-8" }],
     // link: [{ rel: "stylesheet", href:"https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css", type:"text/css", charset:"utf-8" }],
     script: [{ type:"text/javascript", src:"https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"}]
   },
@@ -78,6 +78,7 @@ export default {
     "@nuxtjs/bulma",
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
+    ["@nuxtjs/component-cache", {maxAge : 31557600}],
     [
       "@nuxtjs/google-analytics",
       {

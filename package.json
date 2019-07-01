@@ -28,6 +28,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/bulma": "^1.2.1",
+    "@nuxtjs/component-cache": "^1.1.5",
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/moment": "^1.2.0",
