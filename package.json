@@ -32,7 +32,7 @@
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/moment": "^1.2.0",
-    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/pwa": "latest",
     "bulma-modal-fx": "^1.1.1",
     "glob": "^7.1.4",
     "node-snackbar": "^0.1.15",
@@ -57,7 +57,7 @@
   },
   "config": {
     "nuxt": {
-      "host": "192.168.1.9",
+      "host": "localhost",
       "port": "8080"
     }
   }

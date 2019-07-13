@@ -74,7 +74,7 @@
 </script>
 
 <style scoped lang="scss">
-
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:600&display=swap&text=Blog');
   .preview-image {
     width: 12vw;
   }
