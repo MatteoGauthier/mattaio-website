@@ -53,7 +53,7 @@ export default {
   loading: {
     color: "#4FC08D",
     failedColor: "#bf5050",
-    duration: 1500,
+    duration: 1200,
     height: '5px'
   },
 
