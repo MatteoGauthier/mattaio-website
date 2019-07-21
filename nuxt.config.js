@@ -1,7 +1,8 @@
 const glob = require("glob");
 const webhook = require("webhook-discord")
+const webhookUrl = process.env.WEBHOOK_URL || ''
  
-const Hook = new webhook.Webhook("https://discordapp.com/api/webhooks/594532612224319496/i8vv4upuSlQoc9U3PW2WJUlrnncMZF97daCur-GdDiJM1pN6MIP4qu3hXC95TQXfMsJI")
+const Hook = new webhook.Webhook(webhookUrl)
 // we acquire an array containing the filenames
 // in the articles directory
 let files = glob.sync("**/*.md", {
