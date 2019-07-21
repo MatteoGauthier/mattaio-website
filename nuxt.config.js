@@ -1,6 +1,6 @@
 const glob = require("glob");
 const webhook = require("webhook-discord")
-const webhookUrl = process.env.WEBHOOK_URL || ''
+const webhookUrl = process.env.WEBHOOK_URL || 'https://discordapp.com/api/webhooks/60G_BvODPFEedT-hozwA'
  
 const Hook = new webhook.Webhook(webhookUrl)
 // we acquire an array containing the filenames
