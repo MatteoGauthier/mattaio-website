@@ -14,7 +14,7 @@
           developer
           who is currently working with technologies such as Javascript, Python, Node.js and obviously Web. I can also
           use
-          editing software like Premiere Pro, Photoshop or Figma. My actual status is middleschool student on my 12th
+          editing softwares like Premiere Pro, Photoshop or Figma. My actual status is middleschool student on my 12th
           year.</div>
       </div>
     </div>
