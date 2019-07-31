@@ -14,9 +14,8 @@
       </section>
     <section class="section">
       <div class="container">
-        <div class="columns">
-          <article class="column">
-            <div class="content">
+        <div class="">
+          <article class="">
               <div v-html="content" class="blog-content content"></div>
               <!-- <div class="field is-grouped">
                 <div class="control">
@@ -28,7 +27,6 @@
                   </div>
                 </div>
               </div>-->
-            </div>
           </article>
           <!-- <aside class="column">
             <div class="has-text-centered box has-background-white">
@@ -73,7 +71,7 @@ export default {
   },
   head() {
     return {
-      title:  this.attributes.title + " - " + process.env.npm_package_name || "",
+      title:  this.attributes.title + " - " + process.env.npm_package_name || "Mattaio-Website",
       meta: [
         {
           hid: "description",
