@@ -1,4 +1,3 @@
-# Tuto - Création d'une application CLI avec NodeJS
 ---
 title: "Tuto - Création d'une application CLI avec NodeJS"
 published: true
@@ -7,6 +6,7 @@ tags: node,nodejs,cli,app,yargs
 ctime: 2019-07-31
 author: Mattèo Gauthier
 ---
+# Tuto - Création d'une application CLI avec NodeJS
 
 Pendant mon stage à TBWA\Paris j'ai eu du temps pour commencer le développement d'une suite d'application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J'ai crée une simple application qui affiche les données public d'un utilisateur Github. Voyons sont fonctionnement :
 
