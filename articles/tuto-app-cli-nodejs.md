@@ -10,11 +10,11 @@ author: Mattèo Gauthier
 
 Pendant mon stage à TBWA\Paris j'ai eu du temps pour commencer le développement d'une suite d'application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J'ai crée une simple application qui affiche les données public d'un utilisateur Github. Voyons sont fonctionnement :
 
-    									╭──────────────────────╮
-    									│                      │
-    									│   Github User Info   │
-    									│                      │
-    									╰──────────────────────╯
+                        ╭──────────────────────╮
+                        │                      │
+                        │   Github User Info   │
+                        │                      │
+                        ╰──────────────────────╯
     
     ? What's your Github username? » [ur username]
 
