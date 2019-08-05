@@ -100,4 +100,7 @@ export default {
 .postsOlist {
   margin-top: 0.75rem;
 }
+article {
+  text-align: justify;
+}
 </style>

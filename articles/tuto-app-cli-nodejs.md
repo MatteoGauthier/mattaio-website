@@ -5,16 +5,17 @@ description: Simple approche des applications cli avec nodejs
 tags: node,nodejs,cli,app,yargs
 ctime: 2019-07-31
 author: Mattèo Gauthier
+filename: tuto-app-cli-nodejs.md
 ---
 # Tuto - Création d'une application CLI avec NodeJS
 
 Pendant mon stage à TBWA\Paris j'ai eu du temps pour commencer le développement d'une suite d'application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J'ai crée une simple application qui affiche les données public d'un utilisateur Github. Voyons sont fonctionnement :
 
-                        ╭──────────────────────╮
-                        │                      │
-                        │   Github User Info   │
-                        │                      │
-                        ╰──────────────────────╯
+    						╭──────────────────────╮
+    						│                      │
+    						│   Github User Info   │
+    						│                      │
+    						╰──────────────────────╯
     
     ? What's your Github username? » [ur username]
 
@@ -171,3 +172,4 @@ Puis le fichier `cli.js`
 **Maintenant votre application est disponible dans votre terminal avec la commande `emoji-app` !**
 
 > Merci d'avoir lu ce bref tutoriel n'hésitez pas à partager vos programmes et à me donner votre avis sur ce post
+> 
