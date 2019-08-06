@@ -35,18 +35,25 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Mattèo Gauthier - mattaio-website",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: 'keywords', content: "Mattèo Gauthier, Mattèo, semoule.fr, semoule, mattaio-website, personnal website"},
+      { name: 'msapplication-TileColor', content: "#2b5797"},
+      { name: 'theme-color', content: "#fff"},
       {
         hid: "description",
         name: "description",
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{rel: 'icon',type: 'image/x-icon', href: 'favicon.ico?v2',}],
+    link: [{ rel: "apple-touch-icon", type: "image/png", sizes: "180x180", href: "/apple-touch-icon.png" }],
+    link: [{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    link: [{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
+    link: [{ rel: "manifest", href: "/site.webmanifest" }],
+    link: [{ rel: "mask-icon", href: "/safari-pinned-tab.svg" , color:"#5bbad5"}],
     link: [{ rel: "stylesheet", href:"https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/fonts/Jost/Jost.css", type:"text/css", charset:"utf-8" }],
     // link: [{ rel: "stylesheet", href:"https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css", type:"text/css", charset:"utf-8" }],
     script: [{ type:"text/javascript", src:"https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"}]
