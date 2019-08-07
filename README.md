@@ -10,16 +10,17 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [x] Move the footer at the bottom 
 - [x] Clean the projects
 - [ ] Fix the errors on build (size limit)
-- [ ] I don't know how to override the bulma default value
+- [x] I don't know how to override the bulma default value
 - [ ] Make the tags indexable (on click > page with all blog-posts with this tag)
 - [x] better footer
 - [x] Fetch data markdown
 - [x] Add ga.js
 - [x] Create the homepage hero
-- [ ] Find a way to host properly my website
+- [x] Find a way to host properly my website
 - [ ] Modal Close when the value is changed (contact section)
 - [ ] Add video support markdown-it
-- [ ] Now.sh doesn't display the title
+- [x] Now.sh doesn't display the title
+- [ ] Assign text align justify only for paragraphs
 
 ## Development - Build
 
