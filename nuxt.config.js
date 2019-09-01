@@ -20,7 +20,8 @@ function getSlugs(post, _) {
 }
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/mattaio-website/'
+    base: '/mattaio-website/',
+    
   }
 } : {}
   
@@ -70,7 +71,6 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [],
-  
   pageTransition: {
     name: "page",
     mode: "out-in"
