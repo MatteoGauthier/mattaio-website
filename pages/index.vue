@@ -10,7 +10,7 @@
           <div id="subtitle">{{heroDesc.a}}</div>
           <div id="subtitle">{{heroDesc.b}}</div>
         </div>
-        <div class="rectangle yo">Hey, my name is Mattèo, I’m 16 yo. I live in Poitiers in France. I am a novice
+        <div class="rectangle yo">Hey, my name is Mattèo, I’m 17 yo. I live in Poitiers in France. I am a novice
           developer
           who is currently working with technologies such as Javascript, Python, Node.js and obviously Web. I can also
           use
