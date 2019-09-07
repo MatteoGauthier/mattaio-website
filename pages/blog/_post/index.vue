@@ -76,7 +76,7 @@ export default {
   
   head() {
     return {
-      title:  this.attributes.title + " - " + process.env.npm_package_name || "Mattaio-Website",
+      title:  this.attributes.title + " - " + "Mattaio-Website",
       meta: [
         {
           hid: "description",
@@ -114,7 +114,7 @@ article {
 }
 .landing {
     display: inline-block;
-    background-color: #f0f8ff6b;
+    background-color: #f5f5f56b;
     padding: 1rem;
 }
 .hero-body {
