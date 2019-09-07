@@ -5,8 +5,9 @@ description: "Résumé jour par jour de mon stage dans l'entreprise\\TBWA"
 tags: stage,paris,tbwa,Boulogne
 ctime: 2019-07-14
 author: Mattèo Gauthier
+landingImg: "tbwa-landing.jpg"
 ---
-Pendant les vacances scolaires de l’été 2019, j’ai eu la chance d’être stagiaire au sein de l’entreprise TBWA/Paris pendant 1 semaine. Ce post a été écrit chaque jour de stage, il résume brièvement le stage effectué.
+*Pendant les vacances scolaires de l’été 2019, j’ai eu la chance d’être stagiaire au sein de l’entreprise TBWA/Paris pendant 1 semaine. Ce post a été écrit chaque jour de stage, il résume brièvement le stage effectué.*
 
 # Premier Jour
 

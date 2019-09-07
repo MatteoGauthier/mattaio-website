@@ -1,23 +1,24 @@
 <template>
   <div :key="$route.params.post">
-      <section class="hero is-light has-text-centered">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">{{attributes.title}}</h1>
-            <div class="subtitle">
-                Published on <time>{{require('moment')(attributes.ctime).format('Do MMM YYYY')}}</time>
-              <!-- Published on {{attributes.ctime}} -->
-              by {{ attributes.author }}
-            </div>
+    <section class="hero is-light has-text-centered">
+      <div class="hero-body" :style="{backgroundImage: landingImg}">
+        <div class="container landing">
+          <h1 class="title">{{attributes.title}}</h1>
+          <div class="subtitle">
+            Published on
+            <time>{{require('moment')(attributes.ctime).format('Do MMM YYYY')}}</time>
+            <!-- Published on {{attributes.ctime}} -->
+            by {{ attributes.author }}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     <section class="section">
       <div class="container">
-        <div class="">
-          <article class="">
-              <div v-html="content" class="blog-content content"></div>
-              <!-- <div class="field is-grouped">
+        <div class>
+          <article class>
+            <div v-html="content" class="blog-content content"></div>
+            <!-- <div class="field is-grouped">
                 <div class="control">
                   <span class="tag has-text-grey is-white is-paddingless">Tags :</span>
                 </div>
@@ -26,7 +27,7 @@
                     <span v-for="tags in post.tags" :key="tags" class="tag is-grey has-text-dark">{{tags}}</span>
                   </div>
                 </div>
-              </div>-->
+            </div>-->
           </article>
           <!-- <aside class="column">
             <div class="has-text-centered box has-background-white">
@@ -64,11 +65,15 @@ export default {
     return {
       // attributes will be an object containing the markdown metadata
       attributes: res.attributes,
+      
+      landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg )+')' : '' ,
+      
       // content will contain the body of the markdown file,
       // rendered in HTML via the `markdownit` class
       content: md.render(res.body)
     };
   },
+  
   head() {
     return {
       title:  this.attributes.title + " - " + process.env.npm_package_name || "Mattaio-Website",
@@ -77,6 +82,10 @@ export default {
           hid: "description",
           name: "description",
           content: this.attributes.description
+        },
+        {
+          name: "keywords",
+          content: this.attributes.tags
         }
       ]
     };
@@ -103,4 +112,14 @@ export default {
 article {
   text-align: justify;
 }
+.landing {
+    display: inline-block;
+    background-color: #f0f8ff6b;
+    padding: 1rem;
+}
+.hero-body {
+      padding: 2rem 1.5rem;
+  background-position: center top;
+}
+
 </style>
