@@ -28,7 +28,7 @@ export const state = () => ({
       }).map(post => {
         let attributes = fm(post.default).attributes;
         attributes.slug = post.slug;
-        attributes.ctime = moment(attributes.ctime).format('DD-MM-YYYY')
+        attributes.ctime = moment(attributes.ctime).format('YYYY-MM-DD')
         return attributes;
       }).sort( (a,b) => {
         return a.ctime < b.ctime;
