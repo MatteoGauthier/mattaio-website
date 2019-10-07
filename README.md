@@ -21,6 +21,7 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [ ] Add video support markdown-it
 - [x] Now.sh doesn't display the title
 - [ ] Assign text align justify only for paragraphs
+- [ ] Now.sh site doesn't show svg image (cv preview)
 
 ## Development - Build
 
