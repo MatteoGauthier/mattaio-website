@@ -17,8 +17,8 @@
       <div class="container">
         <div class>
           <a href='CV_MattèoGauthier_2019.pdf'>
-          <figure class="responsive-img">
-            <img class="" src="CV_MattèoGauthier_2019 blur.svg" alt />
+          <figure class="responsive-img ">
+            <img class="blur" src="CV_MattèoGauthier_2019 small.svg" alt />
             <figcaption>Retrouve mon CV ici <i class="fas fa-arrow-up"></i></figcaption>
           </figure></a>
           <h1 class="title">Présentation</h1>
@@ -67,8 +67,26 @@ export default {};
 article * {
   margin-bottom: 1rem;
 }
-
+.blur {
+  filter: blur(2px);
+  transition: 500ms all;
+}
+.blur:hover {
+  filter: blur(0px)
+}
+.hero-body {
+      padding: 2rem 1.5rem;
+    background-position: center 39%;
+    background-size: cover;
+}
 .title {
   font-size: 2rem;
 }
+.landing {
+    display: inline-block;
+    background-color: #0000006b;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
 </style>
