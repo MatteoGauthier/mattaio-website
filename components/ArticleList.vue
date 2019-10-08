@@ -74,6 +74,18 @@
 </script>
 
 <style scoped lang="scss">
+.columns:not(:last-child) {
+    margin-bottom: calc(1.5rem - -0.25rem);
+}
+
+article {
+      border: solid 1px #e6e6e6;
+    border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+.level-left + .level-right {
+    margin-top: unset;
+}}
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:600&display=swap&text=Blog');
   .preview-image {
     width: 12vw;
