@@ -5,6 +5,7 @@ description: Petite listes de ressources en rapport avec l'entrepreunariat
 tags: marketing,entrepreneuriat,seo,OSS,bookmarks,list,books,business,communication
 ctime: 2019-10-07
 author: Mattèo Gauthier
+landingImg: "josh-calabrese-Ca8r0PSWg9Q-unsplash.jpg"
 ---
 # Marketing, entrepreneuriat bookmarks
 

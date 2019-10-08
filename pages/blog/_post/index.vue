@@ -66,7 +66,7 @@ export default {
       // attributes will be an object containing the markdown metadata
       attributes: res.attributes,
       
-      landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg )+')' : '' ,
+      landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg + '?quality=100' )+')' : '' ,
       
       // content will contain the body of the markdown file,
       // rendered in HTML via the `markdownit` class
@@ -93,8 +93,13 @@ export default {
 };
 </script>
 
-
-<style scoped lang="scss">
+<style lang="scss">
+  
+.blog-content p {
+  text-align: justify;
+}
+</style>
+<style lang="scss" scoped>
 #otherPostsTitle {
   text-align: center;
 }
@@ -109,17 +114,17 @@ export default {
 .postsOlist {
   margin-top: 0.75rem;
 }
-article {
-  text-align: justify;
-}
+
 .landing {
     display: inline-block;
-    background-color: #f5f5f56b;
+    background-color: #f5f5f5a2;
     padding: 1rem;
 }
 .hero-body {
       padding: 2rem 1.5rem;
-  background-position: center top;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
 </style>
