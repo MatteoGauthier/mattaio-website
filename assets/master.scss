@@ -17,7 +17,7 @@ html {
 
 @media (orientation:portrait) {
   .contain {
-        height: 111vh !important;
+        // height: 111vh !important;
   }
  }
 
@@ -47,10 +47,11 @@ footer {
   left: 0;
   right: 0;
   display: flow-root;
-  position: relative;
   +mobile {
     border: solid 20px green;
   }
+  position: absolute;
+    bottom: -107px;
 }
 
 ::selection {
