@@ -110,7 +110,7 @@ export default {
     color: "#85d8ff",
     failedColor: "#bf5050",
     duration: 1200,
-    height: "5px"
+    height: "4px",
   },
 
   css: ["@/assets/master.scss"],
