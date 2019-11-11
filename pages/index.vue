@@ -53,11 +53,11 @@ export default {
   async asyncData ({ params }) {
     return axios.get(`https://api.jsonbin.io/b/5dc840e6c9b247772abd680b/latest`)
       .then((res) => {
-        console.log(res.data[0])
+        // console.log(res.data[0])
         let randomChoice = Math.floor(Math.random() * res.data.length)
         let names = res.data[randomChoice].artists.map(item => item.name)
         let nameString = names.join(', ')
-        console.log(res.data[randomChoice].album.images[2].url)
+        // console.log(res.data[randomChoice].album.images[2].url)
         return { spotifyFetch: {
           title: res.data[randomChoice].name,
           artists: nameString,
@@ -103,6 +103,7 @@ export default {
   display: inline-block;
   background-color: #0e0c0c;
   padding: 14px;
+  padding-top: 5px;
   border-radius: 4px;
   max-width: 50%;
   #spotTop {
@@ -118,6 +119,7 @@ export default {
         url("~static/maskSpot.png") repeat;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      background-clip:text;
     }
     svg {
       float: left;
