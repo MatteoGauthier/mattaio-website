@@ -1,30 +1,29 @@
-const glob = require("glob");
+const glob = require("glob")
 // const webhook = require("webhook-discord")
 // const webhookUrl = process.env.WEBHOOK_URL || 'https://discordapp.com/api/webhooks/60G_BvODPFEedT-hozwA'
- 
+
 // const Hook = new webhook.Webhook(webhookUrl)
 // we acquire an array containing the filenames
 // in the articles directory
 let files = glob.sync("**/*.md", {
   cwd: "articles"
-});
-
-
+})
 
 // We define a function to trim the '.md' from the filename
 // and return the correct path.
 // This function will be used later
 function getSlugs(post, _) {
-  let slug = post.substr(0, post.lastIndexOf("."));
-  return `/blog/${slug}`;
+  let slug = post.substr(0, post.lastIndexOf("."))
+  return `/blog/${slug}`
 }
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/mattaio-website/',
-    
-  }
-} : {}
-  
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        router: {
+          base: "/mattaio-website/"
+        }
+      }
+    : {}
 
 // if (process.env.DEPLOY_ENV == 'GH_PAGES') {
 //   Hook.info("Node.js Debugger",`🎉 ${process.env.npm_package_name} have just been deployed in production mode 📦`)
@@ -94,7 +93,7 @@ export default {
     // link: [{ rel: "stylesheet", href:"https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css", type:"text/css", charset:"utf-8" }],
     script: [
       {
-        rel:'preconnect',
+        rel: "preconnect",
         type: "text/javascript",
         src: "https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"
       }

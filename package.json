@@ -36,14 +36,15 @@
     "bulma-modal-fx": "^1.1.1",
     "glob": "^7.1.4",
     "node-snackbar": "^0.1.15",
+    "nuxt-purgecss": "^0.2.1",
     "tippy.js": "^4.3.4",
     "webhook-discord": "^3.2.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
     "@nuxtjs/markdownit": "^1.2.5",
     "@nuxtjs/style-resources": "^0.1.2",
     "bulma": "^0.7.5",
+    "cross-env": "^5.2.0",
     "frontmatter-markdown-loader": "^1.7.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
