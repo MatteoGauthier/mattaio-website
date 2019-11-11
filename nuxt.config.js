@@ -85,7 +85,7 @@ export default {
       {
         rel: "stylesheet preconnect",
         href:
-          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/fonts/Jost/Jost.css",
+          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@latest/fonts/Jost/Jost.css",
         type: "text/css",
         charset: "utf-8"
       }
@@ -97,20 +97,27 @@ export default {
         type: "text/javascript",
         src: "https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"
       }
+    ,
+    
+      {
+        rel: "preconnect",
+        type: "text/javascript",
+        src: "https://unpkg.com/scrollreveal"
+      }
     ]
   },
   loading: {
-    color: "#4FC08D",
+    color: "#85d8ff",
     failedColor: "#bf5050",
     duration: 1200,
     height: "5px"
   },
 
-  css: ["@/assets/master.scss"],
+  css: ["@/assets/master.scss", "aos/dist/aos.css"],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: "@/plugins/aos.js", mode: "client" }],
   pageTransition: {
     name: "page",
     mode: "out-in"

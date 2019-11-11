@@ -5,8 +5,8 @@
       <div class="the-top">
         <div class="acroche yo">
           <div id="title">{{heroGuy}}</div>
-          <div id="subtitle">{{heroDesc.a}}</div>
-          <div id="subtitle">{{heroDesc.b}}</div>
+          <div class="a-subtitle">{{heroDesc.a}}</div>
+          <div class="a-subtitle">{{heroDesc.b}}</div>
         </div>
         <div class="rectangle yo">
           Hey, my name is Mattèo, I’m 17 yo. I live in Poitiers in France. I am a novice
@@ -141,16 +141,21 @@ export default {
     font-style: normal;
     font-weight: 600;
     font-size: 31px;
-    transform: translate(-28px, 0px);
+    transform: translate(-28px, -4px);
     // overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 32rem;
+    line-height: 2.2rem;
+    overflow: hidden;
   }
   #spotArtists {
     font-family: "Jost", Jost, "Jost *";
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
-    transform: translate(-16px, 0px);
+    transform: translate(-16px, -8px);
     // overflow: hidden;
     white-space: nowrap;
   }
@@ -217,7 +222,7 @@ export default {
     color: black;
   }
 
-  #subtitle {
+  .a-subtitle {
     color: #a2acbd;
 
     font-weight: 500;
@@ -225,7 +230,7 @@ export default {
     line-height: 100%;
   }
 
-  #subtitle:nth-child(2) {
+  .a-subtitle:nth-child(2) {
     color: #6e7788;
   }
 }
