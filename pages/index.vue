@@ -45,25 +45,28 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 import PostsPreview from "@/components/PostsPreview.vue";
 import Snackbar from "node-snackbar";
 
 export default {
-  async asyncData ({ params }) {
-    return axios.get(`https://api.jsonbin.io/b/5dc840e6c9b247772abd680b/latest`)
-      .then((res) => {
+  async asyncData({ params }) {
+    return axios
+      .get(`https://api.jsonbin.io/b/5dc840e6c9b247772abd680b/latest`)
+      .then(res => {
         // console.log(res.data[0])
-        let randomChoice = Math.floor(Math.random() * res.data.length)
-        let names = res.data[randomChoice].artists.map(item => item.name)
-        let nameString = names.join(', ')
+        let randomChoice = Math.floor(Math.random() * res.data.length);
+        let names = res.data[randomChoice].artists.map(item => item.name);
+        let nameString = names.join(", ");
         // console.log(res.data[randomChoice].album.images[2].url)
-        return { spotifyFetch: {
-          title: res.data[randomChoice].name,
-          artists: nameString,
-          thumbnail: res.data[randomChoice].album.images[1].url,
-        }}
-      })
+        return {
+          spotifyFetch: {
+            title: res.data[randomChoice].name,
+            artists: nameString,
+            thumbnail: res.data[randomChoice].album.images[1].url
+          }
+        };
+      });
   },
   data() {
     return {
@@ -116,10 +119,10 @@ export default {
     justify-content: space-between;
     .nowlisten {
       background: -webkit-linear-gradient(transparent, transparent),
-        url("~static/maskSpot.png") repeat;
+        url("~static/maskSpot2.webp") repeat;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
-      background-clip:text;
+      background-clip: text;
     }
     svg {
       float: left;
@@ -128,8 +131,8 @@ export default {
   }
   .spotInfo {
     line-height: 1.6em;
-       margin-top: 1.1rem;
-           text-shadow: 2px 3px 4px black;
+    margin-top: 1.1rem;
+    text-shadow: 2px 3px 4px black;
     text-align: initial;
   }
 
@@ -139,7 +142,7 @@ export default {
     font-weight: 600;
     font-size: 31px;
     transform: translate(-28px, 0px);
-        // overflow: hidden;
+    // overflow: hidden;
     white-space: nowrap;
   }
   #spotArtists {
@@ -148,7 +151,7 @@ export default {
     font-weight: 300;
     font-size: 22px;
     transform: translate(-16px, 0px);
-        // overflow: hidden;
+    // overflow: hidden;
     white-space: nowrap;
   }
   #spotMain {
@@ -271,7 +274,7 @@ export default {
   }
   .floating-listening {
     text-align: center;
-    margin:0;
+    margin: 0;
   }
   .spot-box {
     max-width: none;
