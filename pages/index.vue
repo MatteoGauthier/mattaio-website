@@ -96,6 +96,7 @@ export default {
 
 #title {
   font-weight: 700;
+  line-height: 40px;
 }
 
 // spot
