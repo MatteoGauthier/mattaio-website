@@ -113,7 +113,7 @@ export default {
     height: "5px"
   },
 
-  css: ["@/assets/master.scss", "aos/dist/aos.css"],
+  css: ["@/assets/master.scss"],
   /*
    ** Plugins to load before mounting the App
    */
