@@ -14,7 +14,7 @@
   "private": true,
   
   "engines" : { 
-    "node" : ">=12" 
+    "node" : ">=12.x.x" 
   },
   "scripts": {
     "dev": "nuxt",
