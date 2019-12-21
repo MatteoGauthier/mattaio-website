@@ -1,3 +1,4 @@
+import purgecss from "@fullhuman/postcss-purgecss";
 import PurgecssPlugin from "purgecss-webpack-plugin";
 import glob from "glob-all";
 import path from "path";
@@ -11,12 +12,11 @@ let files = glob.sync("**/*.md", {
   cwd: "articles"
 });
 
-
 // We define a function to trim the '.md' from the filename
 // and return the correct path.
 // This function will be used later
 function getSlugs(post, _) {
-  console.log(post)
+  console.log(post);
   let slug = post.substr(0, post.lastIndexOf("."));
   return `/blog/${slug}`;
 }
@@ -34,7 +34,7 @@ const routerBase =
 //   Hook.info("Node.js Debugger",`🎉 ${process.env.npm_package_name} have just been deployed in production mode 📦`)
 // }
 
-var config = {
+export default {
   mode: "universal",
   /*
    ** Headers of the page
@@ -147,8 +147,7 @@ var config = {
           laptop: 1250
         }
       }
-    ]
-    ,
+    ],
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     ["@nuxtjs/component-cache", { maxAge: 31557600 }],
@@ -157,7 +156,8 @@ var config = {
       {
         id: "UA-125389774-1"
       }
-    ],"@nuxtjs/redirect-module"
+    ],
+    "@nuxtjs/redirect-module"
   ],
   router: {
     scrollBehavior: async (to, from, savedPosition) => {
@@ -197,10 +197,8 @@ var config = {
   },
   ...routerBase,
   generate: {
-    routes: {
-      function() {
-        return files.map(getSlugs);
-      }
+    routes: function() {
+      return files.map(getSlugs);
     }
   },
   axios: {},
@@ -224,8 +222,6 @@ var config = {
           })
         );
       }
-      config.resolve.alias["vue$"] = "vue/dist/vue.esm.js";
-      config.resolve.extensions.push('*', '.js', '.vue', '.json')
       config.module.rules.push({
         test: /\.md$/,
         use: ["raw-loader"]
@@ -258,6 +254,16 @@ var config = {
       };
     },
     postcss: {
+      plugins: [
+        purgecss({
+          content: [
+            "./pages/**/*.vue",
+            "./layouts/**/*.vue",
+            "./components/**/*.vue"
+          ],
+          whitelist: ["html", "body"]
+        })
+      ],
       preset: {
         features: {
           customProperties: false
@@ -266,5 +272,3 @@ var config = {
     }
   }
 };
-
-module.exports = config;
