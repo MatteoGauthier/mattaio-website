@@ -32,8 +32,8 @@
 
 <script>
 import Rellax from "rellax";
-import MiniHero from "~/components/MiniHero";
-import lightBox from "~/components/lightBox";
+import MiniHero from "~/components/MiniHero.vue";
+import lightBox from "~/components/lightBox.vue";
 import aboutData from "~/static/about.json";
 import StoryPreview from "~/components/StoryPreview";
 export default {
