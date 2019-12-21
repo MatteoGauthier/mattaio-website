@@ -12,6 +12,10 @@
   ],
   "author": "Mattèo Gauthier",
   "private": true,
+  
+  "engines" : { 
+    "node" : ">=12" 
+  },
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",

@@ -225,7 +225,7 @@ var config = {
         );
       }
       config.resolve.alias["vue$"] = "vue/dist/vue.esm.js";
-      config.resolve.extensions = ["*", ".js", ".vue", ".json"];
+      config.resolve.extensions.push('*', '.js', '.vue', '.json')
       config.module.rules.push({
         test: /\.md$/,
         use: ["raw-loader"]
