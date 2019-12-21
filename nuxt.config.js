@@ -1,4 +1,6 @@
-const glob = require("glob");
+import PurgecssPlugin from "purgecss-webpack-plugin";
+import glob from "glob-all";
+import path from "path";
 // const webhook = require("webhook-discord")
 // const webhookUrl = process.env.WEBHOOK_URL || 'https://discordapp.com/api/webhooks/60G_BvODPFEedT-hozwA'
 
@@ -206,7 +208,22 @@ var config = {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
     extend(config, { isDev, isClient }) {
+      if (!isDev) {
+        // Remove unused CSS using PurgeCSS. See https://github.com/FullHuman/purgecss
+        // for more information about PurgeCSS.
+        config.plugins.push(
+          new PurgecssPlugin({
+            paths: glob.sync([
+              path.join(__dirname, "./pages/**/*.vue"),
+              path.join(__dirname, "./layouts/**/*.vue"),
+              path.join(__dirname, "./components/**/*.vue")
+            ]),
+            whitelist: ["html", "body"]
+          })
+        );
+      }
       config.module.rules.push({
         test: /\.md$/,
         use: ["raw-loader"]
