@@ -1,4 +1,4 @@
-const glob = require("glob")
+const glob = require("glob");
 // const webhook = require("webhook-discord")
 // const webhookUrl = process.env.WEBHOOK_URL || 'https://discordapp.com/api/webhooks/60G_BvODPFEedT-hozwA'
 
@@ -7,15 +7,18 @@ const glob = require("glob")
 // in the articles directory
 let files = glob.sync("**/*.md", {
   cwd: "articles"
-})
+});
+
 
 // We define a function to trim the '.md' from the filename
 // and return the correct path.
 // This function will be used later
 function getSlugs(post, _) {
-  let slug = post.substr(0, post.lastIndexOf("."))
-  return `/blog/${slug}`
+  console.log(post)
+  let slug = post.substr(0, post.lastIndexOf("."));
+  return `/blog/${slug}`;
 }
+
 const routerBase =
   process.env.DEPLOY_ENV === "GH_PAGES"
     ? {
@@ -23,13 +26,13 @@ const routerBase =
           base: "/mattaio-website/"
         }
       }
-    : {}
+    : {};
 
 // if (process.env.DEPLOY_ENV == 'GH_PAGES') {
 //   Hook.info("Node.js Debugger",`🎉 ${process.env.npm_package_name} have just been deployed in production mode 📦`)
 // }
 
-export default {
+var config = {
   mode: "universal",
   /*
    ** Headers of the page
@@ -96,9 +99,7 @@ export default {
         rel: "preconnect",
         type: "text/javascript",
         src: "https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"
-      }
-    ,
-    
+      },
       {
         rel: "preconnect",
         type: "text/javascript",
@@ -110,14 +111,14 @@ export default {
     color: "#85d8ff",
     failedColor: "#bf5050",
     duration: 1200,
-    height: "4px",
+    height: "4px"
   },
 
   css: ["@/assets/master.scss"],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: "~/plugins/splitting.client.js", ssr: false }],
   pageTransition: {
     name: "page",
     mode: "out-in"
@@ -131,7 +132,21 @@ export default {
   },
   modules: [
     "nuxt-purgecss",
+    "nuxt-element-ui",
     "@nuxtjs/bulma",
+    [
+      "nuxt-mq",
+      {
+        // Default breakpoint for SSR
+        defaultBreakpoint: "default",
+        breakpoints: {
+          mobile: 450,
+          tablet: 900,
+          laptop: 1250
+        }
+      }
+    ]
+    ,
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     ["@nuxtjs/component-cache", { maxAge: 31557600 }],
@@ -140,12 +155,50 @@ export default {
       {
         id: "UA-125389774-1"
       }
-    ]
+    ],"@nuxtjs/redirect-module"
   ],
+  router: {
+    scrollBehavior: async (to, from, savedPosition) => {
+      if (savedPosition) {
+        return savedPosition;
+      }
+
+      const findEl = async (hash, x) => {
+        return (
+          document.querySelector(hash) ||
+          new Promise((resolve, reject) => {
+            if (x > 50) {
+              return resolve();
+            }
+            setTimeout(() => {
+              resolve(findEl(hash, ++x || 1));
+            }, 100);
+          })
+        );
+      };
+
+      if (to.hash) {
+        let el = await findEl(to.hash);
+        if ("scrollBehavior" in document.documentElement.style) {
+          return window.scrollTo({ top: el.offsetTop, behavior: "smooth" });
+        } else {
+          return window.scrollTo(0, el.offsetTop);
+        }
+      }
+
+      return { x: 0, y: 0 };
+    }
+  },
+  elementUI: {
+    components: ["MessageBox"],
+    locale: "fr"
+  },
   ...routerBase,
   generate: {
-    routes: function() {
-      return files.map(getSlugs)
+    routes: {
+      function() {
+        return files.map(getSlugs);
+      }
     }
   },
   axios: {},
@@ -157,7 +210,7 @@ export default {
       config.module.rules.push({
         test: /\.md$/,
         use: ["raw-loader"]
-      })
+      });
       config.module.rules.unshift({
         test: /\.(png|jpe?g|gif)$/,
         use: {
@@ -171,19 +224,19 @@ export default {
             adapter: require("responsive-loader/sharp")
           }
         }
-      })
+      });
       // remove old pattern from the older loader
       config.module.rules.forEach(value => {
         if (String(value.test) === String(/\.(png|jpe?g|gif|svg|webp)$/)) {
           // reduce to svg and webp, as other images are handled above
-          value.test = /\.(svg|webp)$/
+          value.test = /\.(svg|webp)$/;
           // keep the configuration from image-webpack-loader here unchanged
         }
-      })
+      });
       config.node = {
         fs: "empty",
         glob: "empty"
-      }
+      };
     },
     postcss: {
       preset: {
@@ -193,4 +246,6 @@ export default {
       }
     }
   }
-}
+};
+
+module.exports = config;

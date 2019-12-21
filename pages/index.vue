@@ -17,7 +17,7 @@
           year.
         </div>
       </div>
-      <div class="floating-listening">
+      <div class="floating-listening" v-show="spotifyFetch.title !== null">
         <div class="spot-box">
           <div id="spotTop">
             <div class="nowlisten">Now listening..</div>
@@ -50,23 +50,30 @@ import PostsPreview from "@/components/PostsPreview.vue";
 import Snackbar from "node-snackbar";
 
 export default {
-  async asyncData({ params }) {
-    return axios
-      .get(`https://api.jsonbin.io/b/5dc840e6c9b247772abd680b/latest`)
-      .then(res => {
-        // console.log(res.data[0])
-        let randomChoice = Math.floor(Math.random() * res.data.length);
-        let names = res.data[randomChoice].artists.map(item => item.name);
-        let nameString = names.join(", ");
-        // console.log(res.data[randomChoice].album.images[2].url)
-        return {
-          spotifyFetch: {
-            title: res.data[randomChoice].name,
-            artists: nameString,
-            thumbnail: res.data[randomChoice].album.images[1].url
-          }
-        };
-      });
+  async asyncData({ params, error }) {
+    try {
+      const res = await axios.get("https://api.jsonbin.io/b/5dc840e6c9b247772abd680b/latest");
+      let randomChoice = Math.floor(Math.random() * res.data.length);
+      let names = res.data[randomChoice].artists.map(item => item.name);
+      let nameString = names.join(", ");
+      // console.log(res.data[randomChoice].album.images[2].url)
+      return {
+        spotifyFetch: {
+          title: res.data[randomChoice].name,
+          artists: nameString,
+          thumbnail: res.data[randomChoice].album.images[1].url
+        }
+      };
+    } catch (error) {
+      console.log(error);
+      return {
+        spotifyFetch: {
+          title: null,
+          artists: null,
+          thumbnail: null
+        }
+      };
+    }
   },
   data() {
     return {
@@ -112,15 +119,13 @@ export default {
   max-width: 50%;
   #spotTop {
     font-size: 32px;
-    font-family: "Montserrat", Montserrat, "Segoe UI", Tahoma, Geneva, Verdana,
-      sans-serif;
+    font-family: "Montserrat", Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .nowlisten {
-      background: -webkit-linear-gradient(transparent, transparent),
-        url("~static/maskSpot2.webp") repeat;
+      background: -webkit-linear-gradient(transparent, transparent), url("~static/maskSpot2.webp") repeat;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
@@ -186,9 +191,7 @@ export default {
 }
 
 .contain {
-  font-family: "Jost", Jost, "Jost *", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Jost", Jost, "Jost *", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   z-index: 2;
   font-display: swap;
   // height: 100vh;
