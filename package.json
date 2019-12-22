@@ -12,6 +12,7 @@
   ],
   "author": "Mattèo Gauthier",
   "private": true,
+
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",

@@ -13,7 +13,7 @@
     </section>
     <section class="section">
       <div v-for="(item, index) in aboutData" :key="index">
-        <MiniHero :title="item.title" :boxGradient="item.boxGradient" />
+        <minihero :title="item.title" :boxGradient="item.boxGradient" />
         <div v-show="item.boxs" class="box-container">
           <div v-for="(s, idx) in item.boxs" :key="idx">
             <!-- <nuxt-link v-show="item.title == `Les cours que j’ai suivis`" :to="`/about/courses#${s.boxTitle}`"> -->
@@ -32,13 +32,13 @@
 
 <script>
 import Rellax from "rellax";
-import MiniHero from "~/components/MiniHero";
+import minihero from "~/components/minihero";
 import lightBox from "~/components/lightBox";
 import aboutData from "~/static/about.json";
 import StoryPreview from "~/components/StoryPreview";
 export default {
   components: {
-    MiniHero,
+    minihero,
     lightBox,
     StoryPreview
   },
