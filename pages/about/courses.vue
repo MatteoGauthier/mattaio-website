@@ -31,7 +31,7 @@
                       <span>Variable</span>
                     </div>
                     <div class="course-badge is-info is-light tag">{{Rating(course.rating)}}</div>
-                    <a class="course-badge is-info is-light tag" :href="course.link">
+                    <a class="course-badge is-info is-light tag" :href="course.link" target="_blank">
                       <i class="fas fa-question-circle"></i>
                     </a>
                   </div>
