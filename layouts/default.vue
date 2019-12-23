@@ -25,6 +25,13 @@ export default {
       theme: "light-border"
     });
     
+    var enTravaux = document.querySelectorAll(".enTravaux");
+    tippy(enTravaux, {
+      content: "En travaux",
+      placement: "left",
+      theme: "light-border"
+    });
+    
     }
 };
 </script>

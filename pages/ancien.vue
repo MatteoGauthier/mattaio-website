@@ -61,6 +61,10 @@ export default {};
   .responsive-img {
     float: none;
     width: 100%;
+    margin-left:0;
+  }
+  .section {
+    padding-top: 1.5rem;
   }
 }
 

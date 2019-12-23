@@ -4,25 +4,9 @@ Hello everyone, here is the repository of my personnal website, it is powered by
 If you wan't to contribute to the development of the project it is possible and encouraged 😄 (I'm a novice developer that's why my apps may have an ugly code style). Feel free to publish issue it's so helpful 😇
 
 ## TODO's
-If you know the answer you can open a pull request, a new issue or send me an [email](mailto:matteo.gauthier@gmail.com).
+If you know the answer you can open a pull request, a new issue or send me an [email](mailto:matteo.gauthier@gmail.com)
 
-- [ ] Align the tags to the bottom
-- [x] Move the footer at the bottom 
-- [x] Clean the projects
-- [ ] Fix the errors on build (size limit)
-- [x] I don't know how to override the bulma default value
-- [ ] Make the tags indexable (on click > page with all blog-posts with this tag)
-- [x] better footer
-- [x] Fetch data markdown
-- [x] Add ga.js
-- [x] Create the homepage hero
-- [x] Find a way to host properly my website
-- [ ] Modal Close when the value is changed (contact section)
-- [ ] Add video support markdown-it
-- [x] Now.sh doesn't display the title
-- [ ] Assign text align justify only for paragraphs
-- [ ] Now.sh site doesn't show svg image (cv preview)
-- [ ] Spotify Now Listening
+[Link to TODO's](/TODOS.md)
 
 ## Development - Build
 

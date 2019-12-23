@@ -18,7 +18,7 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-10-tablet is-9-desktop">
-            <article v-for="(post,key) in bloglist" :key="key" class="columns is-centered" id="cc">
+            <article v-for="(post,key) in bloglist" :key="key" class="columns is-centered cc">
               <div v-if="post.cover_image" class="column is-3-desktop">
                 <nuxt-link :to="`/blog/${post.slug}`">
                   <figure class="image">
@@ -71,7 +71,7 @@ export default {
     //   delay: 0,
     //   interval: 120
     // })
-    ScrollReveal().reveal("#cc", {
+    ScrollReveal().reveal(".cc", {
       delay: 0,
       interval: 100
     });
