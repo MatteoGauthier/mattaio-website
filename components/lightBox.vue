@@ -6,7 +6,7 @@
         <div class="box-title">{{boxTitle}}</div>
         <div class="box-desc">{{desc}}</div>
         <div class="box-tags tags">
-          <a class="box-tag tag" v-for="(tag, ctx) in tags" :key="ctx" @click="linkTag(tag)">
+          <a class="box-tag tag popUp" v-for="(tag, ctx) in tags" :key="ctx" @click="linkTag(tag)">
             <span class="icon tag-icon">
               <i :class="tag[0]"></i>
             </span>
@@ -21,6 +21,7 @@
 
 <script>
 import { MessageBox } from "element-ui";
+import tippy from "tippy.js";
 export default {
   name: "lightBox",
   props: ["boxTitle", "desc", "tags", "nlink"],
@@ -29,6 +30,15 @@ export default {
       askedDoc: null,
       isSoon: null
     };
+  },
+  mounted() {
+    var popUp = document.querySelectorAll(".popUp");
+    tippy(popUp, {
+      content: "Il vous faut une autorisation pour pouvoir accéder à ce fichier, envoyez un email au propriétaire",
+      placement: "bottom",
+      theme: "light-border"
+    });
+    
   },
 
   methods: {
@@ -50,13 +60,9 @@ export default {
       }
     },
     open() {
-      this.$confirm("Il vous faut une autorisation pour pouvoir accéder à ce fichier, envoyez un email au propriétaire", "Info", {
-        confirmButtonText: "Let's go",
-        cancelButtonText: "Annuler",
-        type: "info"
-      }).then(() => {
+
         window.open(`mailto:matteo.gauthier@gmail.com?subject=Demande%20d'obtention%20du%20document%20'${this.askedDoc}'&body=Pourquoi%20%3F%20%3A%0A%0AQui%20%C3%AAtes%20vous%20%3F%20%3A%0A`, "_blank");
-      });
+
     }
   }
 };

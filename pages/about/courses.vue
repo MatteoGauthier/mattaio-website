@@ -31,7 +31,7 @@
                       <span>Variable</span>
                     </div>
                     <div class="course-badge is-info is-light tag">{{Rating(course.rating)}}</div>
-<a class="course-badge is-info is-light tag" @click="linkTag([course.name, plateform.name])">
+                    <a class="course-badge is-info is-light tag" :href="course.link">
                       <i class="fas fa-question-circle"></i>
                     </a>
                   </div>
