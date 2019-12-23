@@ -27,37 +27,6 @@
     "gh-pages": "cross-env DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --verbose"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@nuxtjs/axios": "5.5.4",
-    "@nuxtjs/bulma": "1.2.4",
-    "@nuxtjs/component-cache": "1.1.5",
-    "@nuxtjs/font-awesome": "1.0.4",
-    "@nuxtjs/google-analytics": "2.2.0",
-    "@nuxtjs/moment": "1.2.0",
-    "@nuxtjs/pwa": "latest",
-    "bulma-modal-fx": "1.1.1",
-    "glob": "7.1.4",
-    "node-snackbar": "0.1.15",
-    "nuxt-purgecss": "0.2.1",
-    "tippy.js": "4.3.4",
-    "webhook-discord": "3.2.0"
-  },
-  "devDependencies": {
-    "@nuxtjs/markdownit": "1.2.6",
-    "@nuxtjs/style-resources": "0.1.2",
-    "bulma": "0.7.5",
-    "cross-env": "5.2.0",
-    "frontmatter-markdown-loader": "1.8.0",
-    "node-sass": "4.12.0",
-    "nodemon": "1.19.1",
-    "nuxt": "2.8.1",
-    "nuxt-buefy": "0.3.10",
-    "nuxt-sass-resources-loader": "2.0.5",
-    "push-dir": "0.4.1",
-    "responsive-loader": "1.2.0",
-    "sass-loader": "7.1.0",
-    "sharp": "0.22.1"
-=======
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/bulma": "^1.2.6",
@@ -99,7 +68,6 @@
     "responsive-loader": "^1.2.0",
     "sass-loader": "^7.3.1",
     "sharp": "^0.22.1"
->>>>>>> parent of be73322... Trying to add element ui
   },
   "config": {
     "nuxt": {
