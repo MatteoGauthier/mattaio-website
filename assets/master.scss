@@ -1,10 +1,10 @@
 
 @import '~bulma/sass/utilities/initial-variables'; @import '~bulma/sass/utilities/functions';
 @import "~bulma/sass/utilities/_all";
-@import url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css);
+@import url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.9.0/css/all.min.css);
 @import url('https://cdn.jsdelivr.net/gh/MattixNow/OnEstCombien/res/snackbar.css');
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import "fontawesomeOver";
+@debug $family-sans-serif;
 h1 {
   font-family: "Montserrat", Montserrat, Arial, Helvetica, sans-serif;
 }

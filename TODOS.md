@@ -21,3 +21,4 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [ ] Find a way to add Splitting.js
 - [ ] Redesign contact page
 - [ ] Finish Story.vue
+- [ ] Add a element ui MessageBox on private document and information for courses

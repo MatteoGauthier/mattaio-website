@@ -2,7 +2,6 @@ import purgecss from "@fullhuman/postcss-purgecss";
 import PurgecssPlugin from "purgecss-webpack-plugin";
 import glob from "glob-all";
 import path from "path";
-
 // const webhook = require("webhook-discord")
 // const webhookUrl = process.env.WEBHOOK_URL || 'https://discordapp.com/api/webhooks/60G_BvODPFEedT-hozwA'
 
@@ -117,10 +116,7 @@ export default {
     height: "4px"
   },
 
-  css: [
-    { src: "@/assets/master.scss", lang: "scss" },
-    { src: "@/assets/fontawesomeOver.scss", lang: "scss" }
-  ],
+  css: ["@/assets/master.scss"],
   /*
    ** Plugins to load before mounting the App
    */
@@ -138,14 +134,8 @@ export default {
   },
   modules: [
     "nuxt-purgecss",
+    "nuxt-element-ui",
     "@nuxtjs/bulma",
-    [
-      "nuxt-element-ui",
-      {
-        components: ["MessageBox"],
-        locale: "fr"
-      }
-    ],
     [
       "nuxt-mq",
       {
@@ -167,7 +157,6 @@ export default {
         id: "UA-125389774-1"
       }
     ],
-
     "@nuxtjs/redirect-module"
   ],
   router: {
@@ -201,6 +190,10 @@ export default {
 
       return { x: 0, y: 0 };
     }
+  },
+  elementUI: {
+    components: ["MessageBox"],
+    locale: "fr"
   },
   ...routerBase,
   generate: {

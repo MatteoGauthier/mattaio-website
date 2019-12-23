@@ -5,43 +5,7 @@
       <div class="container">
         <div class="hero">
           <client-only>
-            <div data-splitting class="title has-text-centered hero-text words chars splitting" style="--word-total:5; --char-total:21;">
-              <span class="word" data-word="Les" style="--word-index:0;">
-                <span class="char" data-char="L" style="--char-index:0;">L</span>
-                <span class="char" data-char="e" style="--char-index:1;">e</span>
-                <span class="char" data-char="s" style="--char-index:2;">s</span>
-              </span>
-              <span class="whitespace"></span>
-              <span class="word" data-word="cours" style="--word-index:1;">
-                <span class="char" data-char="c" style="--char-index:3;">c</span>
-                <span class="char" data-char="o" style="--char-index:4;">o</span>
-                <span class="char" data-char="u" style="--char-index:5;">u</span>
-                <span class="char" data-char="r" style="--char-index:6;">r</span>
-                <span class="char" data-char="s" style="--char-index:7;">s</span>
-              </span>
-              <span class="whitespace"></span>
-              <span class="word" data-word="que" style="--word-index:2;">
-                <span class="char" data-char="q" style="--char-index:8;">q</span>
-                <span class="char" data-char="u" style="--char-index:9;">u</span>
-                <span class="char" data-char="e" style="--char-index:10;">e</span>
-              </span>
-              <span class="whitespace"></span>
-              <span class="word" data-word="j'ai" style="--word-index:3;">
-                <span class="char" data-char="j" style="--char-index:11;">j</span>
-                <span class="char" data-char="'" style="--char-index:12;">'</span>
-                <span class="char" data-char="a" style="--char-index:13;">a</span>
-                <span class="char" data-char="i" style="--char-index:14;">i</span>
-              </span>
-              <span class="whitespace"></span>
-              <span class="word" data-word="suivis" style="--word-index:4;">
-                <span class="char" data-char="s" style="--char-index:15;">s</span>
-                <span class="char" data-char="u" style="--char-index:16;">u</span>
-                <span class="char" data-char="i" style="--char-index:17;">i</span>
-                <span class="char" data-char="v" style="--char-index:18;">v</span>
-                <span class="char" data-char="i" style="--char-index:19;">i</span>
-                <span class="char" data-char="s" style="--char-index:20;">s</span>
-              </span>
-            </div>
+            <div data-splitting="" class="title has-text-centered hero-text words chars splitting" style="--word-total:5; --char-total:21;"><span class="word" data-word="Les" style="--word-index:0;"><span class="char" data-char="L" style="--char-index:0;">L</span><span class="char" data-char="e" style="--char-index:1;">e</span><span class="char" data-char="s" style="--char-index:2;">s</span></span><span class="whitespace"> </span><span class="word" data-word="cours" style="--word-index:1;"><span class="char" data-char="c" style="--char-index:3;">c</span><span class="char" data-char="o" style="--char-index:4;">o</span><span class="char" data-char="u" style="--char-index:5;">u</span><span class="char" data-char="r" style="--char-index:6;">r</span><span class="char" data-char="s" style="--char-index:7;">s</span></span><span class="whitespace"> </span><span class="word" data-word="que" style="--word-index:2;"><span class="char" data-char="q" style="--char-index:8;">q</span><span class="char" data-char="u" style="--char-index:9;">u</span><span class="char" data-char="e" style="--char-index:10;">e</span></span><span class="whitespace"> </span><span class="word" data-word="j'ai" style="--word-index:3;"><span class="char" data-char="j" style="--char-index:11;">j</span><span class="char" data-char="'" style="--char-index:12;">'</span><span class="char" data-char="a" style="--char-index:13;">a</span><span class="char" data-char="i" style="--char-index:14;">i</span></span><span class="whitespace"> </span><span class="word" data-word="suivis" style="--word-index:4;"><span class="char" data-char="s" style="--char-index:15;">s</span><span class="char" data-char="u" style="--char-index:16;">u</span><span class="char" data-char="i" style="--char-index:17;">i</span><span class="char" data-char="v" style="--char-index:18;">v</span><span class="char" data-char="i" style="--char-index:19;">i</span><span class="char" data-char="s" style="--char-index:20;">s</span></span></div>            
           </client-only>
           <div class="subtitle has-text-centered hero-subtitle">Retrouver ici les cours que j'ai effectuer pour compléter mon apprentissage</div>
         </div>
@@ -67,7 +31,7 @@
                       <span>Variable</span>
                     </div>
                     <div class="course-badge is-info is-light tag">{{Rating(course.rating)}}</div>
-                    <a class="course-badge is-info is-light tag info-tag" @click="linkTag([course.name, plateform.name])">
+<a class="course-badge is-info is-light tag" @click="linkTag([course.name, plateform.name])">
                       <i class="fas fa-question-circle"></i>
                     </a>
                   </div>
@@ -83,8 +47,8 @@
 </template>
 
 <script>
-import tippy from 'tippy.js'
-import Snackbar from "node-snackbar";
+import { MessageBox } from "element-ui";
+import Snackbar from 'node-snackbar'
 import axios from "axios";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
@@ -95,8 +59,7 @@ export default {
     return {
       count: 16,
       categories: ["OpenClassrooms", "FreeCodeCamp", "Grafikart", "Udemy", "Scrimba", "WesBos Courses", "VueMastery"],
-      courses: null,
-      askedDoc: ""
+      courses: null,      askedDoc: ""
     };
   },
   components: {
@@ -118,8 +81,7 @@ export default {
       // console.log(result);
       return result;
     },
-    Badges(price, certif) {},
-    linkTag: function(ctx) {
+    Badges(price, certif) {},linkTag: function(ctx) {
       console.log(this.$event);
       this.askedDoc = ctx;
       this.open();
@@ -135,7 +97,7 @@ export default {
     }
   },
   mounted() {
-    
+
     axios
       .get("https://api.jsonbin.io/b/5df14e15bc5ffd040097c63a/latest")
       .then(response => {
@@ -158,12 +120,6 @@ export default {
       textColor: "#000",
       backgroundColor: "#f4f6ff"
     });
-    var infoTag = document.querySelectorAll(".info-tag");
-    tippy(infoTag, {
-      content: "Pour avoir plus d'info sur ce cours (certificat, commentaires, infos additionnels), envoyez un email au propriétaire",
-      placement: "bottom",
-      theme: "light-border"
-    });
   }
 };
 </script>
@@ -173,7 +129,7 @@ a {
   text-decoration: none;
 }
 .whitespace::after {
-  content: " ";
+  content: ' '
 }
 .flex {
   display: flex;

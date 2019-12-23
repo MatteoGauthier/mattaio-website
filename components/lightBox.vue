@@ -1,21 +1,26 @@
 <template>
-  <div class="root-lightBox">
-    <div class="box-title">{{boxTitle}}</div>
-    <div class="box-desc">{{desc}}</div>
-    <div class="box-tags tags">
-      <a class="box-tag tag" v-for="(tag, ctx) in tags" :key="ctx " @click="linkTag(tag)">
-        <span class="icon tag-icon">
-          <i :class="tag[0]"></i>
-        </span>
-        {{tag[1]}}
-      </a>
-    </div>
+
+
+      <div class="root-lightBox">
+
+        <div class="box-title">{{boxTitle}}</div>
+        <div class="box-desc">{{desc}}</div>
+        <div class="box-tags tags">
+          <a class="box-tag tag" v-for="(tag, ctx) in tags" :key="ctx" @click="linkTag(tag)">
+            <span class="icon tag-icon">
+              <i :class="tag[0]"></i>
+            </span>
+            {{tag[1]}}
+          </a>
+        </div>
+
   </div>
 </template>
 
 
 
 <script>
+import { MessageBox } from "element-ui";
 export default {
   name: "lightBox",
   props: ["boxTitle", "desc", "tags", "nlink"],
@@ -28,6 +33,7 @@ export default {
 
   methods: {
     linkTag: function(ctx) {
+      console.log(this.$event);
       if (ctx[1] === "Attestation de stage") {
         this.askedDoc = ctx[1];
         this.open();
@@ -56,8 +62,8 @@ export default {
 };
 </script>
 
+<style src="element-ui/lib/theme-chalk/index.css"></style>
 <style lang="scss" scoped>
-
 .tag-icon {
   padding-right: 2px;
 }
