@@ -22,3 +22,4 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [ ] Redesign contact page
 - [ ] Finish Story.vue
 - [ ] Add a element ui MessageBox on private document and information for courses
+- [ ] Nuxt transition
