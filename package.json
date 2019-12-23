@@ -12,7 +12,6 @@
   ],
   "author": "Mattèo Gauthier",
   "private": true,
-
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
@@ -39,7 +38,7 @@
     "animejs": "^3.1.0",
     "bulma-modal-fx": "^1.1.1",
     "dayjs": "^1.8.17",
-    "element-ui": "^2.12.0",
+    "font-awesome": "^4.7.0",
     "glob": "^7.1.6",
     "node-snackbar": "^0.1.16",
     "nuxt-element-ui": "^1.0.10",
@@ -51,6 +50,7 @@
     "webhook-discord": "^3.5.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^0.1.2",
     "bulma": "^0.8.0",

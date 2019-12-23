@@ -36,6 +36,7 @@ import minihero from "~/components/minihero";
 import lightBox from "~/components/lightBox";
 import aboutData from "~/static/about.json";
 import StoryPreview from "~/components/StoryPreview";
+
 export default {
   components: {
     minihero,

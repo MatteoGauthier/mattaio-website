@@ -13,7 +13,6 @@ export default {
   computed: {
     cssProps() { return {
         '--bg-box-gradient': this.boxGradient
-        
       }
     }
 	}
