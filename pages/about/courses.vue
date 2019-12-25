@@ -125,6 +125,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
 a {
   text-decoration: none;
 }
