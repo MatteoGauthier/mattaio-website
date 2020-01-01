@@ -12,7 +12,7 @@
   ],
   "author": "Mattèo Gauthier",
   "private": true,
-"engines": {
+  "engines": {
     "node": "12.x || 10.x"
   },
   "scripts": {
@@ -69,7 +69,7 @@
     "push-dir": "^0.4.1",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^7.3.1",
-    "sharp": "^0.22.1"
+    "sharp": "^0.23.4"
   },
   "config": {
     "nuxt": {
