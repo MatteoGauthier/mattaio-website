@@ -2,7 +2,7 @@
   <footer class="footer is-size-7-mobile">
     <div class="is-pulled-left">
       <p>
-        <a class="linkn" href="https://semoule.fr"><strong>Semoule.fr</strong></a> 2017 → 2019 by
+        <a class="linkn" href="https://semoule.fr"><strong>Semoule.fr</strong></a> 2017 → 2020 by
         <a href="https://t.me/MatteoGauthier">Mattèo Gauthier</a>
       </p>
     </div>
