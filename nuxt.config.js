@@ -61,11 +61,13 @@ export default {
       },
       {
         property: "og:image",
-        content: "/og.png"
+        content:
+          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og.png"
       },
       {
         property: "twitter:image",
-        content: "/og-twitter.png"
+        content:
+          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og-twitter.png"
       },
       {
         property: "twitter:card",
