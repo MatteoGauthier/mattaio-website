@@ -68,6 +68,10 @@ export default {
         content: "/og-twitter.png"
       },
       {
+        property: "twitter:card",
+        content: "summary"
+      },
+      {
         property: "twitter:title",
         content: "Mattèo Gauthier personal website"
       },
