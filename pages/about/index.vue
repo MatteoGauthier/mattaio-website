@@ -7,9 +7,9 @@
           <!-- <div class="subtitle"></div> -->
         </div>
       </div>
-      <a href="CV_MattèoGauthier_2019.pdf" class="dl-button enTravaux" aria-label="Télécharger mon CV / Resume">
+      <nuxt-link to="/cv" class="dl-button enTravaux" aria-label="Télécharger mon CV / Resume">
         <span>Download resume</span> <i class="fas fa-arrow-down"></i>
-      </a>
+      </nuxt-link>
     </section>
     <section class="section">
       <div v-for="(item, index) in aboutData" :key="index">
@@ -21,7 +21,7 @@
 
               <lightBox :boxTitle="s.boxTitle" :desc="s.description" :tags="s.tags"/>
             </nuxt-link>
-          </div>  
+          </div>
         </div>
         <!-- {{item.body}} -->
       </div>
