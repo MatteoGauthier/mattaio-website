@@ -35,7 +35,7 @@
               <ul class="postsOlist">
                 <li v-for="related in relatedPosts" :key="related">
                   <nuxt-link :to="{name: 'posts-id', params: {id: related.id}}">{{related.title}}</nuxt-link>
-                </li> 
+                </li>
               </ul>
             </div>
           </aside>-->
@@ -65,18 +65,18 @@ export default {
     return {
       // attributes will be an object containing the markdown metadata
       attributes: res.attributes,
-      
+
       landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg + '?quality=100' )+')' : '' ,
-      
+
       // content will contain the body of the markdown file,
       // rendered in HTML via the `markdownit` class
       content: md.render(res.body)
     };
   },
-  
+
   head() {
     return {
-      title:  this.attributes.title + " - " + "Mattaio-Website",
+      title:  this.attributes.title + " - " + "Mattèo.dev",
       meta: [
         {
           hid: "description",
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="scss">
-  
+
 .blog-content p {
   text-align: justify;
 }

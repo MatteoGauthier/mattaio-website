@@ -29,8 +29,8 @@
           <div class="navbar-item">
             <div class="buttons">
               <a class="button is-light soonPop">Feedback</a>
-              <a href="https://semoule.fr" class="button is-light">
-                <strong>Semoule.fr</strong>
+              <a href="mailto:hello@mattèo.dev" class="button is-light">
+                <strong>Email me 😉</strong>
               </a>
             </div>
           </div>

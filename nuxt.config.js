@@ -40,16 +40,16 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Mattèo Gauthier personal website - mattaio-website",
+    title: "Mattèo Gauthier personal website - Mattèo.dev",
     meta: [
       { charset: "utf-8" },
       {
         name: "title",
-        content: "Mattèo Gauthier personal website - mattaio-website"
+        content: "Mattèo Gauthier personal website - Mattèo.dev"
       },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mattaio.netlify.com/" }, // here it is just ngrok for my test
+      { property: "og:url", content: "https://xn--matto-7ra.dev/" }, // here it is just ngrok for my test
       {
         property: "og:title",
         content: "Mattèo Gauthier personal website"
@@ -79,7 +79,7 @@ export default {
       },
       {
         property: "twitter:url",
-        content: "https://mattaio.netlify.com/"
+        content: "https://xn--matto-7ra.dev/"
       },
       {
         property: "twitter:description",
@@ -90,7 +90,7 @@ export default {
       {
         name: "keywords",
         content:
-          "Mattèo Gauthier, Mattèo, semoule.fr, semoule, mattaio-website, personal website, Javascript, French, Français, NodeJS, blog"
+          "Mattèo Gauthier, Mattèo, semoule.fr, semoule, mattaio-website, personal website, Javascript, French, Français, NodeJS, blog, mattèo.dev"
       },
       { name: "msapplication-TileColor", content: "#2b5797" },
       { name: "theme-color", content: "#fff" },
