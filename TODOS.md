@@ -25,3 +25,4 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 - [ ] Nuxt transition
 - [ ] Add a infobox in course.vue
 - [ ] Fix Now.sh deployment
+- [ ] Find a better way to redirect !!!!
