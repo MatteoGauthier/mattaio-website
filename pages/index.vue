@@ -109,6 +109,7 @@ export default {
 // spot
 .floating-listening {
   margin-left: 27%;
+  display: none;
 }
 .spot-box {
   display: inline-block;
