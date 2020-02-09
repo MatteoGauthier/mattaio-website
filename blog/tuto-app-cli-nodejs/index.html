@@ -1,0 +1,156 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Tuto - Création d'une application CLI avec NodeJS - Mattèo.dev</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="title" content="Mattèo Gauthier personal website - Mattèo.dev"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" property="og:type" content="website"><meta data-n-head="ssr" property="og:url" content="https://xn--matto-7ra.dev/"><meta data-n-head="ssr" property="og:title" content="Mattèo Gauthier personal website"><meta data-n-head="ssr" property="og:description" content="Novice web developer, learning, writing, open-sourcer. Working with web technologies like Vue, React. Find out some blog-posts, tutorials, etc.."><meta data-n-head="ssr" property="og:image" content="https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og.png"><meta data-n-head="ssr" property="twitter:image" content="https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og-twitter.png"><meta data-n-head="ssr" property="twitter:card" content="summary"><meta data-n-head="ssr" property="twitter:title" content="Mattèo Gauthier personal website"><meta data-n-head="ssr" property="twitter:url" content="https://xn--matto-7ra.dev/"><meta data-n-head="ssr" property="twitter:description" content="Novice web developer, learning, writing, open-sourcer. Working with web technologies like Vue, React. Find out some blog-posts, tutorials, etc.."><meta data-n-head="ssr" name="keywords" content="Mattèo Gauthier, Mattèo, semoule.fr, semoule, mattaio-website, personal website, Javascript, French, Français, NodeJS, blog, mattèo.dev"><meta data-n-head="ssr" name="msapplication-TileColor" content="#2b5797"><meta data-n-head="ssr" name="theme-color" content="#fff"><meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="ssr" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="Mattaio-Website"><meta data-n-head="ssr" data-hid="author" name="author" content="Mattèo Gauthier"><meta data-n-head="ssr" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="Mattaio-Website"><meta data-n-head="ssr" data-hid="description" name="description" content="Simple approche des applications cli avec nodejs"><meta data-n-head="ssr" name="keywords" content="node,nodejs,cli,app,yargs"><link data-n-head="ssr" rel="stylesheet preconnect" href="https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@latest/fonts/Jost/Jost.css" type="text/css" charset="utf-8"><link data-n-head="ssr" rel="manifest" href="/mattaio-website/_nuxt/manifest.ba9e728a.json"><script data-n-head="ssr" rel="preconnect" type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script><script data-n-head="ssr" rel="preconnect" type="text/javascript" src="https://unpkg.com/scrollreveal"></script><base href="/mattaio-website/"><link rel="preload" href="/mattaio-website/_nuxt/0a8bdd07b09a027a2b22.js" as="script"><link rel="preload" href="/mattaio-website/_nuxt/79b6ae31d4a6badc9636.js" as="script"><link rel="preload" href="/mattaio-website/_nuxt/27919725d3b1ff9b3d51.css" as="style"><link rel="preload" href="/mattaio-website/_nuxt/0ffaf7a34307cf057f4f.js" as="script"><link rel="preload" href="/mattaio-website/_nuxt/1386f4d472fc0c3168b7.css" as="style"><link rel="preload" href="/mattaio-website/_nuxt/08a7e0d52047aed56052.js" as="script"><link rel="preload" href="/mattaio-website/_nuxt/0c9bf40304dc16ac6430.css" as="style"><link rel="preload" href="/mattaio-website/_nuxt/22dc228677282aed575d.js" as="script"><link rel="stylesheet" href="/mattaio-website/_nuxt/27919725d3b1ff9b3d51.css"><link rel="stylesheet" href="/mattaio-website/_nuxt/1386f4d472fc0c3168b7.css"><link rel="stylesheet" href="/mattaio-website/_nuxt/0c9bf40304dc16ac6430.css">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="page-container"><div data-v-b4ff0000><nav role="navigation" aria-label="main navigation" class="navbar" data-v-b4ff0000><div class="navbar-brand" data-v-b4ff0000><a href="/mattaio-website/" class="navbar-item nuxt-link-active" data-v-b4ff0000><h1 class="title logo-text" data-v-b4ff0000>Mattèo Gauthier</h1></a> <a role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" class="navbar-burger burger" data-v-b4ff0000><span aria-hidden="true" data-v-b4ff0000></span> <span aria-hidden="true" data-v-b4ff0000></span> <span aria-hidden="true" data-v-b4ff0000></span></a></div> <div id="navbarBasicExample" class="navbar-menu" data-v-b4ff0000><div class="navbar-start" data-v-b4ff0000><a href="/mattaio-website/blog" class="navbar-item nuxt-link-active" data-v-b4ff0000>Mes posts</a> <a href="/mattaio-website/about" class="navbar-item" data-v-b4ff0000>About</a> <a href="/mattaio-website/contact" class="navbar-item" data-v-b4ff0000>Contact</a></div> <div class="navbar-end" data-v-b4ff0000><div class="navbar-item" data-v-b4ff0000><div class="buttons" data-v-b4ff0000><a class="button is-light soonPop" data-v-b4ff0000>Feedback</a> <a href="mailto:hello@mattèo.dev" class="button is-light" data-v-b4ff0000><strong data-v-b4ff0000>Email me 😉</strong></a></div></div></div></div></nav></div> <div data-v-4dcdf3e2><section class="hero is-light has-text-centered" data-v-4dcdf3e2><div class="hero-body" data-v-4dcdf3e2><div class="container landing" data-v-4dcdf3e2><h1 class="title" data-v-4dcdf3e2>Tuto - Création d'une application CLI avec NodeJS</h1> <div class="subtitle" data-v-4dcdf3e2>
+          Published on
+          <time data-v-4dcdf3e2>31st Jul 2019</time> 
+          by Mattèo Gauthier
+        </div></div></div></section> <section class="section" data-v-4dcdf3e2><div class="container" data-v-4dcdf3e2><div data-v-4dcdf3e2><article data-v-4dcdf3e2><div class="blog-content content" data-v-4dcdf3e2><h1>Tuto - Création d’une application CLI avec NodeJS</h1>
+<p>Pendant mon stage à TBWA\Paris j’ai eu du temps pour commencer le développement d’une suite d’application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J’ai créér une simple application qui affiche les données publiques d’un utilisateur Github. Voyons son fonctionnement :</p>
+<pre><code>						╭──────────────────────╮
+						│                      │
+						│   Github User Info   │
+						│                      │
+						╰──────────────────────╯
+
+? What's your Github username? » [ur username]
+
+				▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+				▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+				▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+				▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   &lt;---- Profile Picture
+				▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+				▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+     Username: tj
+         Name: TJ Holowaychuk
+   Identifier: 25254
+  Repos count: 275
+ Social Stats: TJ Holowaychuk follow 46 users and 40506 follow him
+     Location: London, UK
+      Weather: 16.67°C in London, UK
+
+  Direct Link to this github profile https://github.com/tj
+</code></pre>
+<p><strong>Passons maintenant à la création d’un simple utilitaire qui récupère des emojis de l’api Github</strong></p>
+<h2>1. Quelles sont les données dont nous avons besoin ?</h2>
+<p>Pour créer une application il vous faut du contenu, dans l’application que nous allons créer nous aurons besoin de données en provenance du service de gestion de dépôts Github, pour nous faciliter la tâche les applications web comme Github peuvent disposer d’une API ouverte (Interface de Programmation). Nous allons donc nous documenter à propos de celle-ci.</p>
+<p>Github dispose de plusieurs types d’API à savoir : une API REST et une API GraphQL; ces apis ont une approche différente de la donnée distante, pour faciliter la tâche nous allons utiliser l’api REST qui sert de standard à la plupart des APIs modernes.</p>
+<p>La documentation nous indique la baseUrl <a href="https://api.github.com/"><code>https://api.github.com</code></a> c’est par cette url que toutes les requests vers l’api seront envoyées. L’application qui va répondre à nos requêtes a été développée selon des normes d’accessibilité, il vous sera donc plus simple de tester des endpoints (les endpoints sont un ou plusieurs objets d’une collection de données), lorsque votre requête sera erroné l’api répondra une erreur avec un code de statuts, c’est le protocole HTTP qui permet les réponses avec statuts. Les données dont nous avons besoin sont donc facilement accessibles (nous verrons plus tard les cas d’authentification).</p>
+<h2>2. Créations de l’application</h2>
+<p>L’utilisateur de l’application doit pouvoir donner un ou plusieurs mots clés pour permettre à l’application de rechercher l’emoji en question.</p>
+<p>Pour débuter une application NodeJS, nous avons besoin du gestionnaire de package npm, npm va rendre utilisable notre application. Pour utiliser npm vous aurez besoin de NodeJS 🤪, si npm n’est pas installé vous pouvez <a href="http://nodejs.org/downloads">mettre à jour</a> NodeJS ou l’installer avec apt si vous êtes sur linux <code>sudo apt install npm</code></p>
+<p>Maintenant que NodeJS et NPM sont bien installés nous allons créer un package avec la commande :</p>
+<pre><code>npm init
+
+package name: my-app
+version: (1.0.0)
+description:
+entry point: (cli.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+</code></pre>
+<p>A l’aide de la lib yargs nous allons récupérer les arguments émis par l’utilisateur. Pour l’installer il vous suffit de taper dans votre terminal :</p>
+<pre><code>npm i yargs
+</code></pre>
+<p>Maintenant éditons le cœur de notre application, créez le fichier <strong>cli.js</strong>. Nous allons intégrer <strong>yargs</strong> que nous venons d’installer.</p>
+<pre><code>const argv = require("yargs")
+</code></pre>
+<p><strong>Yargs</strong> permet de définir des options à l’application, son utilisation est très simple, il suffit d’ajouter méthode à la fonction require ⤵️</p>
+<pre><code>const argv = require("yargs")
+    .usage("Usage: $0 -e [eg. alien]")  // Ici nous définissons l'usage de la commande pour l'utilisateur
+    .alias("e", "emoji") // Ici nous mettons en relation deux options qui auront le même effet
+    .describe("e", "Get an emoji") // Ici nous décrivons l'option "e" pour l'utilisateur
+    .help("h") // Help est une méthode native à la librarie, cela affiche une explication de l'utilisation de l'app
+    .alias("h", "help") // Encore un alias
+    .epilog("Mattèo Gauthier - semoule.fr 2019").argv // Puis un texte à afficher en fin d'exécution de la commande help
+																											// On remarque aussi la méthode .argv qui termine
+</code></pre>
+<p>Nous pouvons dès à présent tester le fonctionnement en ajoutant un console.log</p>
+<pre><code>...
+console.log(argv.e)
+</code></pre>
+<p>Normalement si tout fonctionne à l’exécution la sortie devrait ressembler à ça :</p>
+<pre><code>$ node cli.js -e hey
+hey
+
+$ node cli.js
+undefined
+</code></pre>
+<hr>
+<p>Maintenant que <strong>yargs</strong> est fonctionnelle passons à la récupération des données de l’api Github, nous allons effectuer une requête HTTP, pour cela nous allons utilisé la librairie <strong>axios</strong> (il existe de nombreuses librairies http nodejs mais axios reste la plus connues, got est aussi une très bonne librairie)</p>
+<pre><code>npm i axios
+</code></pre>
+<p>Maintenant que nous avons les librairies requises ⤵️</p>
+<pre><code>// Définition des modules requis
+const argv = require("yargs")
+    .usage("Usage: $0 -e [eg. alien]")
+    .alias("e", "emoji")
+    .describe("e", "Get an emoji")
+    .help("h")
+    .alias("h", "help")
+    .epilog("Mattèo Gauthier - semoule.fr 2019").argv
+const axios = require("axios")
+
+const choice = argv.e // Définition de la variable qui intégre le choix de l'use
+console.log("You chose " + choice + " emoji") // Message de rappel du choix (debug)
+
+axios.get(`https://api.github.com/emojis`) // Requête GET à l'aide de la fonction axios.get()
+  .then((response) => { // Lorsque la promise est résolu (réponse de l'api)
+    let res = response.data // Assignation de la variable
+    console.log(res[choice]); // Affichage de l'url de l'emoji demandé
+  })
+</code></pre>
+<p>Voilà le fonctionnement de notre mini application, vous pouvez bien évidemment l’améliorer pour qu’elle puisse par exemple enregistrer dans l’image dans un dossier ou que l’emoji en question soit copié dans le presse papier.</p>
+<p>Application en fonctionnement ⤵️</p>
+<pre><code>$ node cli.js -e smile
+You chose smile emoji
+https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8
+</code></pre>
+<p>C’est bien beau tout cela mais notre application ne dispose pas de commande à portée générale, il serait plus pratique d’utiliser une commande telle que :</p>
+<pre><code>touch index.html // Commande Unix qui créer un ou plusieurs fichier
+</code></pre>
+<p>Pour lier notre application à un alias utilisable globalement nous avons d’abord besoin de configurer le fichier <code>package.json</code> ⤵️</p>
+<pre><code>{
+  "name": "emoji-app",
+  "version": "1.0.0",
+  "description": "Hello WORLD",
+  "main": "cli.js", // Ici le main doit correspondre avec le bin ⤵️
+  "bin": {
+    "emoji-app": "cli.js" // Ici on défini l'exécutable
+  },
+  "scripts": {
+    "start": "node cli.js"
+  },
+  "engines": {
+    "node": ">=8" // Ici on s'assure que l'utilisateur à une version suffisante (facultatif)
+  },
+  "files": [
+    "cli.js" // Ici on ajoute les fichiers requis à l'exécution
+  ],
+  "keywords": [],
+  "author": "Mattèo Gauthier",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "yargs": "^13.3.0"
+  }
+}
+</code></pre>
+<p>Puis le fichier <code>cli.js</code></p>
+<pre><code>#!/usr/bin/env node // On ajoute un shebang pour que le système exécute avec node
+</code></pre>
+<p><strong>Maintenant votre application est disponible dans votre terminal avec la commande <code>emoji-app</code> !</strong></p>
+<blockquote>
+<p>Merci d’avoir lu ce bref tutoriel n’hésitez pas à partager vos programmes et à me donner votre avis sur ce post</p>
+</blockquote>
+</div></article></div></div></section></div> <footer class="footer is-size-7-mobile"><div class="is-pulled-left"><p><a href="https://Mattèo.dev" class="linkn"><strong>Mattèo.dev</strong></a> 2017 → 2020 by
+      <a href="https://t.me/MatteoGauthier">Mattèo Gauthier</a></p></div> <div class="is-pulled-right has-text-right"><nav class="buttons"><span><a href="https://github.com/MattixNow" class="linkn"><i class="fab fa-github"></i> <span class="which-social">Github</span></a></span> <span><a href="https://twitter.com/MattixNow" class="linkn"><i class="fab fa-twitter"></i> <span class="which-social">Twitter</span></a></span></nav></div></footer></div></div></div><script>window.__NUXT__=function(e,t,o,n,i,s){return{layout:"default",data:[{attributes:{title:o,published:e,description:n,tags:i,ctime:new Date(15645312e5),author:t,filename:s},landingImg:"",content:"<h1>Tuto - Création d’une application CLI avec NodeJS</h1>\n<p>Pendant mon stage à TBWA\\Paris j’ai eu du temps pour commencer le développement d’une suite d’application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J’ai créér une simple application qui affiche les données publiques d’un utilisateur Github. Voyons son fonctionnement :</p>\n<pre><code>\t\t\t\t\t\t╭──────────────────────╮\n\t\t\t\t\t\t│                      │\n\t\t\t\t\t\t│   Github User Info   │\n\t\t\t\t\t\t│                      │\n\t\t\t\t\t\t╰──────────────────────╯\n\n? What's your Github username? » [ur username]\n\n\t\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\t\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\t\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\t\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   &lt;---- Profile Picture\n\t\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\t\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\n     Username: tj\n         Name: TJ Holowaychuk\n   Identifier: 25254\n  Repos count: 275\n Social Stats: TJ Holowaychuk follow 46 users and 40506 follow him\n     Location: London, UK\n      Weather: 16.67°C in London, UK\n\n  Direct Link to this github profile https://github.com/tj\n</code></pre>\n<p><strong>Passons maintenant à la création d’un simple utilitaire qui récupère des emojis de l’api Github</strong></p>\n<h2>1. Quelles sont les données dont nous avons besoin ?</h2>\n<p>Pour créer une application il vous faut du contenu, dans l’application que nous allons créer nous aurons besoin de données en provenance du service de gestion de dépôts Github, pour nous faciliter la tâche les applications web comme Github peuvent disposer d’une API ouverte (Interface de Programmation). Nous allons donc nous documenter à propos de celle-ci.</p>\n<p>Github dispose de plusieurs types d’API à savoir : une API REST et une API GraphQL; ces apis ont une approche différente de la donnée distante, pour faciliter la tâche nous allons utiliser l’api REST qui sert de standard à la plupart des APIs modernes.</p>\n<p>La documentation nous indique la baseUrl <a href=\"https://api.github.com/\"><code>https://api.github.com</code></a> c’est par cette url que toutes les requests vers l’api seront envoyées. L’application qui va répondre à nos requêtes a été développée selon des normes d’accessibilité, il vous sera donc plus simple de tester des endpoints (les endpoints sont un ou plusieurs objets d’une collection de données), lorsque votre requête sera erroné l’api répondra une erreur avec un code de statuts, c’est le protocole HTTP qui permet les réponses avec statuts. Les données dont nous avons besoin sont donc facilement accessibles (nous verrons plus tard les cas d’authentification).</p>\n<h2>2. Créations de l’application</h2>\n<p>L’utilisateur de l’application doit pouvoir donner un ou plusieurs mots clés pour permettre à l’application de rechercher l’emoji en question.</p>\n<p>Pour débuter une application NodeJS, nous avons besoin du gestionnaire de package npm, npm va rendre utilisable notre application. Pour utiliser npm vous aurez besoin de NodeJS 🤪, si npm n’est pas installé vous pouvez <a href=\"http://nodejs.org/downloads\">mettre à jour</a> NodeJS ou l’installer avec apt si vous êtes sur linux <code>sudo apt install npm</code></p>\n<p>Maintenant que NodeJS et NPM sont bien installés nous allons créer un package avec la commande :</p>\n<pre><code>npm init\n\npackage name: my-app\nversion: (1.0.0)\ndescription:\nentry point: (cli.js)\ntest command:\ngit repository:\nkeywords:\nauthor:\nlicense: (ISC)\n</code></pre>\n<p>A l’aide de la lib yargs nous allons récupérer les arguments émis par l’utilisateur. Pour l’installer il vous suffit de taper dans votre terminal :</p>\n<pre><code>npm i yargs\n</code></pre>\n<p>Maintenant éditons le cœur de notre application, créez le fichier <strong>cli.js</strong>. Nous allons intégrer <strong>yargs</strong> que nous venons d’installer.</p>\n<pre><code>const argv = require(&quot;yargs&quot;)\n</code></pre>\n<p><strong>Yargs</strong> permet de définir des options à l’application, son utilisation est très simple, il suffit d’ajouter méthode à la fonction require ⤵️</p>\n<pre><code>const argv = require(&quot;yargs&quot;)\n    .usage(&quot;Usage: $0 -e [eg. alien]&quot;)  // Ici nous définissons l'usage de la commande pour l'utilisateur\n    .alias(&quot;e&quot;, &quot;emoji&quot;) // Ici nous mettons en relation deux options qui auront le même effet\n    .describe(&quot;e&quot;, &quot;Get an emoji&quot;) // Ici nous décrivons l'option &quot;e&quot; pour l'utilisateur\n    .help(&quot;h&quot;) // Help est une méthode native à la librarie, cela affiche une explication de l'utilisation de l'app\n    .alias(&quot;h&quot;, &quot;help&quot;) // Encore un alias\n    .epilog(&quot;Mattèo Gauthier - semoule.fr 2019&quot;).argv // Puis un texte à afficher en fin d'exécution de la commande help\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// On remarque aussi la méthode .argv qui termine\n</code></pre>\n<p>Nous pouvons dès à présent tester le fonctionnement en ajoutant un console.log</p>\n<pre><code>...\nconsole.log(argv.e)\n</code></pre>\n<p>Normalement si tout fonctionne à l’exécution la sortie devrait ressembler à ça :</p>\n<pre><code>$ node cli.js -e hey\nhey\n\n$ node cli.js\nundefined\n</code></pre>\n<hr>\n<p>Maintenant que <strong>yargs</strong> est fonctionnelle passons à la récupération des données de l’api Github, nous allons effectuer une requête HTTP, pour cela nous allons utilisé la librairie <strong>axios</strong> (il existe de nombreuses librairies http nodejs mais axios reste la plus connues, got est aussi une très bonne librairie)</p>\n<pre><code>npm i axios\n</code></pre>\n<p>Maintenant que nous avons les librairies requises ⤵️</p>\n<pre><code>// Définition des modules requis\nconst argv = require(&quot;yargs&quot;)\n    .usage(&quot;Usage: $0 -e [eg. alien]&quot;)\n    .alias(&quot;e&quot;, &quot;emoji&quot;)\n    .describe(&quot;e&quot;, &quot;Get an emoji&quot;)\n    .help(&quot;h&quot;)\n    .alias(&quot;h&quot;, &quot;help&quot;)\n    .epilog(&quot;Mattèo Gauthier - semoule.fr 2019&quot;).argv\nconst axios = require(&quot;axios&quot;)\n\nconst choice = argv.e // Définition de la variable qui intégre le choix de l'use\nconsole.log(&quot;You chose &quot; + choice + &quot; emoji&quot;) // Message de rappel du choix (debug)\n\naxios.get(`https://api.github.com/emojis`) // Requête GET à l'aide de la fonction axios.get()\n  .then((response) =&gt; { // Lorsque la promise est résolu (réponse de l'api)\n    let res = response.data // Assignation de la variable\n    console.log(res[choice]); // Affichage de l'url de l'emoji demandé\n  })\n</code></pre>\n<p>Voilà le fonctionnement de notre mini application, vous pouvez bien évidemment l’améliorer pour qu’elle puisse par exemple enregistrer dans l’image dans un dossier ou que l’emoji en question soit copié dans le presse papier.</p>\n<p>Application en fonctionnement ⤵️</p>\n<pre><code>$ node cli.js -e smile\nYou chose smile emoji\nhttps://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8\n</code></pre>\n<p>C’est bien beau tout cela mais notre application ne dispose pas de commande à portée générale, il serait plus pratique d’utiliser une commande telle que :</p>\n<pre><code>touch index.html // Commande Unix qui créer un ou plusieurs fichier\n</code></pre>\n<p>Pour lier notre application à un alias utilisable globalement nous avons d’abord besoin de configurer le fichier <code>package.json</code> ⤵️</p>\n<pre><code>{\n  &quot;name&quot;: &quot;emoji-app&quot;,\n  &quot;version&quot;: &quot;1.0.0&quot;,\n  &quot;description&quot;: &quot;Hello WORLD&quot;,\n  &quot;main&quot;: &quot;cli.js&quot;, // Ici le main doit correspondre avec le bin ⤵️\n  &quot;bin&quot;: {\n    &quot;emoji-app&quot;: &quot;cli.js&quot; // Ici on défini l'exécutable\n  },\n  &quot;scripts&quot;: {\n    &quot;start&quot;: &quot;node cli.js&quot;\n  },\n  &quot;engines&quot;: {\n    &quot;node&quot;: &quot;&gt;=8&quot; // Ici on s'assure que l'utilisateur à une version suffisante (facultatif)\n  },\n  &quot;files&quot;: [\n    &quot;cli.js&quot; // Ici on ajoute les fichiers requis à l'exécution\n  ],\n  &quot;keywords&quot;: [],\n  &quot;author&quot;: &quot;Mattèo Gauthier&quot;,\n  &quot;license&quot;: &quot;MIT&quot;,\n  &quot;dependencies&quot;: {\n    &quot;axios&quot;: &quot;^0.19.0&quot;,\n    &quot;yargs&quot;: &quot;^13.3.0&quot;\n  }\n}\n</code></pre>\n<p>Puis le fichier <code>cli.js</code></p>\n<pre><code>#!/usr/bin/env node // On ajoute un shebang pour que le système exécute avec node\n</code></pre>\n<p><strong>Maintenant votre application est disponible dans votre terminal avec la commande <code>emoji-app</code> !</strong></p>\n<blockquote>\n<p>Merci d’avoir lu ce bref tutoriel n’hésitez pas à partager vos programmes et à me donner votre avis sur ce post</p>\n</blockquote>\n"}],error:null,state:{bloglist:[{title:"Création du bot discord Giselle",published:e,description:"Petite présentation d'un bot discord simple, créer avec Discord.js",tags:"discord,bot,discord.js,api,discord-bot",ctime:"2019-06-09",author:t,slug:"Creation-du-bot-discord-Giselle"},{title:"Marketing, entrepreneuriat bookmarks",published:e,description:"Petite listes de ressources en rapport avec l'entrepreunariat",tags:"marketing,entrepreneuriat,seo,OSS,bookmarks,list,books,business,communication",ctime:"2019-10-07",author:t,landingImg:"josh-calabrese-Ca8r0PSWg9Q-unsplash.jpg",slug:"Marketing-entrepreneuriat-bookmarks"},{title:"Stage TBWA\\Paris",published:e,description:"Résumé jour par jour de mon stage dans l'entreprise\\TBWA",tags:"stage,paris,tbwa,Boulogne",ctime:"2019-07-14",author:t,landingImg:"tbwa-landing.jpg",slug:"Stage-TBWA-Paris"},{title:"Review : ScreenToGif",published:e,description:"Découvre comment éditer et créer des gifs animés simplement avec le logiciel open-source ScreenToGif",tags:"screentogif,gif,open-source,OSS,Review",ctime:"2019-05-12",author:t,slug:"review-screen-to-gif"},{title:o,published:e,description:n,tags:i,ctime:"2019-07-31",author:t,filename:s,slug:"tuto-app-cli-nodejs"}],posts:{}},serverRendered:e}}(!0,"Mattèo Gauthier","Tuto - Création d'une application CLI avec NodeJS","Simple approche des applications cli avec nodejs","node,nodejs,cli,app,yargs","tuto-app-cli-nodejs.md")</script><script src="/mattaio-website/_nuxt/0a8bdd07b09a027a2b22.js" defer></script><script src="/mattaio-website/_nuxt/22dc228677282aed575d.js" defer></script><script src="/mattaio-website/_nuxt/79b6ae31d4a6badc9636.js" defer></script><script src="/mattaio-website/_nuxt/0ffaf7a34307cf057f4f.js" defer></script><script src="/mattaio-website/_nuxt/08a7e0d52047aed56052.js" defer></script>
+  </body>
+</html>
