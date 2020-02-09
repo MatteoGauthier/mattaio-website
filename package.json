@@ -25,7 +25,7 @@
     "top": "node test.js",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "direct-deploy": "npm run typical-deploy && npm run ghpages-deploy",
-    "typical-deploy": "nuxt generate && surge dist/ mattaio.surge.sh && now",
+    "typical-deploy": "nuxt generate && surge dist/ mattaio.surge.sh",
     "ghpages-deploy": "npm run generate:gh-pages && npm run gh-pages",
     "gh-pages": "cross-env DEPLOY_ENV=GH_PAGES push-dir --dir=dist --branch=gh-pages --verbose"
   },
