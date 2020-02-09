@@ -9,7 +9,7 @@ filename: tuto-app-cli-nodejs.md
 ---
 # Tuto - Création d'une application CLI avec NodeJS
 
-Pendant mon stage à TBWA\Paris j'ai eu du temps pour commencer le développement d'une suite d'application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J'ai crée une simple application qui affiche les données public d'un utilisateur Github. Voyons sont fonctionnement :
+Pendant mon stage à TBWA\Paris j'ai eu du temps pour commencer le développement d'une suite d'application cli (command line app), lors de cette review je vais me concentrer sur la première application de cette suite. J'ai créér une simple application qui affiche les données publiques d'un utilisateur Github. Voyons son fonctionnement :
 
     						╭──────────────────────╮
     						│                      │
@@ -38,19 +38,19 @@ Pendant mon stage à TBWA\Paris j'ai eu du temps pour commencer le développemen
 
 **Passons maintenant à la création d'un simple utilitaire qui récupère des emojis de l'api Github**
 
-## 1. Quels sont les données dont nous avons besoin ?
+## 1. Quelles sont les données dont nous avons besoin ?
 
-Pour créer une application il vous faut du contenus, dans l'application que nous allons créer nous aurons besoin de données en provenance du service de gestion de dépôts Github, pour nous faciliter la tâche les applications web comme Github peuvent disposés d'une API ouverte (Interface de Programmation). Nous allons donc nous documentés à propos de celle-ci.
+Pour créer une application il vous faut du contenu, dans l'application que nous allons créer nous aurons besoin de données en provenance du service de gestion de dépôts Github, pour nous faciliter la tâche les applications web comme Github peuvent disposer d'une API ouverte (Interface de Programmation). Nous allons donc nous documenter à propos de celle-ci.
 
-Github dispose de plusieurs type d'API à savoir : une API REST et une API GraphQL; ces apis ont une approches différentes de la données distantes, pour faciliter la tâche nous allons utilisé l'api REST qui sert de standard à la plus-part des apis modernes.
+Github dispose de plusieurs types d'API à savoir : une API REST et une API GraphQL; ces apis ont une approche différente de la donnée distante, pour faciliter la tâche nous allons utiliser l'api REST qui sert de standard à la plupart des APIs modernes.
 
-La documentation nous indique la baseUrl [`https://api.github.com`](https://api.github.com/) c'est par cette url que toutes les requests vers l'api seront envoyés. L'application qui va répondre à nos requêtes à été développé selon des normes d'accessibilité, ils vous sera donc plus simple de testé des endpoints (les endpoints sont un ou plusieurs objets d'une collection de données), lorsque votre requêtes sera erronés l'api répondras une erreur avec un code de statuts, c'est le protocole HTTP qui permet les réponses avec statuts. Les données dont nous avons besoin sont donc facilement accessibles (nous verront plus tard les cas d'authentification).
+La documentation nous indique la baseUrl [`https://api.github.com`](https://api.github.com/) c'est par cette url que toutes les requests vers l'api seront envoyées. L'application qui va répondre à nos requêtes a été développée selon des normes d'accessibilité, il vous sera donc plus simple de tester des endpoints (les endpoints sont un ou plusieurs objets d'une collection de données), lorsque votre requête sera erroné l'api répondra une erreur avec un code de statuts, c'est le protocole HTTP qui permet les réponses avec statuts. Les données dont nous avons besoin sont donc facilement accessibles (nous verrons plus tard les cas d'authentification).
 
 ## 2. Créations de l'application
 
-L'utilisateur de l'application doit pouvoir donner une ou plusieurs mots clés pour permettre à l'application de rechercher l'emoji en question.
+L'utilisateur de l'application doit pouvoir donner un ou plusieurs mots clés pour permettre à l'application de rechercher l'emoji en question.
 
-Pour débuter une application NodeJS nous avons besoin du gestionnaire de package npm, npm va rendre utilisable notre application. Pour utilisé npm vous aurez besoin de NodeJS 🤪, si npm n'est pas installé vous pouvez [mettre à jour](http://nodejs.org/downloads) NodeJS ou l'installer avec apt si vous êtes sur linux `apt install npm`
+Pour débuter une application NodeJS, nous avons besoin du gestionnaire de package npm, npm va rendre utilisable notre application. Pour utiliser npm vous aurez besoin de NodeJS 🤪, si npm n'est pas installé vous pouvez [mettre à jour](http://nodejs.org/downloads) NodeJS ou l'installer avec apt si vous êtes sur linux `sudo apt install npm`
 
 Maintenant que NodeJS et NPM sont bien installés nous allons créer un package avec la commande :
 
@@ -90,7 +90,7 @@ Nous pouvons dès à présent tester le fonctionnement en ajoutant un console.lo
     ...
     console.log(argv.e)
 
-Normalement ci tout fonctionne à l’exécution la sortie devrait ressembler à ça :
+Normalement si tout fonctionne à l’exécution la sortie devrait ressembler à ça :
 
     $ node cli.js -e hey
     hey
@@ -100,7 +100,7 @@ Normalement ci tout fonctionne à l’exécution la sortie devrait ressembler à
 
 ---
 
-Maintenant que **yargs** est fonctionnelle passons à la récupération des données de l'api Github, nous allons effectuer une requêtes HTTP, pour cela nous allons utilisé la librairie **axios** (il existe de nombreuse libraries http nodejs mais axios reste la plus connus, got est aussi une très bonne librairie)
+Maintenant que **yargs** est fonctionnelle passons à la récupération des données de l'api Github, nous allons effectuer une requête HTTP, pour cela nous allons utilisé la librairie **axios** (il existe de nombreuses librairies http nodejs mais axios reste la plus connues, got est aussi une très bonne librairie)
 
     npm i axios
 
@@ -125,7 +125,7 @@ Maintenant que nous avons les librairies requises ⤵️
         console.log(res[choice]); // Affichage de l'url de l'emoji demandé
       })
 
-Voilà le fonctionnement de notre mini application, vous pouvez bien évidemment l'améliorer pour quel puisse par exemple enregistrer dans l'image dans un dossier ou que l'emoji en question soit copier dans le presse papier.
+Voilà le fonctionnement de notre mini application, vous pouvez bien évidemment l'améliorer pour qu'elle puisse par exemple enregistrer dans l'image dans un dossier ou que l'emoji en question soit copié dans le presse papier.
 
 Application en fonctionnement ⤵️
 
@@ -133,7 +133,7 @@ Application en fonctionnement ⤵️
     You chose smile emoji
     https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8
 
-C'est bien beau tout cela mais notre application ne dispose pas de commande à porter général, il serait plus pratique d'utiliser une commande tels que :
+C'est bien beau tout cela mais notre application ne dispose pas de commande à portée générale, il serait plus pratique d'utiliser une commande telle que :
 
     touch index.html // Commande Unix qui créer un ou plusieurs fichier
 

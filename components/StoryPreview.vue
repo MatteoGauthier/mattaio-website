@@ -3,7 +3,7 @@
     <div v-if="$mq == 'laptop'" class="box-wsh content fade hover-box">
       <div class="hover-box-layer_bottom">
         <h2>Commencement</h2>
-        <p>Depuis mes 13 ans je m'interresse à l'informatique et à son fonctionnement, c'est à partir de la quatrième que je commence à découvrir le monde de la programmation (une infime partie bien sûr) c'est avec Visual Basic .NET que je commence la création de petites applications, la première fut un utilitaire de 3 Forms permettant de gérer la veille de l'appareil. C'était très simple mais cette approche visuel de la programmation me plaisais (l'interface graphique click & drag des composants rendait la création d'interface simplifié). Au fil du temps j'ai appris différentes notions d'informatiques, de réseaux, de design. C'est en 3ème que j'ai suivi mon premier cours de programmation en ligne (MOOC) avec les PDFs du site du zéro renommé OpenClassrooms aujourd'hui, vous pouvez d'ailleurs retrouver les cours que j'ai validés dans la section cours de mon site web. OpenClassrooms est un très bon moyen d'enrichir ses connaissances gratuitement c'est vraiment pour moi le point de départ d'un apprentissage, le cours "Apprenez à coder avec JavaScript" m'a orienté vers l'apprentissage développement web pour à terme espérer devenir développeur web (je suis encore loin mais je fais le maximum pour atteindre mon objectif).</p>
+        <p>Depuis mes 13 ans je m'intéresse à l'informatique et à son fonctionnement, c'est à partir de la quatrième que je commence à découvrir le monde de la programmation (une infime partie bien sûr) c'est avec Visual Basic .NET que je commence la création de petites applications, la première fut un utilitaire de 3 Forms permettant de gérer la veille de l'appareil. C'était très simple mais cette approche visuelle de la programmation me plaisait (l'interface graphique click & drag des composants rendait la création d'interface simplifiée). Au fil du temps j'ai appris différentes notions d'informatique, de réseaux, de design. C'est en 3ème que j'ai suivi mon premier cours de programmation en ligne (MOOC) avec les PDFs du site du zéro renommé OpenClassrooms aujourd'hui, vous pouvez d'ailleurs retrouver les cours que j'ai validés dans la section cours de mon site web. OpenClassrooms est un très bon moyen d'enrichir ses connaissances gratuitement c'est vraiment pour moi le point de départ d'un apprentissage, le cours "Apprenez à coder avec JavaScript" m'a orienté vers l'apprentissage développement web pour à terme espérer devenir développeur web (je suis encore loin mais je fais le maximum pour atteindre mon objectif).</p>
       </div>
       <nuxt-link :to="`about/story`" class="hover-box-layer_top">
         <div class="hover-box-text">Read more +</div>
@@ -33,9 +33,8 @@ export default {
       windowHeight: 0,
       expanded: false
     };
-  },
+  }
 
-  
 };
 </script>
 

@@ -47,7 +47,7 @@
       },
       {
         "boxTitle": "VueSchool",
-        "description": "Plateforme officiels axées sur apprentissage du language Vue.JS et des technologies web",
+        "description": "Plateforme officielle axés sur l'apprentissage du langage Vue.JS et des technologies web",
         "tags": [["fas fa-user-graduate", "Certificats"]]
       },
       {
@@ -67,7 +67,7 @@
 
       {
         "boxTitle": "WesBos Courses",
-        "description": "Cours de programmation gratuit et payant créer par un open source enthusiast canadien."
+        "description": "Cours de programmation gratuits et payant créé par un open source enthusiast canadien."
       }
     ]
   },

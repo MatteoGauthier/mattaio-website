@@ -9,7 +9,7 @@ landingImg: "josh-calabrese-Ca8r0PSWg9Q-unsplash.jpg"
 ---
 # Marketing, entrepreneuriat bookmarks
 
-Salut voici une liste des outils, sites web, des livres, des ressources à propos du Marketing et de l'entrepreneuriat. Le monde de l'entrepreneuriat m'intéresse, j'espère que cette liste vous feras découvrir de nouvelles choses. J'ai testé toutes les ressources si dessous, n'hésitez pas à en proposer d'autres 😉.
+Salut voici une liste des outils, sites web, des livres, des ressources à propos du Marketing et de l'entrepreneuriat. Le monde de l'entrepreneuriat m'intéresse, j'espère que cette liste vous fera découvrir de nouvelles choses. J'ai testé toutes les ressources si dessous, n'hésitez pas à en proposer d'autres 😉.
 
 **Thèmes** : Business, Gestion de projet, Marketing, Communication
 
