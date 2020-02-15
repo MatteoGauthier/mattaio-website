@@ -1,44 +1,22 @@
-# Mattèo's website
-Hello everyone, here is the repository of my personnal website, it is powered by vue.js through the nuxt.js framework, markdownit, front-matter, obviously VueJ and the powerfull Bulma Framework. This project is in beta so it probably contains bugs and some mistakes.
+# mattaio2020
 
-If you wan't to contribute to the development of the project it is possible and encouraged 😄 (I'm a novice developer that's why my apps may have an ugly code style). Feel free to publish issue it's so helpful 😇
+> Mattèo Gauthier website - 2020 version
 
-## TODO's
-If you know the answer you can open a pull request, a new issue or send me an [email](mailto:matteo.gauthier@gmail.com)
+## Build Setup
 
-[Link to TODO's](/TODOS.md)
+``` bash
+# install dependencies
+$ yarn install
 
-## Development - Build
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-### Requirement
-* `git` installed
-* `node` installed
-  * `npm` installed
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-
-### Build locally
-Clone the repository using
-```bash
-git clone git@github.com:MattixNow/mattaio-website.git
+# generate static project
+$ yarn generate
 ```
 
-Install the dependencies
-```markdown
-npm install
-```
-
-Start the Nuxt.js devloppement server
-```bash
-npm run dev
-```
-✨ Open your browser at localhost:3000 ✨
-
-> For deployment see the package.json file
-## Credits
-
-* `vue.js` [framework](https://github.com/vuejs/vue) by Discord.js team
-* `nuxt.js` [framework](https://github.com/nuxt/nuxt.js) by Nuxt.js team
-* `bulma` [framework](bulma.io) by Jeremy Thomas
-* [Nicolò Rebughini](https://github.com/nirebu) and is his blog that helped me to build mine
-* `node-snackbar` [utility](https://github.com/polonel/SnackBar) by Chris Brame
-* `Jost*` [font](https://indestructibletype.com/Jost.html) by indestructible type*
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
