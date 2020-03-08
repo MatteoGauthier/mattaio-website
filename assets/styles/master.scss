@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border-radius: 5px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.page-enter-active {
+  transition: all .3s ease;
+}
+.page-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.page-enter, .page-leave-to
+/* .pageleave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}

@@ -1,4 +1,4 @@
-
+import blogs from "./content/blogs.json";
 export default {
   mode: "universal",
   /*
@@ -20,9 +20,23 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       }
     ]
+  },
+
+  generate: {
+    routes: [].concat(blogs.map(blog => `/blog/${blog.slug}`))
+  },
+
+  robots: {
+    UserAgent: "*",
+    Disallow: "/admin"
+  },
+  sitemap: {
+    hostname: "https://example.com",
+    gzip: true,
+    exclude: ["/admin/"]
   },
   /*
    ** Customize the progress-bar color
@@ -31,11 +45,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ["~/assets/styles/master.scss"],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: "~/plugins/tilt" }, { src: "~/plugins/dummy" }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,6 +64,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv"
   ],
@@ -65,6 +81,14 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: "frontmatter-markdown-loader",
+        options: {
+          vue: true
+        }
+      });
+    }
   }
 };
