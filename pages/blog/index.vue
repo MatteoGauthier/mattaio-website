@@ -70,7 +70,7 @@ export default {
 
   async asyncData({ app }) {
     async function awaitImport(blog) {
-      const wholeMD = await import(`~/content/blog/${blog.slug}.md`)
+      const wholeMD = await require(`~/content/blog/${blog.slug}.md`)
       return {
         attributes: wholeMD.attributes,
         link: blog.slug
