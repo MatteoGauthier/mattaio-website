@@ -7,13 +7,20 @@
       </div>
       <hr class="w-32 mx-auto my-10 border-black" />
       <div class="flex flex-col items-center max-w-4xl">
-        <div v-for="post in posts" :key="post" class="flex w-full mb-4">
+        <!-- <div v-for="post in posts" :key="post" class="flex w-full mb-4">
           <img src="https://source.unsplash.com/random" class="object-cover w-32 h-20 mr-2 rounded-sm sm:mr-4" alt />
           <div class="flex flex-col">
             <h1 class="text-lg font-semibold leading-none sm:leading-8 sm:text-sl">Startup Weekend 2019</h1>
             <p class="leading-tight sm:leading-6" v-dummy></p>
           </div>
-        </div>
+        </div> -->
+
+        <ArticleCard
+        v-for="(blog, index) in blogList"
+        :key="index"
+        :index="index"
+        :article-info="blog"
+      />
       </div>
     </div>
     <img class="z-n1 leaf1" src="~/assets/images/leaf1.png" alt="">
@@ -47,6 +54,49 @@
 @media screen and (max-width: 1024px) {
   .leaf1, .leaf2 {
     filter: opacity(0.2)
+  }
+}
+</style>
+
+
+<script>
+import ArticleCard from '~/components/ArticleCard'
+import blogs from '~/content/blogs.json'
+
+export default {
+  components: {
+    ArticleCard
+  },
+
+  async asyncData({ app }) {
+    async function awaitImport(blog) {
+      const wholeMD = await import(`~/content/blog/${blog.slug}.md`)
+      return {
+        attributes: wholeMD.attributes,
+        link: blog.slug
+      }
+    }
+
+    const blogList = await Promise.all(
+      blogs.map(blog => awaitImport(blog))
+    ).then(res => {
+      return {
+        blogList: res
+      }
+    })
+
+    return blogList
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.intro {
+  text-align: center;
+  margin-bottom: 2.4rem;
+
+  h1 {
+    margin-top: 0;
   }
 }
 </style>
