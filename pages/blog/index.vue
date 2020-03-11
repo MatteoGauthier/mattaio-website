@@ -16,7 +16,7 @@
         </div> -->
 
         <ArticleCard
-        v-for="(blog, index) in blogList"
+        v-for="(blog, index) in blogPosts"
         :key="index"
         :index="index"
         :article-info="blog"
@@ -28,16 +28,6 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'TheBlog',
-    data() {
-      return {
-        posts: 8
-      }
-    },
-  }
-</script>
 
 <style lang="scss" scoped>
 
@@ -61,31 +51,16 @@
 
 <script>
 import ArticleCard from '~/components/ArticleCard'
-import blogs from '~/content/blogs.json'
 
 export default {
   components: {
     ArticleCard
   },
 
-  async asyncData({ app }) {
-    async function awaitImport(blog) {
-      const wholeMD = await require(`~/content/blog/${blog.slug}.md`)
-      return {
-        attributes: wholeMD.attributes,
-        link: blog.slug
-      }
+  computed: {
+    blogPosts() {
+      return this.$store.state.blogPosts;
     }
-
-    const blogList = await Promise.all(
-      blogs.map(blog => awaitImport(blog))
-    ).then(res => {
-      return {
-        blogList: res
-      }
-    })
-
-    return blogList
   }
 }
 </script>

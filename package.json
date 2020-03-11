@@ -5,18 +5,20 @@
   "author": "Mattèo Gauthier",
   "private": true,
   "scripts": {
-    "dev": "node content/index.js && nuxt",
-    "build": "node content/index.js && nuxt build",
+    "dev": "nuxt",
+    "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "node content/index.js && nuxt generate"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.0.1",
-    "front-matter-markdown": "^0.4.4",
+    "dayjs": "^1.8.22",
+    "markdown-it-highlightjs": "^3.1.0",
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
@@ -24,6 +26,7 @@
     "vue-tilt.js": "^1.1.1"
   },
   "devDependencies": {
+    "frontmatter-markdown-loader": "^3.2.1",
     "@nuxtjs/tailwindcss": "latest"
   },
   "config": {

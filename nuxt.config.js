@@ -1,4 +1,3 @@
-import blogs from "./content/blogs.json";
 export default {
   mode: "universal",
   /*
@@ -21,12 +20,29 @@ export default {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       }
+    ],
+    script: [
+      { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
     ]
   },
 
   generate: {
-    routes: [].concat(blogs.map(blog => `/blog/${blog.slug}`))
+    routes: function() {
+      const fs = require("fs");
+      const path = require("path");
+      return fs.readdirSync("./content/blog").map(file => {
+        return {
+          route: `/blog/${path.parse(file).name}`, // Return the slug
+          payload: require(`./content/blog/${file}`)
+        };
+      });
+    }
   },
 
   robots: {
@@ -66,9 +82,13 @@ export default {
     "@nuxtjs/pwa",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    // "@nuxtjs/markdownit",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv"
   ],
+  // markdownit: {
+  //   injected: true
+  // },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -84,11 +104,15 @@ export default {
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.md$/,
-        loader: "frontmatter-markdown-loader",
-        options: {
-          vue: true
-        }
+        use: ["raw-loader"]
       });
+      // config.module.rules.push({
+      //   test: /\.md$/,
+      //   loader: "frontmatter-markdown-loader",
+      //   options: {
+      //     vue: true
+      //   }
+      // });
     }
   }
 };
