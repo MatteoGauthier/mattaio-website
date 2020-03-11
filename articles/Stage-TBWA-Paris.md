@@ -37,7 +37,7 @@ Les créas peuvent aussi avoir comme mission d’imaginer une publicité, ces mi
 
 Dans l’après-midi, j’ai rencontré un motion designer qui a pour mission de monter et de réaliser des vidéos, à l’aide de Premiere Pro, AfterEffect et Cinéma 4D, il peut réaliser toutes sortes de créations. La plupart de ses projets sont des spots publicitaires.
 
-Durant la soirée du jeudi, on a pu profiter d’une soirée organisée par TBWA, on remarque l’influence du modèle américain dans les .entreprises avec ce genre d’événement, la soirée s’est très bien passée, j’ai pu rencontrer d’autres membres de l’entreprise. J’étais content d’avoir eu la chance de venir à cette soirée.
+Durant la soirée du jeudi, on a pu profiter d’une soirée organisée par TBWA, on remarque l’influence du modèle américain dans les entreprises avec ce genre d’événement, la soirée s’est très bien passée, j’ai pu rencontrer d’autres membres de l’entreprise. J’étais content d’avoir eu la chance de venir à cette soirée.
 
 # Dernier Jour
 
