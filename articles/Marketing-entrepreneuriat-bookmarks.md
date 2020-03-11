@@ -1,7 +1,7 @@
 ---
 title: "Marketing, entrepreneuriat bookmarks"
 published: true
-description: Petite listes de ressources en rapport avec l'entrepreunariat
+description: Petite liste de ressources en rapport avec l'entrepreunariat
 tags: marketing,entrepreneuriat,seo,OSS,bookmarks,list,books,business,communication
 ctime: 2019-10-07
 author: Mattèo Gauthier
