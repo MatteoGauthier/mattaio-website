@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <div class="mr-6 mg-img">
-      <img class="rounded shadow-md" src="https://source.unsplash.com/400x225" />
+      <img class="rounded shadow-md" v-lazy="`https://source.unsplash.com/400x225`" />
     </div>
     <div class="flex flex-col">
       <div id="top-infos">

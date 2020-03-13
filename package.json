@@ -23,11 +23,12 @@
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
     "vue-dummy": "^1.1.3",
+    "vue-lazyload": "^1.3.3",
     "vue-tilt.js": "^1.1.1"
   },
   "devDependencies": {
-    "frontmatter-markdown-loader": "^3.2.1",
-    "@nuxtjs/tailwindcss": "latest"
+    "@nuxtjs/tailwindcss": "latest",
+    "frontmatter-markdown-loader": "^3.2.1"
   },
   "config": {
     "nuxt": {

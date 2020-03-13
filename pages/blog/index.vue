@@ -6,7 +6,7 @@
         <p class="w-2/3 text-sm leading-4 text-center">J’écrit des articles quand j’ai le temps, je parle de développement web et de mes expériences.</p>
       </div>
       <hr class="w-32 mx-auto my-10 border-black" />
-      <div class="flex flex-col items-center max-w-4xl">
+      <div class="flex flex-col items-stretch justify-start max-w-3xl ml-16 ">
         <!-- <div v-for="post in posts" :key="post" class="flex w-full mb-4">
           <img src="https://source.unsplash.com/random" class="object-cover w-32 h-20 mr-2 rounded-sm sm:mr-4" alt />
           <div class="flex flex-col">
@@ -20,6 +20,7 @@
         :key="index"
         :index="index"
         :article-info="blog"
+        class="mb-4"
       />
       </div>
     </div>

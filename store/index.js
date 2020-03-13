@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+const path = require("path");
 export const state = () => ({
   blogPosts: []
 });
@@ -21,7 +22,8 @@ export const actions = {
       .keys()
       .map(key => {
         let res = files(key);
-        res.slug = key.slice(2, -5);
+        // res.slug = key.slice(2, -5);
+        res.slug = path.parse(key).name;
         return res;
       })
       .map(post => {
