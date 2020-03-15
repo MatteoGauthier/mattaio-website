@@ -68,7 +68,8 @@ export default {
   plugins: [
     { src: "~/plugins/tilt" },
     { src: "~/plugins/dummy" },
-    { src: "~/plugins/vue-lazyload" }
+    { src: "~/plugins/vue-lazyload" },
+    { src: "~/plugins/fragment" }
   ],
   /*
    ** Nuxt.js dev-modules

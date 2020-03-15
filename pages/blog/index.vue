@@ -7,14 +7,6 @@
       </div>
       <hr class="w-32 mx-auto my-10 border-black" />
       <div class="flex flex-col items-stretch justify-start max-w-3xl ml-16 ">
-        <!-- <div v-for="post in posts" :key="post" class="flex w-full mb-4">
-          <img src="https://source.unsplash.com/random" class="object-cover w-32 h-20 mr-2 rounded-sm sm:mr-4" alt />
-          <div class="flex flex-col">
-            <h1 class="text-lg font-semibold leading-none sm:leading-8 sm:text-sl">Startup Weekend 2019</h1>
-            <p class="leading-tight sm:leading-6" v-dummy></p>
-          </div>
-        </div> -->
-
         <ArticleCard
         v-for="(blog, index) in blogPosts"
         :key="index"

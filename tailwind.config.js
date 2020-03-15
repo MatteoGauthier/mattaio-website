@@ -28,6 +28,13 @@ module.exports = {
         "Segoe UI Emoji",
         "Segoe UI Symbol",
         "Noto Color Emoji"
+      ],
+      serif: [
+        "Playfair Display",
+        "Georgia",
+        "Times New Roman",
+        "Times",
+        "serif"
       ]
     },
     extend: {
@@ -40,10 +47,12 @@ module.exports = {
       fontSize: {
         sl: "1.75rem",
         xxl: "2rem",
-        "4-5xl":"2.5rem"
+        "4-5xl": "2.5rem"
       }
     }
   },
-  variants: {},
+  variants: {
+    padding: ["first", "last"]
+  },
   plugins: []
 };
