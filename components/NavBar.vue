@@ -14,7 +14,7 @@
             <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </button>
-        <ul class="absolute top-0 right-0 z-10 hidden max-w-xs p-5 mt-12 font-medium text-right bg-white rounded shadow md:max-w-full md:w-auto md:flex md:mt-0 md:relative md:flex-row md:items-center md:bg-transparent md:p-0 md:shadow-none md:rounded-none">
+        <ul class="absolute top-0 right-0 z-10 hidden max-w-xs p-5 mt-12 font-medium text-right bg-white rounded shadow md:max-w-full md:w-auto md:flex md:mt-0 md:relative md:flex-row md:items-center md:bg-transparent md:shadow-none md:rounded-none">
           <li class="mb-3 md:mr-8 md:mb-0">
             <nuxt-link to="/Resume">Resume</nuxt-link>
           </li>

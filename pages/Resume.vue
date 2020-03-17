@@ -6,7 +6,7 @@
         <p class="w-2/3 text-sm leading-4 text-center">Mon resumé vous permet de rapidement découvrir les domaines qui m'intéressent.</p>
       </div>
       <hr class="w-32 mx-auto my-10 border-black" />
-      <div class="flex flex-wrap justify-center">
+      <div class="sm:flex sm:flex-wrap justify-center">
         <Bio />
         <Experiences :experiences="experiences" />
         <Education :education="education"/>
@@ -19,10 +19,10 @@
 <script>
 
 
-import Bio from "@/components/Portfolio/Bio"
-import Experiences from "@/components/Portfolio/Experiences"
-import Education from "@/components/Portfolio/Education"
-import Tools from "@/components/Portfolio/Tools"
+import Bio from "@/components/Resume/Bio"
+import Experiences from "@/components/Resume/Experiences"
+import Education from "@/components/Resume/Education"
+import Tools from "@/components/Resume/Tools"
 export default {
   components: {
     Bio,

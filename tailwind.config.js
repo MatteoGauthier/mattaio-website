@@ -41,6 +41,14 @@ module.exports = {
       maxWidth: {
         xxl: "1600px"
       },
+      height: {
+        imgA: "80px",
+        "imgCV": "223px"
+      },
+      width: {
+        imgA: "140px",
+        "imgCV": "317px"
+      },
       zIndex: {
         n1: "-10"
       },
@@ -52,7 +60,7 @@ module.exports = {
     }
   },
   variants: {
-    padding: ["first", "last"]
+    padding: ["first", "last", "responsive"]
   },
   plugins: []
 };

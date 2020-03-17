@@ -67,9 +67,6 @@ img[lazy="error"] {
   transition: all 1s;
 }
 
-.title {
-  @apply font-serif text-xxl text-right pr-8
-}
 .mg-table-ititle {
   @apply font-sans text-xl font-semibold;
 }
@@ -78,7 +75,7 @@ img[lazy="error"] {
   @apply text-gray-500 leading-8;
 }
 
-.mg-cv-img {
-  width: 223px;
-  height: 317px;
-}
+// .mg-cv-img {
+//   width: 223px;
+//   height: 317px;
+// }

@@ -1,13 +1,11 @@
 <template>
-  <article class="article-card">
-    <nuxt-link :to="`/blog/${articleInfo.slug}`" class="flex">
-    <img v-lazy="`https://source.unsplash.com/140x80?${articleInfo.slug}`" class="mr-4 rounded-sm shadow-md mg-article-card-img" alt="">
-      <div class="flex flex-col">
-        <div class="mb-1 font-semibold leading-none text-sl">{{articleInfo.title}}</div>
+    <nuxt-link :to="`/blog/${articleInfo.slug}`" class="overflow-hidden rounded shadow-lg sm:flex article-card sm:rounded-none sm:shadow-none">
+      <img v-lazy="`https://source.unsplash.com/random?${articleInfo.slug}`" class="object-cover w-full h-32 mr-4 rounded-sm sm:shadow-md sm:w-imgA sm:h-imgA" alt />
+      <div class="flex flex-col px-3 py-3 bg-white sm:px-0 sm:py-0 sm:pt-1 sm:bg-transparent ">
+        <div class="mb-1 text-2xl font-semibold leading-none">{{articleInfo.title}}</div>
         <div id="desc" class="leading-6">{{articleInfo.description}}</div>
       </div>
     </nuxt-link>
-  </article>
 </template>
 
 <script>
@@ -22,8 +20,8 @@ export default {
 </script>
 
 <style lang="scss">
-.mg-article-card-img {
-  width: 140px;
-  height: 80px;
-}
+// .mg-article-card-img {
+//   width: 140px;
+//   height: 80px;
+// }
 </style>

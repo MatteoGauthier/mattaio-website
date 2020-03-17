@@ -1,6 +1,6 @@
 <template>
   <fragment>
-    <div class="w-1/4 mt-10 leading-8 title">Education</div>
+    <div class="w-1/4 mt-10 leading-8 font-serif text-xxl text-right pr-8">Education</div>
     <div class="w-2/4 mt-10 more">
       <div class="flex flex-col">
         <div v-for="item in education" :key="item.desc" class="flex justify-between">

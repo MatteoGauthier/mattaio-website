@@ -1,6 +1,6 @@
 <template>
   <fragment>
-    <div class="w-1/4 mt-10 leading-8 title">Tools</div>
+    <div class="w-1/4 mt-10 leading-8 font-serif text-xxl text-right pr-8">Tools</div>
     <div class="w-2/4 px-2 mt-10 more">
       <div class="flex flex-wrap -mx-2 overflow-hidden">
         <div v-for="item in tools" :key="item" class="w-1/3 px-2 my-1 last:pb-6 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/5">
