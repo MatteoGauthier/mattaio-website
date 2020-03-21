@@ -45,14 +45,14 @@ export default {
     }
   },
 
-  router: {
-    extendRoutes (routes, resolve) {
-      routes.push({
-        path: "/cv",
-        redirect: () => {return "CV_MattèoGauthier_2020_2.1.pdf";}
-      });
-    }
-  },
+  // router: {
+  //   extendRoutes (routes, resolve) {
+  //     routes.push({
+  //       path: "/cv",
+  //       redirect: () => {return "CV_MattèoGauthier_2020_2.1.pdf";}
+  //     });
+  //   }
+  // },
 
   robots: {
     UserAgent: "*",
