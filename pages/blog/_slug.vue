@@ -2,11 +2,13 @@
   <article class="container max-w-5xl px-8 mx-auto" :key="$route.params.slug">
     <ArticleHead class="pt-5 pb-12" :article="attributes" />
     <div class="markdown" v-html="content"></div>
+    <OSSBadge/>
   </article>
 </template>
 
 <script>
 import ArticleHead from "@/components/ArticleHead.vue";
+import OSSBadge from "@/components/OSSBadge.vue";
 const fm = require("front-matter");
 const md = require('markdown-it')({
   breaks: true,
@@ -16,7 +18,7 @@ const md = require('markdown-it')({
 
 export default {
   components: {
-    ArticleHead
+    ArticleHead,OSSBadge
   },
 
 
