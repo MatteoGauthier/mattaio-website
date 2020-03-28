@@ -60,7 +60,8 @@ module.exports = {
     }
   },
   variants: {
-    padding: ["first", "last", "responsive"]
+    padding: ["first", "last", "responsive"],
+    container: ['responsive']
   },
   plugins: []
 };

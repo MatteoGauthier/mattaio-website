@@ -13,7 +13,7 @@
         <div id="subtitle" class="table text-gray-800 ">{{article.description}}</div>
       </div>
       <div id="tags">
-        <div v-for="tag in article.tags" :key="tag" v-html="tag" class="inline px-3 py-1 mr-2 text-sm text-gray-800 bg-gray-200 rounded-full"></div>
+        <div v-for="tag in article.tags.slice(0,5)" :key="tag" v-html="tag" class="inline px-3 py-1 mr-2 text-sm text-gray-800 bg-gray-200 rounded-full"></div>
       </div>
     </div>
   </div>
@@ -43,32 +43,13 @@ export default {
   font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
 }
 #titles {
-  &:last-child {
-    margin: 0;
-  }
+
   #title, #subtitle {
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: #000;
-    &::after {
-    content: "";
-    background: #BEE3F8;
-    position: absolute;
-    left: 10px;
-    bottom: 5px;
-    min-width: 100%;
-    height: calc(100% - 66%);
-    z-index: -1;
-    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 1);
-    }
+    // box-shadow: inset 0 -0.5625em 0 0 #BEE3F8;
+    text-decoration: underline #BEE3F8;
 
   }
-  #subtitle::after {
-    background: #EBF8FF;
-    height: calc(100% - 20%);
-    bottom:-4px
-  }
+
 }
 
 

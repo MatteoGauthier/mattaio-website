@@ -1,12 +1,12 @@
 <template>
   <div class="relative pb-8 mt-4">
-    <div class="container flex flex-col items-center justify-center px-3 mx-auto bg-transparent sm:px-0">
+    <div class="flex flex-col items-center justify-center px-3 mx-auto bg-transparent ">
       <div class="flex flex-col items-center justify-center">
         <img class="mb-2" src="~/assets/Resume Plaque.png" alt="Plaque" />
         <p class="w-2/3 text-sm leading-4 text-center">Mon resumé vous permet de rapidement découvrir les domaines qui m'intéressent.</p>
       </div>
       <hr class="w-32 mx-auto my-10 border-black" />
-      <div class="sm:flex sm:flex-wrap justify-center">
+      <div class="justify-center sm:flex sm:flex-wrap">
         <Bio />
         <Experiences :experiences="experiences" />
         <Education :education="education"/>

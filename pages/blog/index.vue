@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-screen pb-8 mt-4 ">
+  <div class="relative pb-8 mt-4 ">
     <div class="container flex flex-col items-center justify-center px-3 bg-transparent md:mx-auto sm:px-0">
       <div class="flex flex-col items-center justify-center">
         <img class="mb-2" src="~/assets/The Blog Plaque.svg" alt="Plaque" />
