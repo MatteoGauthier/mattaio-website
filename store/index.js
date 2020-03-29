@@ -14,7 +14,7 @@ export const actions = {
   async nuxtServerInit({ commit }) {
     const fm = require("front-matter");
     let files = await require.context(
-      "~/assets/content/blog/",
+      "~/content/blog/",
       false,
       /\.md$/
     );
