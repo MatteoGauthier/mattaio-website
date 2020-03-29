@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pb-8 mt-4">
+  <div class="container relative pb-8 mx-auto mt-4">
     <div class="flex flex-col items-center justify-center px-3 mx-auto bg-transparent ">
       <div class="flex flex-col items-center justify-center">
         <img class="mb-2" src="~/assets/Resume Plaque.png" alt="Plaque" />

@@ -1,3 +1,11 @@
+import path from "path";
+import glob from "glob";
+const otherRoutes = [];
+const routeMap = {
+  "": "blog/*.md"
+};
+
+
 export default {
   mode: "universal",
   /*
@@ -33,16 +41,7 @@ export default {
   },
 
   generate: {
-    routes: function() {
-      const fs = require("fs");
-      const path = require("path");
-      return fs.readdirSync("./content/blog").map(file => {
-        return {
-          route: `/blog/${path.parse(file).name}`, // Return the slug
-          payload: require(`./content/blog/${file}`)
-        };
-      });
-    }
+    routes: otherRoutes.concat(getDynamicPaths(routeMap))
   },
 
   // router: {
@@ -130,3 +129,21 @@ export default {
     }
   }
 };
+
+/**
+ * Create an array of URLs from a list of files
+ * @param {*} urlFilepathTable
+ */
+function getDynamicPaths(urlFilepathTable) {
+  return [].concat(
+    ...Object.keys(urlFilepathTable).map((url) => {
+      const filepathGlob = urlFilepathTable[url]
+      let d = glob.sync(filepathGlob, { cwd: "content" }).map(filepath => {
+        console.log(`/blog${url}/${path.basename(filepath, ".md")}`);
+        return `/blog${url}/${path.basename(filepath, ".md")}`;
+      });
+      console.log(d)
+      return d
+    })
+  )
+}
