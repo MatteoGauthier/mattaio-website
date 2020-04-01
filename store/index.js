@@ -1,7 +1,10 @@
 import dayjs from 'dayjs'
+
+
 const path = require("path");
 export const state = () => ({
-  blogPosts: []
+  blogPosts: [],
+  portfolioImages: []
 });
 
 export const mutations = {
@@ -37,5 +40,7 @@ export const actions = {
       });
     // console.log(blogPosts)
     await commit("setBlogPosts", blogPosts);
+
+
   }
 };

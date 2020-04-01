@@ -2,3 +2,9 @@
   from = "/CV"
   to = "/CV_MattèoGauthier_2020_2.1.pdf"
   status = 301
+  
+[[redirects]]
+  from = "/cv"
+  to = "/CV_MattèoGauthier_2020_2.1.pdf"
+  status = 301
+
