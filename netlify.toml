@@ -14,6 +14,16 @@
   status = 301
 
 [[redirects]]
+  from = "/courses"
+  to = "/Resume/courses"
+  status = 301
+
+[[redirects]]
+  from = "/Courses"
+  to = "/Resume/courses"
+  status = 301
+
+[[redirects]]
   from = "/theblog"
   to = "/blog"
   status = 301
