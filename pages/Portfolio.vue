@@ -1,8 +1,10 @@
 <template>
   <div>
-    <client-only>
+
+
       <CoolLightBox :items="images" :index="index" loop @close="index = null"></CoolLightBox>
-    </client-only>
+
+
     <div class="inline-flex flex-wrap">
       <img class="flex-1 object-cover h-64 max-w-md m-2 transition-all duration-700 rounded shadow" v-for="(src, index) in images" :key="index" @click="setIndex(index)" v-lazy="src" alt />
     </div>
@@ -10,13 +12,13 @@
 </template>
 
 <script>
-import CoolLightBox from "vue-cool-lightbox";
-import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
-
 export default {
-  components: {
-    CoolLightBox
-  },
+  head: {
+  link: [
+    { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vue-cool-lightbox/dist/vue-cool-lightbox.min.css' }
+  ]
+},
+
   data() {
     return {
       images: [
@@ -44,4 +46,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+
+</style>

@@ -33,8 +33,7 @@
     "@nuxtjs/tailwindcss": "latest",
     "frontmatter-markdown-loader": "^3.2.1",
     "glob": "^7.1.6",
-    "glob-all": "^3.2.1",
-    "x-ray": "^2.3.4"
+    "glob-all": "^3.2.1"
   },
   "config": {
     "nuxt": {
