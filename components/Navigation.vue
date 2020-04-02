@@ -27,14 +27,14 @@
       return {
         cards: [
           {
-            name:'Portfolio',
+            name:'Resume / CV en ligne',
             desc: "Expériences, éducation, outils de travails, bio, etc..",
-            img: "https://source.unsplash.com/daily"
+            img: "https://source.unsplash.com/n8Qb1ZAkK88"
           },
           {
             name:'Mes réalisations',
             desc: "Prototype d’applications web / mobile, site web, vidéos, logiciel.",
-            img: "https://source.unsplash.com/weekly"
+            img: require('~/assets/images/Real.jpg')
           },
           {
             name:'The Blog',

@@ -19,7 +19,7 @@
             <nuxt-link to="/Resume">Resume</nuxt-link>
           </li>
           <li class="mb-3 md:mr-8 md:mb-0">
-            <a href="#">Mes réalisations</a>
+            <nuxt-link to="/Portfolio">Mes réalisations</nuxt-link>
           </li>
           <li class="mb-3 md:mr-8 md:mb-0">
             <nuxt-link to="/blog">The Blog</nuxt-link>
