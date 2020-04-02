@@ -2,9 +2,23 @@
   from = "/CV"
   to = "/CV_MattèoGauthier_2020_2.1.pdf"
   status = 301
-  
+
 [[redirects]]
   from = "/cv"
   to = "/CV_MattèoGauthier_2020_2.1.pdf"
   status = 301
 
+[[redirects]]
+  from = "/ytb"
+  to = "https://youtu.be/BMuJJeMWnIg"
+  status = 301
+
+[[redirects]]
+  from = "/MMI"
+  to = "https://youtu.be/BMuJJeMWnIg"
+  status = 301
+
+[[redirects]]
+  from = "/mmi"
+  to = "https://youtu.be/BMuJJeMWnIg"
+  status = 301
