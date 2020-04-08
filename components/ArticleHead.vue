@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <div class="mr-6 mg-img">
-      <img class="rounded shadow-md" v-lazy="`https://source.unsplash.com/400x225`" />
+      <img class="rounded shadow-md" v-lazy="this.article.landingImg ? this.article.landingImg :setImage(article.landingImg)" />
     </div>
     <div class="flex flex-col">
       <div id="top-infos">
@@ -27,12 +27,25 @@ export default {
     methods: {
       formatDate(date) {
         return dayjs(date).format("DD MMM YYYY")
-      }
+      },
+
+    setImage(slug) {
+
+        let img = 'https://source.unsplash.com/400x225'
+        return img
+
+
+  },
     },
     mounted() {
-      this.article.tags = this.article.tags.split(',').map(x => {
+      try {
+        this.article.tags = this.article.tags.split(',').map(x => {
         return '#' + x.charAt(0).toUpperCase() + x.slice(1)
         })
+      } catch (error) {
+        console.log(error)
+      }
+
 
     },
   }

@@ -17,13 +17,13 @@
           </button>
           <ul class="absolute top-0 right-0 z-10 hidden max-w-xs p-5 mt-12 font-medium text-right bg-white rounded shadow md:max-w-full md:w-auto md:flex md:mt-0 md:relative md:flex-row md:items-center md:bg-transparent md:shadow-none md:rounded-none">
             <li class="mb-3 md:mr-8 md:mb-0">
-              <nuxt-link to="/Resume">Resume</nuxt-link>
+              <nuxt-link class="mg-links" to="/Resume">Resume</nuxt-link>
             </li>
             <li class="mb-3 md:mr-8 md:mb-0">
-              <nuxt-link to="/Portfolio">Mes réalisations</nuxt-link>
+              <nuxt-link class="mg-links" to="/Portfolio">Mes réalisations</nuxt-link>
             </li>
             <li class="mb-3 md:mr-8 md:mb-0">
-              <nuxt-link to="/blog">The Blog</nuxt-link>
+              <nuxt-link class="mg-links" to="/blog">The Blog</nuxt-link>
             </li>
             <li>
               <a href="#" @click="open = true" class="inline-block px-2 py-1 font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">Contact me</a>
@@ -127,6 +127,43 @@ export default {
 </script>
 
 <style lang="scss">
+// .mg-links , .nuxt-link-active {
+//   content: '';
+//   position: absolute;
+//   width: 100%;
+//   transform: scaleX(1);
+//   height: 2px;
+//   bottom: 0;
+//   left: 0;
+//   background-color: rgb(33, 41, 77);
+//   transform-origin: bottom right;
+//   transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+// }
+
+.mg-links {
+  display: inline-block;
+  position: relative;
+  // color: #474E51;
+}
+
+.mg-links::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(33, 41, 77);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.mg-links:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 #email {
   background: #0053fa;
   background-size: cover;
