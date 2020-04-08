@@ -1,22 +1,45 @@
-# MattaioRevamp2020
+# Mattèo's website
+Hello everyone, here is the repository of my personnal website, it is powered by vue.js through the nuxt.js framework, markdownit, front-matter, obviously VueJ and the powerfull Bulma Framework. This project is in beta so it probably contains bugs and some mistakes.
 
-> My sweet Nuxt.js project
+If you wan't to contribute to the development of the project it is possible and encouraged 😄 (I'm a novice developer that's why my apps may have an ugly code style). Feel free to publish issue it's so helpful 😇
 
-## Build Setup
+## TODO's
+If you know the answer you can open a pull request, a new issue or send me an [email](mailto:matteo.gauthier@gmail.com)
 
-``` bash
-# install dependencies
-$ yarn install
+[Link to TODO's](/TODOS.md)
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## Development - Build
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+### Requirement
+* `git` installed
+* `node` installed
+  * `npm` installed
 
-# generate static project
-$ yarn generate
+
+### Build locally
+Clone the repository using
+```bash
+git clone git@github.com:MattixNow/mattaio-website.git
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Install the dependencies
+```markdown
+npm install
+```
+
+Start the Nuxt.js devloppement server
+```bash
+npm run dev
+```
+✨ Open your browser at localhost:3000 ✨
+
+> For deployment look at the package.json file
+## Credits
+* `vue.js` [framework](https://github.com/vuejs/vue) by Discord.js team
+* `nuxt.js` [framework](https://github.com/nuxt/nuxt.js) by Nuxt.js team
+* `bulma` [framework](bulma.io) by Jeremy Thomas (previously in v1)
+* [Nicolò Rebughini](https://github.com/nirebu) and is his blog that helped me to build mine (v1)
+* `node-snackbar` [utility](https://github.com/polonel/SnackBar) by Chris Brame (v1)
+* `Jost*` [font](https://indestructibletype.com/Jost.html) by indestructible type* (v1)
+* `Inter` [font](https://rsms.me/inter/) by Rasmus Andersson
+* `TailwindCSS` [framework](https://tailwindcss.com/) by Adam Wathan
