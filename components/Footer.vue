@@ -1,64 +1,38 @@
 <template>
-  <footer class="footer is-size-7-mobile">
-    <div class="is-pulled-left">
-      <p>
-        <a class="linkn" href="https://Mattèo.dev"><strong>Mattèo.dev</strong></a> 2017 → 2020 by
-        <a href="https://t.me/MatteoGauthier">Mattèo Gauthier</a>
-      </p>
-    </div>
-    <div class="is-pulled-right has-text-right">
-      <nav class="buttons">
-        <span>
-          <a class="linkn" href="https://github.com/MattixNow">
-            <i class="fab fa-github"></i>
-            <span class="which-social">Github</span></a>
-        </span>
-        <span>
-          <a class="linkn" href="https://twitter.com/MattixNow">
-            <i class="fab fa-twitter"></i>
-            <span class="which-social">Twitter</span></a>
-        </span>
+  <nav class="mt-6 bg-gray-100 md:mt-12">
+    <div class="container px-4 py-4 mx-auto">
+      <div class="relative flex flex-col items-center justify-around h-16 md:justify-between md:flex-row">
+        <div class="inline-flex leading-5 text-gray-900">
+          <span class="mr-1 font-semibold text-black ">Mattèo.dev </span>
+          <span class="mr-1 ">2017 </span>
+          <svg class="inline mr-1" width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.60227 15L13.6932 9.90909L8.60227 4.81818L7.72727 5.69318L11.3295 9.28409H2V10.5341H11.3295L7.72727 14.1364L8.60227 15Z" fill="#1A202C" />
+          </svg>
+          <span class="mr-1 ">2020 by </span>
+          <nuxt-link class="text-blue-700 " to="/Resume">Mattèo Gauthier</nuxt-link>
+        </div>
+        <div class="flex">
+          <a href="https://github.com/MattixNow/mattaio-website" class="flex items-center mr-4">
+            <img src="~/assets/images/icons/Github.svg" class="w-6 mr-1" alt="github icon" />
+            <span>Github</span>
+          </a>
+          <a href="https://twitter.com/MattixNow" class="flex items-center ">
 
-      </nav>
+            <img src="~/assets/images/icons/Twitter.svg" class="w-6 mr-1" alt="github icon" />
+            <span>Twitter</span>
+          </a>
+
+        </div>
+      </div>
     </div>
-  </footer>
+  </nav>
 </template>
 
 <script>
   export default {
-
-  };
-
+    name: "Footer"
+  }
 </script>
 
-<style lang="scss">
-  .which-social {
-    font-size: 1.25rem;
-  }
-
-  nav {
-    span {
-      margin: 0 0.3rem;
-    }
-  }
-
-footer {
-  // position: absolute;
-  // bottom: 0;
-}
-@media screen and (max-width: 528px) {
-  .buttons {
-        justify-content: center;
-  }
-
-  .footer {
-    text-align: center;
-
-    padding: 1.5rem 1.5rem 1.5rem !important;
-    * {
-    float: none !important;}
-  }
-}
-
-
+<style lang="scss" scoped>
 </style>

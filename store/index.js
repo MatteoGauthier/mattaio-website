@@ -1,42 +1,46 @@
+import dayjs from 'dayjs'
+
+
+const path = require("path");
 export const state = () => ({
-  bloglist: []
+  blogPosts: [],
+  portfolioImages: []
 });
 
 export const mutations = {
-  set(state, list) {
-    state.bloglist = list;
+  setBlogPosts(state, list) {
+    state.blogPosts = list;
   }
 };
 
 export const actions = {
-  /*
-      nuxtServerInit will run everytime the app is launched or navigated
-      directly from the browser (not when using the <nuxt-link> component)
-      This function will read the articles folder and commit to the store
-      the attributes (maybe it will also store the article contents)
-      so we can render the blog page in the right order and also
-      navigate back to it
-    */
   async nuxtServerInit({ commit }) {
     const fm = require("front-matter");
-    const dayjs = require("dayjs");
-    var files = await require.context("~/articles/", false, /\.md$/);
-    var posts = files
+    let files = await require.context(
+      "~/content/blog/",
+      false,
+      /\.md$/
+    );
+    let blogPosts = files
       .keys()
       .map(key => {
-        var res = files(key);
-        res.slug = key.slice(2, -3);
+        let res = files(key);
+        // res.slug = key.slice(2, -5);
+        res.slug = path.parse(key).name;
         return res;
       })
       .map(post => {
         let attributes = fm(post.default).attributes;
         attributes.slug = post.slug;
-        attributes.ctime = dayjs(attributes.ctime).format("YYYY-MM-DD");
+        attributes.date = dayjs(attributes.date).format("DD-MM-YYYY");
         return attributes;
       })
       .sort((a, b) => {
-        return a.ctime < b.ctime;
+        return a.date < b.date;
       });
-    await commit("set", posts);
+    // console.log(blogPosts)
+    await commit("setBlogPosts", blogPosts);
+
+
   }
 };

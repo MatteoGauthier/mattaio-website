@@ -1,0 +1,82 @@
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border-radius: 5px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.page-enter-active {
+  transition: all .3s ease;
+}
+.page-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.page-enter, .page-leave-to
+/* .pageleave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+img[lazy="loaded"] {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  transition: all 1s;
+}
+img[lazy="loading"] {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  transition: all 1s;
+  object-fit: cover;
+}
+
+img[lazy="error"] {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  transition: all 1s;
+}
+
+.mg-table-ititle {
+  @apply font-sans text-xl font-semibold;
+}
+
+// .mg-table-idesc {
+//   @apply ;
+// }
+
+// .mg-cv-img {
+//   width: 223px;
+//   height: 317px;
+// }

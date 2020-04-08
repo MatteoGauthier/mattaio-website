@@ -1,0 +1,44 @@
+[[redirects]]
+  from = "/CV"
+  to = "/CV_Matt%C3%A8oGauthier_2020_2.1.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/cv"
+  to = "/CV_Matt%C3%A8oGauthier_2020_2.1.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/TheBlog"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/courses"
+  to = "/Resume/courses"
+  status = 301
+
+[[redirects]]
+  from = "/Courses"
+  to = "/Resume/courses"
+  status = 301
+
+[[redirects]]
+  from = "/theblog"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/ytb"
+  to = "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev"
+  status = 301
+
+[[redirects]]
+  from = "/MMI"
+  to = "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev"
+  status = 301
+
+[[redirects]]
+  from = "/mmi"
+  to = "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev"
+  status = 301
