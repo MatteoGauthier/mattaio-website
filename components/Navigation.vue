@@ -5,7 +5,7 @@
       <main class="py-4">
 
           <div class="justify-between block md:flex md:-mx-2">
-            <div v-for="card in cards" :key="card.name" class="flex w-full pb-4 lg:w-1/3 md:mx-2">
+            <nuxt-link :to="card.link" v-for="card in cards" :key="card.name" class="flex w-full pb-4 lg:w-1/3 md:mx-2">
               <div class="relative overflow-hidden bg-white rounded-lg shadow">
                 <img class="object-cover object-center w-full h-32" :src="card.img" :alt="card.name + 'image'" />
                 <div class="h-auto p-4">
@@ -13,7 +13,7 @@
                   <div class="leading-relaxed text-gray-900">{{card.desc}}</div>
                 </div>
               </div>
-            </div>
+            </nuxt-link>
 
         </div>
       </main>
@@ -28,18 +28,21 @@
         cards: [
           {
             name:'Resume / CV en ligne',
-            desc: "Expériences, éducation, outils de travails, bio, etc..",
-            img: "https://source.unsplash.com/n8Qb1ZAkK88"
+            desc: "Expériences, formations, outils de travail, bio, etc..",
+            img: "https://source.unsplash.com/n8Qb1ZAkK88",
+            link:'/Resume'
           },
           {
             name:'Mes réalisations',
             desc: "Prototype d’applications web / mobile, site web, vidéos, logiciel.",
-            img: require('~/assets/images/Real.jpg')
+            img: require('~/assets/images/Real.jpg'),
+            link:'/Portfolio'
           },
           {
             name:'The Blog',
-            desc: "J’écrit des articles quand j’ai le temps, je parle de développement web et de mes expériences.",
-            img: "https://source.unsplash.com/random?blog"
+            desc: "J’écris des articles quand j’ai le temps, je parle de développement web et de mes expériences.",
+            img: "https://source.unsplash.com/FACAaPZak2k",
+            link:'/Blog'
           },
         ]
       }

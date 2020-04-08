@@ -1,4 +1,5 @@
 <template>
+<fragment>
   <div class="container mx-auto">
     <div id="courses-top">
       <div class="text-3xl font-bold text-center text-gray-900">Les cours que j'ai suivis</div>
@@ -36,12 +37,17 @@
       </div>
     </div>
   </div>
+  </fragment>
 </template>
 
 <script>
 import axios from "axios";
+import Modal from "@/components/Modal";
 export default {
   name: 'Courses',
+  components: {
+    Modal
+  },
   asyncData() {
     return axios
       .get("https://api.jsonbin.io/b/5df14e15bc5ffd040097c63a/latest")

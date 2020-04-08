@@ -9,18 +9,18 @@
             <path d="M8.60227 15L13.6932 9.90909L8.60227 4.81818L7.72727 5.69318L11.3295 9.28409H2V10.5341H11.3295L7.72727 14.1364L8.60227 15Z" fill="#1A202C" />
           </svg>
           <span class="mr-1 ">2020 by </span>
-          <span class="text-blue-700 ">Mattèo Gauthier</span>
+          <nuxt-link class="text-blue-700 " to="/Resume">Mattèo Gauthier</nuxt-link>
         </div>
         <div class="flex">
-          <div class="flex items-center mr-4">
+          <a href="https://github.com/MattixNow/mattaio-website" class="flex items-center mr-4">
             <img src="~/assets/images/icons/Github.svg" class="w-6 mr-1" alt="github icon" />
             <span>Github</span>
-          </div>
-          <div class="flex items-center ">
+          </a>
+          <a href="https://twitter.com/MattixNow" class="flex items-center ">
 
             <img src="~/assets/images/icons/Twitter.svg" class="w-6 mr-1" alt="github icon" />
             <span>Twitter</span>
-          </div>
+          </a>
 
         </div>
       </div>

@@ -69,7 +69,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~/assets/styles/master.scss"],
+  css: [{ src: "~/assets/styles/master.scss", lang: "scss" }],
   /*
    ** Plugins to load before mounting the App
    */
@@ -78,12 +78,19 @@ export default {
     { src: "~/plugins/dummy" },
     { src: "~/plugins/vue-lazyload" },
     { src: "~/plugins/fragment" },
-     { src: '~/plugins/lightbox', ssr: false }
+    { src: "~/plugins/lightbox", ssr: false },
+    { src: "~/plugins/ytb", ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-125389774-1"
+      }
+    ],
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss"
   ],
@@ -98,7 +105,8 @@ export default {
     "@nuxtjs/robots",
     // "@nuxtjs/markdownit",
     // Doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
+    "portal-vue/nuxt"
   ],
   // markdownit: {
   //   injected: true

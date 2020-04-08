@@ -14,7 +14,9 @@
       </div>
     </div>
     <div class="hidden lg:block">
-      <img src="https://source.unsplash.com/400x225" />
+      <no-ssr>
+      <youtube :video-id="videoId" ref="youtube" :height="270" :width="480" :fitParent="true" style="background-image: url('https://i.ytimg.com/vi/Qn2fZ2FlO4M/hqdefault.jpg'); background-position:center;"></youtube>
+      </no-ssr>
     </div>
   </div>
 </template>
@@ -23,7 +25,7 @@
 export default {
   name: "Hero",
   data() {
-    return {
+    return {videoId: 'Qn2fZ2FlO4M',
       vtiltdata: {
         speed: 3000,
         max: 10,

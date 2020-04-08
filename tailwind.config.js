@@ -27,41 +27,41 @@ module.exports = {
         "Apple Color Emoji",
         "Segoe UI Emoji",
         "Segoe UI Symbol",
-        "Noto Color Emoji"
+        "Noto Color Emoji",
       ],
       serif: [
         "Playfair Display",
         "Georgia",
         "Times New Roman",
         "Times",
-        "serif"
-      ]
+        "serif",
+      ],
     },
     extend: {
       maxWidth: {
-        xxl: "1600px"
+        xxl: "1600px",
       },
       height: {
         imgA: "80px",
-        "imgCV": "223px"
+        imgCV: "223px",
       },
       width: {
         imgA: "140px",
-        "imgCV": "317px"
+        imgCV: "317px",
       },
       zIndex: {
-        n1: "-10"
+        n1: "-10",
       },
       fontSize: {
         sl: "1.75rem",
         xxl: "2rem",
-        "4-5xl": "2.5rem"
-      }
-    }
+        "4-5xl": "2.5rem",
+      },
+    },
   },
   variants: {
     padding: ["first", "last", "responsive"],
-    container: ['responsive']
+    container: ["responsive"],
   },
-  plugins: []
+  plugins: [require("@tailwindcss/custom-forms")],
 };

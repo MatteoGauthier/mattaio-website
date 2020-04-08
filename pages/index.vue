@@ -2,6 +2,7 @@
   <div class="container mx-auto lg:px-8 xl:px-8 xl:max-w-xxl">
     <Hero class="mt-4 mb-10 md:mt-16 md:mb-24"/>
     <Navigation/>
+    <br>
   </div>
 </template>
 
