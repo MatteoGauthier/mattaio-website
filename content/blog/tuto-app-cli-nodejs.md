@@ -6,6 +6,7 @@ tags: node,nodejs,cli,app,yargs
 ctime: 2019-07-31
 author: Mattèo Gauthier
 filename: tuto-app-cli-nodejs.md
+landingImg: "https://source.unsplash.com/Fi-GJaLRGKc"
 ---
 
 # Tuto - Création d'une application CLI avec NodeJS

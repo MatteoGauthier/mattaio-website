@@ -1,11 +1,10 @@
 ---
 title: "Stage TBWA\\Paris"
-published: true
 description: "Résumé jour par jour de mon stage dans l'entreprise\\TBWA"
 tags: stage,paris,tbwa,Boulogne
 ctime: 2019-07-14
 author: Mattèo Gauthier
-landingImg: "tbwa-landing.jpg"
+landingImg: "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/tbwa-landing.jpg"
 ---
 *Pendant les vacances scolaires de l’été 2019, j’ai eu la chance d’être stagiaire au sein de l’entreprise TBWA/Paris pendant 1 semaine. Ce post a été écrit chaque jour de stage, il résume brièvement le stage effectué.*
 
@@ -25,19 +24,19 @@ Aujourd’hui c’était plus calme ma maître de stage n’avait pas beaucoup d
 
 Ce mercredi, j’ai passé beaucoup de temps avec les développeurs de TBWA. Dans la matinée, j’ai eu du temps pour travailler sur mes projets perso, j’ai testé les APIs public no-auth de GitHub pour construire une app cli très simple et je compte reproduire le même principe avec d’autres services (Google APIs, Instagram API, etc..) pour m’entraîner.
 
-Pour l’après-midi, j’ai commencé avec une dev web qui m’a présenté le fonctionnement des projets créés dans leurs bureaux, les technologies utilisées, les clients, les designs et les métiers. On a beaucoup parlé de librairies VueJS et React et leurs utilisations, elle m’a expliqué le fonctionnement et les méthodes de leurs projets fonctionnants avec React. Les 2 frameworks permettent en gros de traiter des données dynamiquement dans un projet web (ex : rendus de listes, Server-Side-Rendering, routes dynamiques, etc..).
+Pour l’après-midi, j’ai commencé avec une dev web qui m’a présenté le fonctionnement des projets créés dans leurs bureaux, les technologies utilisées, les clients, les designs et les métiers. On a beaucoup parlé de librairies VueJS et React et leurs utilisations, elle m’a expliqué le fonctionnement et les méthodes de leurs projets fonctionnants avec React. Les 2 frameworks permettent en gros de traiter des données dynamiquement dans un projet web (ex : rendus de listes, Server-Side-Rendering, routes dynamiques, etc..).
 
-Les projets sont principalement gérés avec du PHP pour correspondre au CMS WordPress, mais les équipes développent aussi avec React et des softs internes à l’entreprise. Puis on m’a présenté un développeur front-end expérimenté en JavaScript et 3D, il m’a montré quelques-unes de ses créations qui étaient superbes, par exemple il a notamment développé le site [thesmoothestburger.com](http://thesmoothestburger.com/) pour une campagne de publicité pour McDonald’s ou encore la campagne de sensibilisation de la SNCF [02h38.com](http://02h38.com/), ces projets sont développés à l’aide du moteur 3D ThreeJs. Puis il m'a montré son travail de création 3D à l’aide du logiciel 3Ds Max. C’était vraiment une journée très formatrice.
+Les projets sont principalement gérés avec du PHP pour correspondre au CMS WordPress, mais les équipes développent aussi avec React et des softs internes à l’entreprise. Puis on m’a présenté un développeur front-end expérimenté en JavaScript et 3D, il m’a montré quelques-unes de ses créations qui étaient superbes, par exemple il a notamment développé le site [thesmoothestburger.com](http://thesmoothestburger.com/) pour une campagne de publicité pour McDonald’s ou encore la campagne de sensibilisation de la SNCF [02h38.com](http://02h38.com/), ces projets sont développés à l’aide du moteur 3D ThreeJs. Puis il m'a montré son travail de création 3D à l’aide du logiciel 3Ds Max. C’était vraiment une journée très formatrice.
 
 # Quatrième Jour
 
-Jeudi, j’ai pu découvrir les nombreuses réalisations qu’avaient effectuées Pauline et ses collègues. Les directeurs artistiques sont donc chargés de la création publicitaire pour mettre en avant une marque ou un produit, ils vont de la phase de réflexion jusqu’à la production de la publicité (print, vidéo, numérique), les “DAs” travaillent en général sur des projets qui leur sont attribués à travers des briefs dans lesquels on leur impose un cahier des charges (les directives) élaboré par un directeur de création (DC).
+Jeudi, j’ai pu découvrir les nombreuses réalisations qu’avaient effectuées Pauline et ses collègues. Les directeurs artistiques sont donc chargés de la création publicitaire pour mettre en avant une marque ou un produit, ils vont de la phase de réflexion jusqu’à la production de la publicité (print, vidéo, numérique), les “DAs” travaillent en général sur des projets qui leur sont attribués à travers des briefs dans lesquels on leur impose un cahier des charges (les directives) élaboré par un directeur de création (DC).
 
-Les créas peuvent aussi avoir comme mission d’imaginer une publicité, ces missions sont appelées “Proac” (Proactif), ils vont donc proposer une offre aux potentiels clients (qui devra être au préalable validée par leurs supérieurs), ces missions leur permettent d'exprimer encore plus leur créativité.
+Les créas peuvent aussi avoir comme mission d’imaginer une publicité, ces missions sont appelées “Proac” (Proactif), ils vont donc proposer une offre aux potentiels clients (qui devra être au préalable validée par leurs supérieurs), ces missions leur permettent d'exprimer encore plus leur créativité.
 
-Dans l’après-midi, j’ai rencontré un motion designer qui a pour mission de monter et de réaliser des vidéos, à l’aide de Premiere Pro, AfterEffect et Cinéma 4D, il peut réaliser toutes sortes de créations. La plupart de ses projets sont des spots publicitaires.
+Dans l’après-midi, j’ai rencontré un motion designer qui a pour mission de monter et de réaliser des vidéos, à l’aide de Premiere Pro, AfterEffect et Cinéma 4D, il peut réaliser toutes sortes de créations. La plupart de ses projets sont des spots publicitaires.
 
-Durant la soirée du jeudi, on a pu profiter d’une soirée organisée par TBWA, on remarque l’influence du modèle américain dans les .entreprises avec ce genre d’événement, la soirée s’est très bien passée, j’ai pu rencontrer d’autres membres de l’entreprise. J’étais content d’avoir eu la chance de venir à cette soirée.
+Durant la soirée du jeudi, on a pu profiter d’une soirée organisée par TBWA, on remarque l’influence du modèle américain dans les entreprises avec ce genre d’événement, la soirée s’est très bien passée, j’ai pu rencontrer d’autres membres de l’entreprise. J’étais content d’avoir eu la chance de venir à cette soirée.
 
 # Dernier Jour
 
@@ -47,8 +46,8 @@ Enfin j'ai discuté avec les directeurs artistiques du bureau de leurs parcours 
 
 # Bilan
 
-**Un stage vraiment enrichissant,** ce court stage en milieu professionnel m'a permis de découvrir la vie professionnelle à travers les directeurs artistiques que j’ai côtoyé durant cette semaine. J’ai beaucoup apprécié la proximité et la sympathie des équipes de création et de développement, l’atmosphère familiale de ces pôles me laisse penser que travailler dans ces conditions doit être très agréable. À travers une fenêtre d’une semaine de découverte des métiers de chez TBWA j’ai pu me fixer de nouveaux objectifs et encore plus me motiver pour réussir mon parcours professionnel.
+**Un stage vraiment enrichissant,** ce court stage en milieu professionnel m'a permis de découvrir la vie professionnelle à travers les directeurs artistiques que j’ai côtoyé durant cette semaine. J’ai beaucoup apprécié la proximité et la sympathie des équipes de création et de développement, l’atmosphère familiale de ces pôles me laisse penser que travailler dans ces conditions doit être très agréable. À travers une fenêtre d’une semaine de découverte des métiers de chez TBWA j’ai pu me fixer de nouveaux objectifs et encore plus me motiver pour réussir mon parcours professionnel.
 
-Merci beaucoup à Pauline Sénéchault, ma maître de stage qui m’a accueilli pendant une semaine à la découverte du monde professionnel, j’ai eu l’opportunité de rencontrer des gens très sympathiques, passionnés et disponibles. Merci aux collègues de Pauline, Cyrielle, Marion, et Florian.
+Merci beaucoup à Pauline Sénéchault, ma maître de stage qui m’a accueilli pendant une semaine à la découverte du monde professionnel, j’ai eu l’opportunité de rencontrer des gens très sympathiques, passionnés et disponibles. Merci aux collègues de Pauline, Cyrielle, Marion, et Florian.
 
-J’ai passé une très bonne semaine en votre compagnie 😉.
+J’ai passé une très bonne semaine en votre compagnie 😉.
