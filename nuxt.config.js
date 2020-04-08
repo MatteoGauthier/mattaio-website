@@ -12,10 +12,60 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Mattèo Gauthier personal website - Mattèo.dev",
     meta: [
       { charset: "utf-8" },
+      {
+        name: "title",
+        content: "Mattèo Gauthier personal website - Mattèo.dev"
+      },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://xn--matto-7ra.dev/" }, // here it is just ngrok for my test
+      {
+        property: "og:title",
+        content: "Mattèo Gauthier personal website"
+      },
+      {
+        property: "og:description",
+        content:
+          "Novice web developer, learning, writing, open-sourcer. Working with web technologies like Vue, React. Find out some blog-posts, tutorials, etc.."
+      },
+      {
+        property: "og:image",
+        content:
+          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og.png"
+      },
+      {
+        property: "twitter:image",
+        content:
+          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og-twitter.png"
+      },
+      {
+        property: "twitter:card",
+        content: "summary"
+      },
+      {
+        property: "twitter:title",
+        content: "Mattèo Gauthier personal website"
+      },
+      {
+        property: "twitter:url",
+        content: "https://xn--matto-7ra.dev/"
+      },
+      {
+        property: "twitter:description",
+        content:
+          "Novice web developer, learning, writing, open-sourcer. Working with web technologies like Vue, React. Find out some blog-posts, tutorials, etc.."
+      },
+
+      {
+        name: "keywords",
+        content:
+          "Mattèo Gauthier, Mattèo, semoule.fr, semoule, mattaio-website, personal website, Javascript, French, Français, NodeJS, blog, mattèo.dev"
+      },
+      { name: "msapplication-TileColor", content: "#2b5797" },
+      { name: "theme-color", content: "#fff" },
       {
         hid: "description",
         name: "description",
