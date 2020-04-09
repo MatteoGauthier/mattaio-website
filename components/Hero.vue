@@ -10,7 +10,7 @@
           conçois des sites web avec Figma et les construis avec Vue, Nuxt ou
           encore React.
         </span>
-        <a href="#" class="text-sm font-medium text-blue-600 md:text-lg">Découvrez mon portfolio →</a>
+        <nuxt-link to="/Portfolio" class="text-sm font-medium text-blue-600 md:text-lg">Découvrez mon portfolio →</nuxt-link>
       </div>
     </div>
     <div class="hidden lg:block">
