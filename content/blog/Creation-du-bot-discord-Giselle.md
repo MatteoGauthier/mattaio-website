@@ -4,6 +4,7 @@ published: true
 description: Petite présentation d'un bot discord simple, créer avec Discord.js
 tags: discord,bot,discord.js,api,discord-bot
 ctime: 2019-06-09
+landingImg: 'https://cdn.jsdelivr.net/gh/mattixnow/mattaio-website@master/assets/images/blog/Creation-du-bot-discord-Giselle.jpg'
 author: Mattèo Gauthier
 ---
 # Création du bot discord Giselle

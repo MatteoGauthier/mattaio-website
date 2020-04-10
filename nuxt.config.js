@@ -69,7 +69,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content:
+          "Novice web developer, learning, writing, open-sourcer. Working with web technologies like Vue, React. Find out some blog-posts, tutorials, etc.."
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
@@ -108,7 +109,7 @@ export default {
     Disallow: "/admin"
   },
   sitemap: {
-    hostname: "https://example.com",
+    hostname: "https://mattèo.dev",
     gzip: true,
     exclude: ["/admin/"]
   },

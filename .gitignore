@@ -79,6 +79,7 @@ dist
 
 # IDE / Editor
 .idea
+.git
 
 # Service worker
 sw.*

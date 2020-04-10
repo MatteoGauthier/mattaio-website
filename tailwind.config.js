@@ -63,6 +63,7 @@ module.exports = {
     padding: ["first", "last", "responsive"],
     container: ["responsive"],
     shadow: ["hover"],
+    width: ['responsive'],
     translate: ["hover"]
   },
   plugins: [require("@tailwindcss/custom-forms")]

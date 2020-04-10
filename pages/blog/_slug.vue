@@ -9,43 +9,60 @@
 <script>
 import ArticleHead from "@/components/ArticleHead.vue";
 import OSSBadge from "@/components/OSSBadge.vue";
-import 'prismjs/themes/prism-tomorrow.css'
-const fm = require("front-matter");
-const md = require('markdown-it')({
+import hljs from "highlight.js"
+import "highlight.js/styles/atom-one-dark.css"
+import fm from "front-matter"
+const marked = require('marked').setOptions({
+  highlight: function(code, language) {
+    const hljs = require('highlight.js');
+    const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
+    return hljs.highlight(validLanguage, code).value;
+  },
   breaks: true,
-  linkify: true,
-  html: true
-}).use(require('markdown-it-prism'))
+  langPrefix:'hljs '
+});
 
 export default {
   components: {
-    ArticleHead,OSSBadge
+    ArticleHead,
+    OSSBadge
   },
 
-
   async asyncData({ params }) {
+    const fileContent = await import(`~/content/blog/${params.slug}.md`);
+    // console.log(fileContent.html)
+    // return {
+    //   attributes: fileContent.attributes,
+    //   blogPost: fileContent.html,
+    // };
 
-      const fileContent = await import(`~/content/blog/${params.slug}.md`)
-      // console.log(fileContent.html)
-      // return {
-        //   attributes: fileContent.attributes,
-      //   blogPost: fileContent.html,
-      // };
-
-      let res = fm(fileContent.default);
-      // console.log("21")
-      res.attributes.slug = params.slug
-      return {
+    let res = fm(fileContent.default);
+    // console.log("21")
+    res.attributes.slug = params.slug;
+    return {
       // attributes will be an object containing the markdown metadata
       attributes: res.attributes,
       // landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg + '?quality=100' )+')' : '' ,
-      content: md.render(res.body)
-      };
-
-
-    }
-
-}
+      content: marked(res.body)
+    };
+  },
+  head() {
+    return {
+      title: this.attributes.title + " - " + "Mattèo.dev",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.attributes.description
+        },
+        {
+          name: "keywords",
+          content: this.attributes.tags
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss">
@@ -62,8 +79,6 @@ export default {
 
     color: #2d3748;
   }
-
-
 
   h1,
   h2 {
@@ -133,14 +148,34 @@ export default {
   li {
     list-style-type: disc;
   }
-    h1,h2,h3,h4,h5 {
-        margin-top: 24px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 24px;
     margin-bottom: 16px;
   }
 
-  blockquote, details, dl, ol, p, pre, table, ul {
+  blockquote,
+  details,
+  dl,
+  ol,
+  p,
+  pre,
+  table,
+  ul {
     margin-top: 0;
     margin-bottom: 16px;
+  }
+
+  code {
+    overflow-x: auto;
+    padding: 0.25em;
+    color: #abb2bf;
+    background: #282c34;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.32) 0px 3px 20px;
 }
 }
 </style>

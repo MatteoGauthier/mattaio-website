@@ -4,12 +4,16 @@ import dayjs from 'dayjs'
 const path = require("path");
 export const state = () => ({
   blogPosts: [],
-  portfolioImages: []
+  portfolioImages: [],
+  feedback: false
 });
 
 export const mutations = {
   setBlogPosts(state, list) {
     state.blogPosts = list;
+  },
+  setFeedback(state, data) {
+    state.feedback = data
   }
 };
 

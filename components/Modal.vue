@@ -1,6 +1,6 @@
 <template>
   <portal to="modals">
-    <div v-if="showModal" v-on:keyup.escape="triggerClose()" class="fixed inset-0 flex items-center justify-center">
+    <div v-if="showModal" class="fixed inset-0 flex items-center justify-center">
       <transition
         @before-leave="backdropLeaving = true"
         @after-leave="backdropLeaving = false"

@@ -1,7 +1,7 @@
 <template>
   <div class="flex px-2 lg:justify-around">
     <div class="flex items-start xl:items-center lg:w-7/12">
-      <img src="~/assets/images/matt.jpg" v-tilt="vtiltdata" class="w-1/3 mr-4 shadow-lg lg:mr-6 lg:w-1/3 md:w-1/4 xl:w-1/4" alt />
+      <img src="~/assets/images/matt.jpg" v-tilt="vtiltdata" class="w-1/3 mr-4 shadow-lg mg-img-perso lg:mr-6 lg:w-1/3 md:w-1/4 xl:w-1/4" alt />
       <div class="flex flex-col">
         <img class="mattèo self-start" src="~/assets/images/Mattèo.svg" alt="mattèo" />
 
@@ -13,9 +13,9 @@
         <a href="#" class="text-sm font-medium text-blue-600 md:text-lg">Découvrez mon portfolio →</a>
       </div>
     </div>
-    <div class="hidden lg:block">
+    <div class="hidden lg:w-1/3 lg:block mg-iframe-container">
       <no-ssr>
-      <youtube :video-id="videoId" ref="youtube" :height="270" :width="480" :fitParent="true" style="background-image: url('https://i.ytimg.com/vi/Qn2fZ2FlO4M/hqdefault.jpg'); background-position:center;"></youtube>
+      <youtube class="mg-iframe" :video-id="videoId" ref="youtube" :height="270" :width="480" :fitParent="true" style="background-image: url('https://i.ytimg.com/vi/Qn2fZ2FlO4M/hqdefault.jpg'); background-position:center;"></youtube>
       </no-ssr>
     </div>
   </div>
@@ -39,10 +39,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@supports (-moz-appearance:none) {
+  .mg-img-perso {
+    width:60%;
+  }
+}
+
+// .mg-iframe-container {
+//   overflow: hidden;
+//   padding-top: 56.25%;
+//   position: relative;
+//   .mg-iframe {
+//     border: 0;
+//    height: 100%;
+//    left: 0;
+//    position: absolute;
+//    top: 0;
+//    width: 100%;
+//   }
+// }
+
 .mg-text-h2 {
   font-size: 42px;
-}
-.mg-img {
-  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
 }
 </style>

@@ -1,19 +1,54 @@
 <template>
   <div>
-    <NavBar/>
+    <NavBar />
     <nuxt />
     <portal-target name="modals"></portal-target>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '~/components/NavBar.vue'
-import Footer from '~/components/Footer.vue'
+import NavBar from "~/components/NavBar.vue";
+import Footer from "~/components/Footer.vue";
 
 export default {
-  components: {NavBar,Footer}
-}
+  components: { NavBar, Footer },
+  mounted() {
+    console.log(this.$route);
+    if (this.$route.query.hasOwnProperty("feedback")) {
+      console.log('opening feeback from path instruction')
+      this.openFeedback();
+    }
+  },
+  created() {
+    if (process.client) {
+      window.addEventListener("keyup", e => this.parseEvent(e));
+    }
+  },
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener("keyup", e => this.parseEvent(e));
+    }
+  },
+  methods: {
+    openFeedback() {
+      // console.log(e)
+      this.$store.commit("setFeedback", true);
+    },
+    closeFeedback() {
+      // console.log(e)
+      this.$store.commit("setFeedback", false);
+    },
+    parseEvent(e) {
+      // console.log(e)
+      if (e.code == "Space" || e.code == "Enter"|| e.code == "KeyF") {
+        this.openFeedback()
+      } else if (e.code == "Escape") {
+        this.closeFeedback();
+      }
+    }
+  }
+};
 </script>
 
 <style>
@@ -36,13 +71,13 @@ export default {
   transition-duration: 200ms;
 }
 .ease-out-quad {
-  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .ease-in-quad {
-  transition-timing-function: cubic-bezier(.55, .085, .68, .53);
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 .scale-70 {
-  transform: scale(.7);
+  transform: scale(0.7);
 }
 .scale-100 {
   transform: scale(1);
