@@ -33,7 +33,7 @@
       </div>
     </nav>
     <Modal :open="feedbackOpen" @close="closeModalFeedback()">
-      <form ref="feedbackForm" @submit.prevent="submit" class="w-full max-w-xl px-6 py-6 bg-white rounded-lg shadow-2xl">
+      <form ref="formElement" @submit.prevent="submit()" class="w-full max-w-xl px-6 py-6 bg-white rounded-lg shadow-2xl">
         <h2 class="pb-3 text-2xl font-semibold leading-tight text-gray-900 border-b-2 border-gray-200">Faire un retour (Feedback)</h2>
         <p class="mt-2 text-sm leading-snug text-gray-600">
           Libre à vous de me donner un retour d'expérience sur ce site web,
@@ -164,26 +164,23 @@ export default {
     },
     submit() {
       let url =
-        "https://script.google.com/macros/s/AKfycbxnambwdCN_aAMvGdHGSpc3PucnzFA8xoeSTB3CoISSIdRBEXrw/exec";
-      let form = new FormData();
-      form.append("name", this.name);
-      form.append("email", this.email);
-      form.append("body", this.body);
-      console.log(form)
-      axios
-        .post(url, {
-          body: form,
-          headers: {
-            "Access-Control-Allow-Origin": true,
-            'Content-Type' : 'multipart/form-data'
-          }
-        })
-        .then(response => {
+        "https://script.google.com/macros/s/AKfycbzTdgXQsPIbxKH_ZJvAKRHiGgUvKrj71-v6zcbbfMNX9XCBKzw/exec";
+      var formElement = this.$refs.formElement;
+      var formData = new FormData(formElement);
+      axios({
+        method: "post",
+        url: url,
+        data: formData,
+      }).then(response => {
           console.log("Success!", response);
-          this.open = false;
+          this.closeModalFeedback()
+          this.name=""
+          this.email=""
+          this.body= ""
         })
         .catch(error => console.error("Error!", error.message));
-    }
+      }
+
   }
 };
 </script>

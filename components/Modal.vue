@@ -1,4 +1,6 @@
 <template>
+<no-ssr>
+
   <portal to="modals">
     <div v-if="showModal" class="fixed inset-0 flex items-center justify-center">
       <transition
@@ -34,6 +36,7 @@
       </transition>
     </div>
   </portal>
+  </no-ssr>
 </template>
 
 <script>
