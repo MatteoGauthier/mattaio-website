@@ -2,7 +2,7 @@
   <nav class="mt-6 bg-gray-100 md:mt-12">
     <div class="container px-4 py-4 mx-auto">
       <div class="relative flex flex-col items-center justify-around h-16 md:justify-between md:flex-row">
-        <div class="inline-flex leading-5 text-gray-900">
+        <div class="inline-flex text-sm leading-5 text-gray-900 sm:text-base">
           <span class="mr-1 font-semibold text-black ">Mattèo.dev </span>
           <span class="mr-1 ">2017 </span>
           <svg class="inline mr-1" width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">

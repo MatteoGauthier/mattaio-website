@@ -19,14 +19,14 @@ export default {
       console.log("opening feeback from path instruction");
       this.openFeedback();
     }
+    setTimeout(() => {
+      this.$notibar.add("Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F");
+    }, 50000);
   },
   created() {
     if (process.client) {
       window.addEventListener("keyup", e => this.parseEvent(e));
     }
-    setTimeout(() => {
-      this.$notibar.add("Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F");
-    }, 50000);
   },
   destroyed() {
     if (process.client) {
