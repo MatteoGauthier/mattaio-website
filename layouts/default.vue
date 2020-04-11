@@ -16,7 +16,7 @@ export default {
   mounted() {
     console.log(this.$route);
     if (this.$route.query.hasOwnProperty("feedback")) {
-      console.log('opening feeback from path instruction')
+      console.log("opening feeback from path instruction");
       this.openFeedback();
     }
   },
@@ -24,6 +24,9 @@ export default {
     if (process.client) {
       window.addEventListener("keyup", e => this.parseEvent(e));
     }
+    setTimeout(() => {
+      this.$notibar.add("Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F");
+    }, 50000);
   },
   destroyed() {
     if (process.client) {
@@ -41,8 +44,8 @@ export default {
     },
     parseEvent(e) {
       // console.log(e)
-      if (e.code == "Space" || e.code == "Enter"|| e.code == "KeyF") {
-        this.openFeedback()
+      if (e.code == "Space" || e.code == "Enter" || e.code == "KeyF") {
+        this.openFeedback();
       } else if (e.code == "Escape") {
         this.closeFeedback();
       }

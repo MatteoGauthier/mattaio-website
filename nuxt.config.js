@@ -130,7 +130,8 @@ export default {
     { src: "~/plugins/vue-lazyload" },
     { src: "~/plugins/fragment" },
     { src: "~/plugins/lightbox", ssr: false },
-    { src: "~/plugins/ytb", ssr: false }
+    { src: "~/plugins/ytb", ssr: false },
+    { src: "~/plugins/snackbar", ssr: false },
   ],
   /*
    ** Nuxt.js dev-modules

@@ -33,24 +33,24 @@
       </div>
     </nav>
     <Modal :open="feedbackOpen" @close="closeModalFeedback()">
-      <form ref="formElement" @submit.prevent="submit()" class="w-full max-w-xl px-6 py-6 bg-white rounded-lg shadow-2xl">
+      <form ref="formElement" @submit.prevent="submit()" class="flex flex-col w-full h-full max-w-xl px-3 py-3 bg-white rounded-lg shadow-2xl sm:px-6 sm:py-6">
         <h2 class="pb-3 text-2xl font-semibold leading-tight text-gray-900 border-b-2 border-gray-200">Faire un retour (Feedback)</h2>
         <p class="mt-2 text-sm leading-snug text-gray-600">
           Libre à vous de me donner un retour d'expérience sur ce site web,
           n'hésitez pas ça m'est vraiment utile 😛
         </p>
-        <div class="my-4">
+        <div class="my-2 sm:my-4">
           <label class="block mb-1 font-semibold text-gray-700" for="name">Comment vous appelez-vous ?</label>
           <input name="name" autocomplete="name" v-model="name" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="username" type="name" placeholder="Username" />
         </div>
-        <div class="my-4">
+        <div class="my-2 sm:my-4">
           <label class="block mb-1 font-semibold text-gray-700" for="w5n1Gwhl8O74pry2jkQ6trgDI8yK6kjUwRlSRkEH0NcmPweGpYHGVadPlqU8LiKkJKdRuM4UpyjKzm07NJ6prujjzDjXiajgMZVpZnyVKWFr1ISWDwDcZwpSlGVnhWnZpPVNH1za">Votre adresse email</label>
           <input name="email" v-model="email" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="tim.cook@apple.com" />
         </div>
-        <textarea name="body" v-model="body" class="w-full mt-2 border rounded shadow-sm form-textarea" rows="8"></textarea>
-        <div class="mt-6">
-          <button type="submit" class="px-4 py-2 font-semibold text-white bg-blue-500 border border-transparent rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline">Partager mon feedback</button>
-          <button @click="closeModalFeedback()" class="px-4 py-2 ml-4 font-semibold text-gray-800 bg-white border rounded hover:bg-gray-100 focus:outline-none focus:shadow-outline">Cancel</button>
+        <textarea name="body" v-model="body" class="w-full h-full mt-2 border rounded shadow-sm form-textarea"></textarea>
+        <div class="mt-4 sm:mt-6">
+          <button type="submit" class="w-full px-4 py-2 font-medium text-white bg-blue-500 border border-transparent rounded sm:w-auto hover:bg-blue-600 focus:outline-none focus:shadow-outline">Partager mon feedback</button>
+          <button @click="closeModalFeedback()" class="w-full px-4 py-2 mt-3 font-medium text-gray-800 bg-white border rounded sm:m-0 sm:ml-4 sm:w-auto hover:bg-gray-100 focus:outline-none focus:shadow-outline">Cancel</button>
         </div>
       </form>
     </Modal>
@@ -126,6 +126,7 @@
 <script>
 import axios from "axios";
 import Modal from "~/components/Modal";
+import { setTimeout } from 'timers';
 export default {
   name: "NavBar",
   components: {
@@ -157,6 +158,7 @@ export default {
       return this.$store.state.feedback;
     }
   },
+
   methods: {
     closeModalFeedback() {
       this.$store.commit("setFeedback", false);
@@ -167,20 +169,26 @@ export default {
         "https://script.google.com/macros/s/AKfycbzTdgXQsPIbxKH_ZJvAKRHiGgUvKrj71-v6zcbbfMNX9XCBKzw/exec";
       var formElement = this.$refs.formElement;
       var formData = new FormData(formElement);
-      axios({
-        method: "post",
-        url: url,
-        data: formData,
-      }).then(response => {
-          console.log("Success!", response);
-          this.closeModalFeedback()
-          this.name=""
-          this.email=""
-          this.body= ""
+      if (this.$store.state.feedback == true && formData.get("body").length > 200) {
+        axios({
+          method: "post",
+          url: url,
+          data: formData
         })
-        .catch(error => console.error("Error!", error.message));
+          .then((response, req) => {
+            console.log(req);
+            console.log("Success!", response);
+            this.closeModalFeedback();
+            this.name = "";
+            this.email = "";
+            this.body = "";
+          })
+          .catch(error => console.error("Error!", error.message));
+      } else if (this.$store.state.feedback == true) {
+        console.log("non")
+        this.$notibar.add('Votre feedback doit faire minimum 20 caractères')
       }
-
+    }
   }
 };
 </script>
