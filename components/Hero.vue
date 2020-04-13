@@ -15,7 +15,7 @@
     </div>
     <div class="hidden lg:w-1/3 lg:block mg-iframe-container">
       <no-ssr>
-      <youtube class="mg-iframe" :video-id="videoId" ref="youtube" :height="270" :width="480" :fitParent="true" style="background-image: url('https://i.ytimg.com/vi/Qn2fZ2FlO4M/hqdefault.jpg'); background-position:center;"></youtube>
+      <youtube class="mg-iframe hidden" :video-id="videoId" ref="youtube" :height="270" :width="480" :fitParent="true" style="background-image: url('https://i.ytimg.com/vi/Qn2fZ2FlO4M/hqdefault.jpg'); background-position:center;"></youtube>
       </no-ssr>
     </div>
   </div>
