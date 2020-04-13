@@ -131,7 +131,7 @@ export default {
     { src: "~/plugins/fragment" },
     { src: "~/plugins/lightbox", ssr: false },
     { src: "~/plugins/ytb", ssr: false },
-    { src: "~/plugins/snackbar", ssr: false },
+    { src: "~/plugins/snackbar", ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -158,6 +158,7 @@ export default {
     // "@nuxtjs/markdownit",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
+    "nuxt-user-agent",
     "portal-vue/nuxt"
   ],
   // markdownit: {

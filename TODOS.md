@@ -7,4 +7,5 @@
 - [ ] Auto fetch image array in portfolio
 - [ ] Find a better way to host images
 - [ ] Fix text size on mobile device for blog posts
+- [ ] Add PurgeCSS
 

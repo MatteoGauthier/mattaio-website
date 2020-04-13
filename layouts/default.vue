@@ -1,9 +1,17 @@
 <template>
   <div>
-    <NavBar />
-    <nuxt />
-    <portal-target name="modals"></portal-target>
-    <Footer />
+    <div v-if="!(this.$ua.browser() == 'Edge')">
+      <NavBar />
+      <nuxt />
+      <portal-target name="modals"></portal-target>
+      <Footer />
+    </div>
+    <div class="container flex h-screen mx-auto" v-else>
+      <div class="m-auto">
+        <h3 class="text-xl font-semibold text-center">Edge Browser n'est pas assez suffisant pour accéder à ce site web</h3>
+        <div class="text-center">Merci de vous rapporter à un navigateur plus récent</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -14,14 +22,17 @@ import Footer from "~/components/Footer.vue";
 export default {
   components: { NavBar, Footer },
   mounted() {
-    console.log(this.$route);
     if (this.$route.query.hasOwnProperty("feedback")) {
       console.log("opening feeback from path instruction");
       this.openFeedback();
     }
+
     setTimeout(() => {
-      this.$notibar.add("Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F");
+      this.$notibar.add(
+        "Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F"
+      );
     }, 50000);
+
   },
   created() {
     if (process.client) {
