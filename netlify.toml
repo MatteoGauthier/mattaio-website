@@ -42,3 +42,8 @@
   from = "/mmi"
   to = "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev"
   status = 301
+
+[[redirects]]
+  from = "/gh"
+  to = "https://github.com/MattixNow/mattaio-website"
+  status = 301
