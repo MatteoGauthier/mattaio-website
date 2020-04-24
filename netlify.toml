@@ -47,3 +47,9 @@
   from = "/gh"
   to = "https://github.com/MattixNow/mattaio-website"
   status = 301
+
+[[redirects]]
+  from = "/v1"
+  to = "https://5e7fd957a684a2000bc6d257--mattaio.netlify.app/"
+  status = 301
+
