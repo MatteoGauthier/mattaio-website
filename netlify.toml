@@ -1,11 +1,16 @@
 [[redirects]]
   from = "/CV"
-  to = "/CV_Matt%C3%A8oGauthier_2020_2.1.pdf"
+  to = "/CV_Matt%C3%A8oGauthier_2020_2.2.pdf"
   status = 301
 
 [[redirects]]
   from = "/cv"
-  to = "/CV_Matt%C3%A8oGauthier_2020_2.1.pdf"
+  to = "/CV_Matt%C3%A8oGauthier_2020_2.2.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/CV_Matt%C3%A8oGauthier_2020_2.1.pdf"
+  to = "/cv"
   status = 301
 
 [[redirects]]
