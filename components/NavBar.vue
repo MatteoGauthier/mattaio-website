@@ -37,7 +37,7 @@
         <h2 class="pb-3 text-2xl font-semibold leading-tight text-gray-900 border-b-2 border-gray-200">Faire un retour (Feedback)</h2>
         <p class="mt-2 text-sm leading-snug text-gray-600">
           Libre à vous de me donner un retour d'expérience sur ce site web,
-          n'hésitez pas ça m'est vraiment utile 😛
+          n'hésitez pas ça m'est vraiment utile <span @click="adminMode = true">😛</span>
         </p>
         <div class="my-2 sm:my-4">
           <label class="block mb-1 font-semibold text-gray-700" for="name">Comment vous appelez-vous ?</label>
@@ -135,6 +135,7 @@ export default {
   data() {
     return {
       open: false,
+      adminMode: false,
       motivation: "Personnel",
       conditions: {
         github: true,
@@ -169,7 +170,9 @@ export default {
         "https://script.google.com/macros/s/AKfycbzTdgXQsPIbxKH_ZJvAKRHiGgUvKrj71-v6zcbbfMNX9XCBKzw/exec";
       var formElement = this.$refs.formElement;
       var formData = new FormData(formElement);
-      if (this.$store.state.feedback == true && formData.get("body").length > 200) {
+      console.log(formData.get("body").length);
+
+      if (this.$store.state.feedback == true && (formData.get("body").length > 20 || this.adminMode)) {
         axios({
           method: "post",
           url: url,

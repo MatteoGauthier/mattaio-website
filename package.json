@@ -1,5 +1,5 @@
 {
-  "name": "MattaioRevamp2020",
+  "name": "mattaio-website",
   "version": "1.0.0",
   "description": "My sweet Nuxt.js project",
   "author": "Mattèo Gauthier",
@@ -20,7 +20,8 @@
     "highlight.js": "^9.18.1",
     "marked": "^0.8.2",
     "node-sass": "^4.13.1",
-    "nuxt": "^2.0.0",
+    "notyf": "^3.6.0",
+    "nuxt": "^2.12.2",
     "nuxt-user-agent": "^1.2.2",
     "portal-vue": "^2.1.7",
     "prismjs": "^1.20.0",
@@ -36,6 +37,7 @@
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
+    "@nuxt/components": "^0.2.5",
     "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/tailwindcss": "latest",
     "@tailwindcss/custom-forms": "^0.2.1",

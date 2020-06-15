@@ -16,23 +16,17 @@
 </template>
 
 <script>
-import NavBar from "~/components/NavBar.vue";
-import Footer from "~/components/Footer.vue";
-
 export default {
-  components: { NavBar, Footer },
   mounted() {
+
+
     if (this.$route.query.hasOwnProperty("feedback")) {
       console.log("opening feeback from path instruction");
       this.openFeedback();
     }
-
     setTimeout(() => {
-      this.$notibar.add(
-        "Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F"
-      );
+      this.$notibar.add("Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F");
     }, 50000);
-
   },
   created() {
     if (process.client) {
