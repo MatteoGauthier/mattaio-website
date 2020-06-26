@@ -5,9 +5,10 @@ const routeMap = {
   "": "blog/*.md"
 };
 
-
 export default {
+  target: "static",
   mode: "universal",
+  components: true,
   /*
    ** Headers of the page
    */
@@ -144,8 +145,7 @@ export default {
       }
     ],
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    "@nuxtjs/tailwindcss",
-    "@nuxt/components"
+    "@nuxtjs/tailwindcss"
   ],
   /*
    ** Nuxt.js modules
@@ -199,14 +199,14 @@ export default {
  */
 function getDynamicPaths(urlFilepathTable) {
   return [].concat(
-    ...Object.keys(urlFilepathTable).map((url) => {
-      const filepathGlob = urlFilepathTable[url]
+    ...Object.keys(urlFilepathTable).map(url => {
+      const filepathGlob = urlFilepathTable[url];
       let d = glob.sync(filepathGlob, { cwd: "content" }).map(filepath => {
         console.log(`/blog${url}/${path.basename(filepath, ".md")}`);
         return `/blog${url}/${path.basename(filepath, ".md")}`;
       });
-      console.log(d)
-      return d
+      console.log(d);
+      return d;
     })
-  )
+  );
 }

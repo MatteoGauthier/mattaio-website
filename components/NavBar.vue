@@ -125,13 +125,9 @@
 
 <script>
 import axios from "axios";
-import Modal from "~/components/Modal";
 import { setTimeout } from 'timers';
 export default {
   name: "NavBar",
-  components: {
-    Modal
-  },
   data() {
     return {
       open: false,

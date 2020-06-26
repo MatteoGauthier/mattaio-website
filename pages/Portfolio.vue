@@ -1,12 +1,16 @@
 <template>
   <div>
-
-
-      <CoolLightBox :items="images" :index="index" loop @close="index = null"></CoolLightBox>
-
+    <CoolLightBox :items="images" :index="index" loop @close="index = null"></CoolLightBox>
 
     <div class="inline-flex flex-wrap">
-      <img class="flex-1 object-cover h-64 max-w-full m-2 transition-all duration-700 rounded shadow sm:max-w-md" v-for="(src, index) in images" :key="index" @click="setIndex(index)" v-lazy="src" alt />
+      <img
+        class="flex-1 object-cover h-64 max-w-full m-2 transition-all duration-700 rounded shadow sm:max-w-md"
+        v-for="(src, index) in images"
+        :key="index"
+        @click="setIndex(index)"
+        v-lazy="src"
+        alt
+      />
     </div>
   </div>
 </template>
@@ -14,10 +18,8 @@
 <script>
 export default {
   head: {
-  link: [
-    { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vue-cool-lightbox/dist/vue-cool-lightbox.min.css' }
-  ]
-},
+    link: [{ rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/vue-cool-lightbox/dist/vue-cool-lightbox.min.css" }]
+  },
 
   data() {
     return {
@@ -47,5 +49,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
