@@ -1,5 +1,5 @@
 <template>
-  <a :href="`https://github.com/MattixNow/mattaio-website/blob/master/content/blog/${href}.md`" class="inline-flex justify-between w-full p-2 border border-gray-400 rounded-sm sm:justify-start sm:w-auto">
+  <a :href="`https://github.com/MatteoGauthier/mattaio-website/blob/master/content/blog/${href}.md`" class="inline-flex justify-between w-full p-2 border border-gray-400 rounded-sm sm:justify-start sm:w-auto">
     <div class="flex flex-col mr-2 justify-evenly">
       <div class="font-medium">Open Source Software</div>
       <div class="text-sm text-gray-900">Contribute to this article</div>
