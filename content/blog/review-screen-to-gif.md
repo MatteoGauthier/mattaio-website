@@ -5,7 +5,7 @@ description: Découvre comment éditer et créer des gifs animés simplement ave
 tags: screentogif,gif,open-source,OSS,Review
 ctime: 2019-05-12
 author: Mattèo Gauthier
-landingImg: "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/screen-to-gif.jpg"
+landingImg: "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/assets/screen-to-gif.jpg"
 ---
 
 # Review : ScreenToGif

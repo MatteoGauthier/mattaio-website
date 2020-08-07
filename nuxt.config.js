@@ -35,12 +35,12 @@ export default {
       {
         property: "og:image",
         content:
-          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og.png"
+          "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/assets/og.png"
       },
       {
         property: "twitter:image",
         content:
-          "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/assets/og-twitter.png"
+          "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/assets/og-twitter.png"
       },
       {
         property: "twitter:card",
