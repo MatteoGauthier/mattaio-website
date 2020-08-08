@@ -9,7 +9,7 @@
     { "source": "/ytb", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
     { "source": "/MMI", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
     { "source": "/mmi", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
-    { "source": "/gh", "destination": "https://github.com/MattixNow/mattaio-website" },
+    { "source": "/gh", "destination": "https://github.com/MatteoGauthier/mattaio-website" },
     { "source": "/v1", "destination": "https://5e7fd957a684a2000bc6d257--mattaio.netlify.app/" }
   ]
 }

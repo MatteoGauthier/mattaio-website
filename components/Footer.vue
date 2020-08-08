@@ -12,7 +12,7 @@
           <nuxt-link class="text-blue-700 " to="/Resume">Mattèo Gauthier</nuxt-link>
         </div>
         <div class="flex">
-          <a href="https://github.com/MattixNow/mattaio-website" class="flex items-center mr-4">
+          <a href="https://github.com/MatteoGauthier/mattaio-website" class="flex items-center mr-4">
             <img src="~/assets/images/icons/Github.svg" class="w-6 mr-1" alt="github icon" />
             <span>Github</span>
           </a>

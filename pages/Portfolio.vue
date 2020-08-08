@@ -24,18 +24,18 @@ export default {
   data() {
     return {
       images: [
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Home Mattèo.dev 2020.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Blog Mattèo.dev 2020.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Portfolio Mattèo.dev 2020.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/CV_MattèoGauthier_2020_2.1.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Dpliance Dashboard Mockup.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Editing Poitiers Home Page.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Dpliance WebSite.png",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Mattèo.dev Home Black.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Mattèo.dev Home White.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/MiniCard.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Proto Cross De ligugé Mobile.jpg",
-        "https://cdn.jsdelivr.net/gh/MattixNow/StaticHost@master/portfolio/Spiaggia HomePage.jpg"
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Home Mattèo.dev 2020.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Blog Mattèo.dev 2020.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Portfolio Mattèo.dev 2020.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/CV_MattèoGauthier_2020_2.1.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Dpliance Dashboard Mockup.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Editing Poitiers Home Page.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Dpliance WebSite.png",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Mattèo.dev Home Black.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Mattèo.dev Home White.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/MiniCard.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Proto Cross De ligugé Mobile.jpg",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Spiaggia HomePage.jpg"
       ],
       index: null
     };

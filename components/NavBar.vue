@@ -83,7 +83,7 @@
             </svg>
             <span class="ml-2">Checkout my dev.to</span>
           </a>
-          <a target="_blank" href="https://github.com/MattixNow" v-show="conditions.github" class="flex items-center p-1 m-1 rounded" id="github">
+          <a target="_blank" href="https://github.com/MatteoGauthier" v-show="conditions.github" class="flex items-center p-1 m-1 rounded" id="github">
             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="w-6 h-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
               <path
                 fill="currentColor"

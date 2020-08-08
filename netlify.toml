@@ -50,7 +50,7 @@
 
 [[redirects]]
   from = "/gh"
-  to = "https://github.com/MattixNow/mattaio-website"
+  to = "https://github.com/MatteoGauthier/mattaio-website"
   status = 301
 
 [[redirects]]
