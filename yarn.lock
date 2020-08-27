@@ -9031,10 +9031,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-cool-lightbox@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/vue-cool-lightbox/-/vue-cool-lightbox-2.4.1.tgz#caee8af26e2c4dc31a9aa77ab2ad9e04c284ff22"
-  integrity sha512-Rg3RpDxl1lIIJGd7h+u86KJcD5yCAgx3/YjH0DP9/sC8GjSKc9YSpQfppDr6VoppqQMlLP4GxRLPSMiS0D3SAA==
+vue-cool-lightbox@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/vue-cool-lightbox/-/vue-cool-lightbox-2.5.1.tgz#1ace31f19f78bfd32de2b7abccc3c94fe8023f88"
+  integrity sha512-3gu9cWmt49oQmLnzaU0mEYqxyMqKraCdO/fV3oaNkBeBdttl4jVYUqipsKqG4SabhVMF2Kqj02C5HUdVBPz20Q==
   dependencies:
     vue "^2.6.10"
 
