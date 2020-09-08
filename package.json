@@ -19,7 +19,7 @@
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "dayjs": "^1.8.33",
-    "highlight.js": "^10.1.1",
+    "highlight.js": "^10.2.0",
     "marked": "^1.1.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.3",
