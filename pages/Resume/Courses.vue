@@ -53,10 +53,10 @@ export default {
       .get("https://api.jsonbin.io/b/5df14e15bc5ffd040097c63a/latest")
       .then(response => {
         const data = response.data.plateforms;
-        console.log(data);
+        // console.log(data);
         Object.keys(data).map((key, index) => {
           // myObject[key] *= 2;
-          console.log(key);
+          // console.log(key);
           Object.keys(data[key]).map((k, i) => {
             data[key].courses.sort((a, b) => b.rating - a.rating);
           });

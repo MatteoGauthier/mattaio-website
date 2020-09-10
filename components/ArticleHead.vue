@@ -51,7 +51,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.article);
     try {
       this.article.tags = this.article.tags.split(",").map(x => {
         return "#" + x.charAt(0).toUpperCase() + x.slice(1);

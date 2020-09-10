@@ -82,7 +82,7 @@ export default {
       this.showContent = true
     },
     triggerClose(event) {
-      console.log(event)
+      // console.log(event)
       if (this.open) {
         this.close()
       }

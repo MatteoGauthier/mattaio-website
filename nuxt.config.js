@@ -192,21 +192,3 @@ export default {
     }
   }
 };
-
-// /**
-//  * Create an array of URLs from a list of files
-//  * @param {*} urlFilepathTable
-//  */
-// function getDynamicPaths(urlFilepathTable) {
-//   return [].concat(
-//     ...Object.keys(urlFilepathTable).map(url => {
-//       const filepathGlob = urlFilepathTable[url];
-//       let d = glob.sync(filepathGlob, { cwd: "content" }).map(filepath => {
-//         console.log(`/blog${url}/${path.basename(filepath, ".md")}`);
-//         return `/blog${url}/${path.basename(filepath, ".md")}`;
-//       });
-//       console.log(d);
-//       return d;
-//     })
-//   );
-// }

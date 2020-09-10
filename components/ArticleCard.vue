@@ -24,9 +24,6 @@ export default {
 
     }
   },
-  mounted() {
-    console.log(this.articleInfo)
-  }
 }
 </script>
 
