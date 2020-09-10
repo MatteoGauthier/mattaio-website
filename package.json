@@ -8,9 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "serve": "nuxt serve",
-    "export": "nuxt export",
-    "generate": "nuxt build && nuxt export"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxt/content": "^1.8.1",
