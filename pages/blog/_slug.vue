@@ -1,7 +1,8 @@
 <template>
   <article class="container max-w-5xl px-8 mx-auto" :key="$route.params.slug">
-    <ArticleHead class="pt-5 pb-12" :article="attributes" />
-    <div class="markdown" v-html="content"></div>
+    <ArticleHead class="pt-5 pb-12" :article="article" />
+    <!-- <div class="markdown" v-html="content"></div> -->
+    <nuxt-content class="markdown" :document="article" />
     <OSSBadge :href="$route.params.slug" />
   </article>
 </template>
@@ -9,59 +10,52 @@
 <script>
 import ArticleHead from "@/components/ArticleHead.vue";
 import OSSBadge from "@/components/OSSBadge.vue";
-import hljs from "highlight.js"
-import "highlight.js/styles/atom-one-dark.css"
-import fm from "front-matter"
-const marked = require('marked').setOptions({
-  highlight: function(code, language) {
-    const hljs = require('highlight.js');
-    const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
-    return hljs.highlight(validLanguage, code).value;
-  },
-  breaks: true,
-  langPrefix:'hljs '
-});
+
 
 export default {
   components: {
     ArticleHead,
-    OSSBadge
+    OSSBadge,
   },
 
-  async asyncData({ params }) {
-    const fileContent = await import(`~/content/blog/${params.slug}.md`);
-    // console.log(fileContent.html)
-    // return {
-    //   attributes: fileContent.attributes,
-    //   blogPost: fileContent.html,
-    // };
+  // async asyncData({ params }) {
+  //   const fileContent = await import(`~/content/blog/${params.slug}.md`);
+  //   // console.log(fileContent.html)
+  //   // return {
+  //   //   attributes: fileContent.attributes,
+  //   //   blogPost: fileContent.html,
+  //   // };
 
-    let res = fm(fileContent.default);
-    // console.log("21")
-    res.attributes.slug = params.slug;
-    return {
-      // attributes will be an object containing the markdown metadata
-      attributes: res.attributes,
-      // landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg + '?quality=100' )+')' : '' ,
-      content: marked(res.body)
-    };
+  //   let res = fm(fileContent.default);
+  //   // console.log("21")
+  //   res.attributes.slug = params.slug;
+  //   return {
+  //     // attributes will be an object containing the markdown metadata
+  //     attributes: res.attributes,
+  //     // landingImg : res.attributes.landingImg ? 'url('+require('@/assets/res/'+ res.attributes.landingImg + '?quality=100' )+')' : '' ,
+  //     content: marked(res.body),
+  //   };
+  // },
+  async asyncData({ $content, params }) {
+    const article = await $content("blog", params.slug).fetch();
+    return { article };
   },
   head() {
     return {
-      title: this.attributes.title + " - " + "Mattèo.dev",
+      title: this.article.title + " - " + "Mattèo.dev",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.attributes.description
+          content: this.article.description,
         },
         {
           name: "keywords",
-          content: this.attributes.tags
-        }
-      ]
+          content: this.article.tags,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -169,13 +163,13 @@ export default {
     margin-bottom: 16px;
   }
 
-  code {
+  /* code {
     overflow-x: auto;
     padding: 0.25em;
     color: #abb2bf;
     background: #282c34;
     border-radius: 0.25rem;
     box-shadow: rgba(0, 0, 0, 0.32) 0px 3px 20px;
-}
+  } */
 }
 </style>

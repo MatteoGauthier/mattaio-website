@@ -45,7 +45,7 @@
         </div>
         <div class="my-2 sm:my-4">
           <label class="block mb-1 font-semibold text-gray-700" for="w5n1Gwhl8O74pry2jkQ6trgDI8yK6kjUwRlSRkEH0NcmPweGpYHGVadPlqU8LiKkJKdRuM4UpyjKzm07NJ6prujjzDjXiajgMZVpZnyVKWFr1ISWDwDcZwpSlGVnhWnZpPVNH1za">Votre adresse email</label>
-          <input name="email" v-model="email" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="tim.cook@apple.com" />
+          <input name="email" v-model="email" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="email-wsh" type="text" placeholder="tim.cook@apple.com" />
         </div>
         <textarea name="body" v-model="body" class="w-full h-full mt-2 border rounded shadow-sm form-textarea"></textarea>
         <div class="mt-4 sm:mt-6">

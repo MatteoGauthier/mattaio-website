@@ -1,10 +1,3 @@
-import path from "path";
-import glob from "glob";
-const otherRoutes = [];
-const routeMap = {
-  "": "blog/*.md"
-};
-
 export default {
   target: "static",
   mode: "universal",
@@ -92,9 +85,9 @@ export default {
     ]
   },
 
-  generate: {
-    routes: otherRoutes.concat(getDynamicPaths(routeMap))
-  },
+  // generate: {
+  //   routes: otherRoutes.concat(getDynamicPaths(routeMap))
+  // },
 
   // router: {
   //   extendRoutes (routes, resolve) {
@@ -127,7 +120,6 @@ export default {
    */
   plugins: [
     { src: "~/plugins/tilt" },
-    { src: "~/plugins/dummy" },
     { src: "~/plugins/vue-lazyload" },
     { src: "~/plugins/fragment" },
     { src: "~/plugins/lightbox", ssr: false },
@@ -160,8 +152,16 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
     "nuxt-user-agent",
-    "portal-vue/nuxt"
+    "portal-vue/nuxt",
+    "@nuxt/content"
   ],
+  content: {
+    markdown: {
+      prism: {
+        theme: "prism-themes/themes/prism-material-oceanic.css"
+      }
+    }
+  },
   // markdownit: {
   //   injected: true
   // },
@@ -193,20 +193,20 @@ export default {
   }
 };
 
-/**
- * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
- */
-function getDynamicPaths(urlFilepathTable) {
-  return [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      const filepathGlob = urlFilepathTable[url];
-      let d = glob.sync(filepathGlob, { cwd: "content" }).map(filepath => {
-        console.log(`/blog${url}/${path.basename(filepath, ".md")}`);
-        return `/blog${url}/${path.basename(filepath, ".md")}`;
-      });
-      console.log(d);
-      return d;
-    })
-  );
-}
+// /**
+//  * Create an array of URLs from a list of files
+//  * @param {*} urlFilepathTable
+//  */
+// function getDynamicPaths(urlFilepathTable) {
+//   return [].concat(
+//     ...Object.keys(urlFilepathTable).map(url => {
+//       const filepathGlob = urlFilepathTable[url];
+//       let d = glob.sync(filepathGlob, { cwd: "content" }).map(filepath => {
+//         console.log(`/blog${url}/${path.basename(filepath, ".md")}`);
+//         return `/blog${url}/${path.basename(filepath, ".md")}`;
+//       });
+//       console.log(d);
+//       return d;
+//     })
+//   );
+// }
