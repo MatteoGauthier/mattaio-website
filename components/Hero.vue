@@ -6,7 +6,7 @@
         <img class="mattèo self-start" src="~/assets/images/Mattèo.svg" alt="mattèo" />
 
         <span class="text-sm font-medium text-justify text-gray-900 sm:leading-7 sm:text-xl">
-          Je suis un développeur Web novice de 17 ans de Poitiers. Je
+          Je suis un développeur Web Junior de 18 ans de Poitiers. Je
           conçois des sites web avec Figma et les construis avec Vue, Nuxt ou
           encore React.
         </span>
