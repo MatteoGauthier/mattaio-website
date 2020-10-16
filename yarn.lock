@@ -2405,6 +2405,11 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
+body-scroll-lock@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-3.1.5.tgz#c1392d9217ed2c3e237fee1e910f6cdd80b7aaec"
+  integrity sha512-Yi1Xaml0EvNA0OYWxXiYNqY24AfWkbA6w5vxE7GWxtKfzIbZM+Qw+aSmkgsbWzbHiy/RCSkUZBplVxTA+E4jJg==
+
 boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
@@ -9779,11 +9784,12 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-cool-lightbox@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/vue-cool-lightbox/-/vue-cool-lightbox-2.5.1.tgz#1ace31f19f78bfd32de2b7abccc3c94fe8023f88"
-  integrity sha512-3gu9cWmt49oQmLnzaU0mEYqxyMqKraCdO/fV3oaNkBeBdttl4jVYUqipsKqG4SabhVMF2Kqj02C5HUdVBPz20Q==
+vue-cool-lightbox@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/vue-cool-lightbox/-/vue-cool-lightbox-2.6.4.tgz#60bfccae44a33698c78fc8ef6de4caaa926b1e68"
+  integrity sha512-BfUd4EO8DOp+/OxN5s0dw0o0M9s/fzj8hz2pZy+lrmwEMJuDl6nj/R+dGwtuVSLKXW9/qi8K+Dda8EeiRmkEZQ==
   dependencies:
+    body-scroll-lock "^3.1.5"
     vue "^2.6.10"
 
 vue-fragment@^1.5.1:
