@@ -983,6 +983,20 @@
     semver "^7.3.4"
     vue-template-compiler "^2.6.12"
 
+"@nuxt/components@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-2.0.0.tgz#f4fd3eb105f9f0069c1017f5c6fb79aa9dfb3df0"
+  integrity sha512-ZV1xbHxOaYwXgvnjhpCrmdXwwCauZyiIYepnr2Rs/E8QWfWVlYNWgjHIfbDPpUANAfIbxSemoqNJ82dg+Q9wfw==
+  dependencies:
+    chalk "^4.1.0"
+    chokidar "^3.5.1"
+    glob "^7.1.6"
+    globby "^11.0.2"
+    lodash "^4.17.20"
+    semver "^7.3.4"
+    upath "^2.0.1"
+    vue-template-compiler "^2.6.12"
+
 "@nuxt/config@2.14.12":
   version "2.14.12"
   resolved "https://registry.yarnpkg.com/@nuxt/config/-/config-2.14.12.tgz#077267c94ac4d30ed38f7642236f3523ee5280f2"
@@ -2876,10 +2890,10 @@ chokidar@^2.1.8:
   optionalDependencies:
     fsevents "^1.2.7"
 
-chokidar@^3.4.1, chokidar@^3.4.3:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.0.tgz#458a4816a415e9d3b3caa4faec2b96a6935a9e65"
-  integrity sha512-JgQM9JS92ZbFR4P90EvmzNpSGhpPBGBSj10PILeDyYFwp4h2/D9OM03wsJ4zW1fEp4ka2DGrnUeD7FuvQ2aZ2Q==
+chokidar@^3.4.1, chokidar@^3.4.3, chokidar@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
+  integrity sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -4655,7 +4669,7 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
-globby@^11.0.1:
+globby@^11.0.1, globby@^11.0.2:
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.2.tgz#1af538b766a3b540ebfb58a32b2e2d5897321d83"
   integrity sha512-2ZThXDvvV8fYFRVIxnrMQBipZQDr7MxKAmQK1vujaj9/7eF0efG7BPUKJ7jP7G5SLF37xKDXvO4S/KKLj/Z0og==
