@@ -1,6 +1,11 @@
 <template>
   <div>
-    <CoolLightBox :items="images" :index="index" loop @close="index = null"></CoolLightBox>
+    <CoolLightBox
+      :items="images"
+      :index="index"
+      loop
+      @close="index = null"
+    ></CoolLightBox>
 
     <div class="inline-flex flex-wrap">
       <img
@@ -18,24 +23,38 @@
 <script>
 export default {
   head: {
-    link: [{ rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/vue-cool-lightbox/dist/vue-cool-lightbox.min.css" }]
+    link: [
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdn.jsdelivr.net/npm/vue-cool-lightbox/dist/vue-cool-lightbox.min.css"
+      }
+    ]
   },
 
   data() {
     return {
       images: [
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Home Mattèo.dev 2020.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Blog Mattèo.dev 2020.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Portfolio Mattèo.dev 2020.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/CV_MattèoGauthier_2020_2.1.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Dpliance Dashboard Mockup.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Editing Poitiers Home Page.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Dpliance WebSite.png",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Mattèo.dev Home Black.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Mattèo.dev Home White.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/MiniCard.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Proto Cross De ligugé Mobile.jpg",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/Spiaggia HomePage.jpg"
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/1.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/2.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/3.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/4.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/5.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/6.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/7.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/8.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/9.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/10.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/11.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/12.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/13.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/14.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/15.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/16.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/17.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/18.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/19.webp",
+        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/20.webp"
       ],
       index: null
     };
@@ -48,5 +67,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
