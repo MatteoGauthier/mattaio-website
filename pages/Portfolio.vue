@@ -7,7 +7,7 @@
       @close="index = null"
     ></CoolLightBox>
 
-    <div class="inline-flex flex-wrap">
+    <div class="inline-flex flex-wrap justify-around">
       <img
         class="flex-1 object-cover h-64 max-w-full m-2 transition-all duration-700 rounded shadow sm:max-w-md"
         v-for="(src, index) in images"
@@ -44,7 +44,6 @@ export default {
         "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/7.webp",
         "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/8.webp",
         "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/9.webp",
-        "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/10.webp",
         "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/11.webp",
         "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/12.webp",
         "https://cdn.jsdelivr.net/gh/MatteoGauthier/StaticHost@master/portfolio/out/13.webp",
