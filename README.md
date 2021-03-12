@@ -19,7 +19,7 @@ If you know the answer you can open a pull request, a new issue or send me an [e
 ### Build locally
 Clone the repository using
 ```bash
-git clone git@github.com:MattixNow/mattaio-website.git
+git clone git@github.com:MatteoGauthier/mattaio-website.git
 ```
 
 Install the dependencies

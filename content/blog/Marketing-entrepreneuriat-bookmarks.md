@@ -62,4 +62,4 @@ Salut voici une liste des outils, sites web, des livres, des ressources à propo
 - [Podcast Entrepreneur](https://open.spotify.com/show/050ElOQU6ChC3TcVWvaJYI)
 - [Marketing Mania](https://open.spotify.com/show/56SD5Qnb7L74kzuGUgjyGf)
 
-> Merci d'avoir lu ce post n'hésitez pas à me [donner votre avis](https://twitter.com/MattixNow) 🙂
+> Merci d'avoir lu ce post n'hésitez pas à me [donner votre avis](https://twitter.com/MatteoGauthier_) 🙂

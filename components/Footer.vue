@@ -16,7 +16,7 @@
             <img src="~/assets/images/icons/Github.svg" class="w-6 mr-1" alt="github icon" />
             <span>Github</span>
           </a>
-          <a href="https://twitter.com/MattixNow" class="flex items-center ">
+          <a href="https://twitter.com/MatteoGauthier_" class="flex items-center ">
 
             <img src="~/assets/images/icons/Twitter.svg" class="w-6 mr-1" alt="github icon" />
             <span>Twitter</span>
