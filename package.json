@@ -34,7 +34,7 @@
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
-    "@nuxt/components": "^1.2.2",
+    "@nuxt/components": "^2.1.4",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "@tailwindcss/custom-forms": "^0.2.1",
