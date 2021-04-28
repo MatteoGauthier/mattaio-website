@@ -25,7 +25,7 @@
       </div>
       <div id="tags">
         <div
-          v-for="tag in article.tags.slice(0, 5)"
+          v-for="tag in articleTags"
           :key="tag"
           v-html="tag"
           class="inline px-3 py-1 mr-2 text-sm text-gray-800 bg-gray-200 rounded-full"
@@ -49,14 +49,16 @@ export default {
       return img
 
     }
+    ,
+
+   
   },
-  mounted() {
-    try {
-      this.article.tags = this.article.tags.split(",").map(x => {
-        return "#" + x.charAt(0).toUpperCase() + x.slice(1);
+  computed: {
+     articleTags: function( ) {
+      return this.article.tags.split(",").slice(0, 5).map(x => {
+        let result = "#" + x.charAt(0).toUpperCase() + x.slice(1);
+        return result
       });
-    } catch (error) {
-      console.log(error);
     }
   }
 };
