@@ -23,7 +23,7 @@
     "nuxt-user-agent": "^1.2.2",
     "portal-vue": "^2.1.7",
     "prism-themes": "^1.5.0",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.0",
     "raw-loader": "^4.0.2",
     "sass-loader": "^10.1.0",
     "vue-cool-lightbox": "^2.7.0",
