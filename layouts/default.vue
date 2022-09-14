@@ -25,8 +25,13 @@ export default {
       this.openFeedback();
     }
     setTimeout(() => {
+      this.$notibar.add("Faute de temps mon site web n'est pas vraiment à jour, retrouve mon CV à jour ici matteogauthier.fr/cv");
+    }, 2000);
+    /*
+    setTimeout(() => {
       this.$notibar.add("Tu peux laisser un feedback sur mon site en cliquant ici ou en appuyant sur Space/Enter/F");
     }, 50000);
+    */
   },
   created() {
     if (process.client) {

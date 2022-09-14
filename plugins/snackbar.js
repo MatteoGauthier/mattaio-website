@@ -3,7 +3,7 @@ import VueNotibar from "vue-notibar";
 
 Vue.use(VueNotibar, {
   position: 'left',
-  time: '3000',
+  time: '20000',
   dismiss: {
     show: true,
     color: "#FFF"
