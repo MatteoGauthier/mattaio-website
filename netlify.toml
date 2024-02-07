@@ -1,15 +1,15 @@
 [[redirects]]
   from = "/CV"
-  to = "/CV_Matt%C3%A8oGauthier_2021_1.3.pdf"
+  to = "/CV_Matt%C3%A8oGauthier_2022_1.0.pdf"
   status = 301
 
 [[redirects]]
   from = "/cv"
-  to = "/CV_Matt%C3%A8oGauthier_2021_1.3.pdf"
+  to = "/CV_Matt%C3%A8oGauthier_2022_1.0.pdf"
   status = 301
 
 [[redirects]]
-  from = "/CV_Matt%C3%A8oGauthier_2021_1.3.pdf"
+  from = "/CV_Matt%C3%A8oGauthier_2022_1.0.pdf"
   to = "/cv"
   status = 301
 
