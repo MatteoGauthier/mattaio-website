@@ -11,6 +11,6 @@
     { "source": "/twitter", "destination": "https://twitter.com/matteogauthier_" },
     { "source": "/github", "destination": "https://github.com/MatteoGauthier" },
     { "source": "/linkedin", "destination": "https://linkedin.com/in/MatteoGauthier" },
-    { "source": "/gh", "destination": "/github" },
+    { "source": "/gh", "destination": "/github" }
   ]
 }
