@@ -2,7 +2,7 @@
   "redirects": [
     { "source": "/", "destination": "/cv" },
     { "source": "/CV", "destination": "/cv" },
-    { "source": "/cv", "destination": "https://cdn.jsdelivr.net/gh/matteogauthier/mattaio-website/static/CV_Matt%C3%A8oGauthier_2024_1.1.pdf" },
+    { "source": "/cv", "destination": "https://cdn.jsdelivr.net/gh/matteogauthier/mattaio-website/static/CV_Matt%C3%A8oGauthier_2024_1.2.pdf" },
     { "source": "/ytb", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
     { "source": "/MMI", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
     { "source": "/mmi", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
