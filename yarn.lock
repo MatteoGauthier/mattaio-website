@@ -10072,10 +10072,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-cool-lightbox@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/vue-cool-lightbox/-/vue-cool-lightbox-2.7.0.tgz#8ddcf358207ecb767f18cbd8c4d8c1e8af83fa09"
-  integrity sha512-yptHA9F5VvgpgygeG/M04iqeveBaRPtyUG3iMPLJ40Zo1IP1EHe6JIuHcneHyrbERZ2HbyQobUZF9xZ39Yebew==
+vue-cool-lightbox@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/vue-cool-lightbox/-/vue-cool-lightbox-2.7.1.tgz#14195c3ab6659e446843a166b32f3f2621aa90c1"
+  integrity sha512-LxcUirNblEi2izgmeLqyWBwSz+fhJVAOvrV4jGJ6Wmz3ip80r0kQlMkgoEGI0ZTAPQwRZqGHbU7Wj1vh8nacVg==
   dependencies:
     body-scroll-lock "^3.1.5"
     vue "^2.6.10"

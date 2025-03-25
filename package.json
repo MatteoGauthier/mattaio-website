@@ -26,7 +26,7 @@
     "prismjs": "^1.23.0",
     "raw-loader": "^4.0.2",
     "sass-loader": "^10.1.0",
-    "vue-cool-lightbox": "^2.7.0",
+    "vue-cool-lightbox": "^2.7.1",
     "vue-fragment": "^1.5.1",
     "vue-lazyload": "^1.3.3",
     "vue-notibar": "^0.3.2",
