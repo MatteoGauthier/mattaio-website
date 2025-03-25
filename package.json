@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "dayjs": "^1.10.2",
     "node-sass": "^5.0.0",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.3",
     "nuxt-user-agent": "^1.2.2",
     "portal-vue": "^2.1.7",
     "prism-themes": "^1.5.0",
