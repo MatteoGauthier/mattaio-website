@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/cv" },
+    { "source": "/", "destination": "https://matteogauthier.framer.website/" },
     { "source": "/CV", "destination": "/cv" },
     { "source": "/cv", "destination": "https://cdn.jsdelivr.net/gh/matteogauthier/mattaio-website/static/CV_Matt%C3%A8oGauthier_2025_1.0.pdf" },
     { "source": "/ytb", "destination": "https://www.youtube.com/watch?v=Qn2fZ2FlO4M?ref=mattèo.dev" },
